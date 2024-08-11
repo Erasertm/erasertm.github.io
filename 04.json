@@ -1,0 +1,1302 @@
+[
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Jenny List",
+    "title": "Your ESP32 As A USB Bluetooth Dongle",
+    "description": "Using Bluetooth on a desktop computer is now such a seamless process; it’s something built-in and just works. Behind that ubiquity is a protocol layer called HCI, or Host Controller …read more",
+    "url": "https://hackaday.com/2024/08/04/your-esp32-as-a-usb-bluetooth-dongle/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2021/07/esp32-linux-featured.jpg",
+    "publishedAt": "2024-08-04T17:00:00Z",
+    "content": "Using Bluetooth on a desktop computer is now such a seamless process; it’s something built-in and just works. Behind that ubiquity is a protocol layer called HCI, or Host Controller Interface, a set … [+851 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Donald Papp",
+    "title": "2024 Business Card Challenge: CardTunes Bluetooth Speaker",
+    "description": "A business card form factor can be quite limiting, but that didn’t stop [Schwimmflugel] from creating CardTunes, an ESP32-based Bluetooth audio speaker that tried something innovative to deliver the output. …read more",
+    "url": "https://hackaday.com/2024/07/20/2024-business-card-challenge-cardtunes-bluetooth-speaker/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/07/3495041719637008223.jpg",
+    "publishedAt": "2024-07-20T17:00:23Z",
+    "content": "A business card form factor can be quite limiting, but that didn’t stop [Schwimmflugel] from creating CardTunes, an ESP32-based Bluetooth audio speaker that tried something innovative to deliver the … [+1084 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Alexander Rowsell",
+    "title": "Photoresistor-based Single Pixel Camera",
+    "description": "[Hugh] has been going back through episodes of the Hackaday podcast, and Elliot mentioned in episode 67 that it can often be inspiring to go back through the archives of Hackaday to find inspiratio…",
+    "url": "https://hackaday.com/2024/07/23/photoresistor-based-single-pixel-camera/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/07/singlepixel_photo.png",
+    "publishedAt": "2024-07-23T11:00:00Z",
+    "content": "[Hugh] has been going back through episodes of the Hackaday podcast, and Elliot mentioned in episode 67 that it can often be inspiring to go back through the archives of Hackaday to find inspiration … [+2076 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Lewin Day",
+    "title": "Iron Man Arc Reactor Clock Is A Stylish Piece",
+    "description": "Iron Man was the film that kicked off the Marvel craze, and is widely regarded to be better than a lot of the movies that followed. If you’re a big fan of the OG, you’re probably alread…",
+    "url": "https://hackaday.com/2024/07/12/iron-man-arc-reactor-clock-is-a-stylish-piece/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/07/FAJQETELIKAKX2E-e1720684815166.webp",
+    "publishedAt": "2024-07-12T18:30:04Z",
+    "content": "Iron Man was the film that kicked off the Marvel craze, and is widely regarded to be better than a lot of the movies that followed. If you’re a big fan of the OG, you’re probably already drowning in … [+1106 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Kristina Panos",
+    "title": "2024 Tiny Games Challenge: Improving Reaction Time",
+    "description": "What lies at the heart of many games? In a sense, it’s your response time, which is a function of hand-eye coordination. Although the 2024 Business Card Challenge has come to a close, [gokux]…",
+    "url": "https://hackaday.com/2024/07/23/2024-tiny-games-challenge-improving-reaction-time/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/07/reaction-game-800.jpg",
+    "publishedAt": "2024-07-23T18:30:38Z",
+    "content": "What lies at the heart of many games? In a sense, it’s your response time, which is a function of hand-eye coordination. Although the 2024 Business Card Challenge has come to a close, [gokux] tends t… [+848 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "heise online"
+    },
+    "author": "Daniel Schwabe",
+    "title": "Starterkit für Sprachsteuerung von Seeed Studio",
+    "description": "Seeed Studio hat ein neues ReSpeaker-Produkt veröffentlicht. Der ReSpeaker Lite bereitet Stimmeingaben mit KI auf, die man mit ESP oder PC weiterverarbeitet.",
+    "url": "https://www.heise.de/news/Starterkit-fuer-Sprachsteuerung-von-Seeed-Studio-9827172.html",
+    "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/6/4/7/4/4/7/image1-b5dc5619de8b08e5.png",
+    "publishedAt": "2024-08-07T12:49:00Z",
+    "content": "Der ReSpeaker Lite ist dafür ausgelegt, Projekte mit Sprachsteuerung auszustatten. Es handelt sich um ein Mikrofon-Array mit zwei PDM-MEMS-Mikrofonen, das mit einem Chip gepaart ist, der KI-basierte … [+3235 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "XDA Developers"
+    },
+    "author": "Ayush Pande",
+    "title": "5 simple projects anyone can build with an ESP32 microcontroller",
+    "description": "Who says you need a high skill-level to create cool ESP32 projects?",
+    "url": "https://www.xda-developers.com/5-simple-esp32-projects/",
+    "urlToImage": "https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2024/07/esp32-8.jpg",
+    "publishedAt": "2024-07-18T23:00:13Z",
+    "content": "Key Takeaways\r\n<ul><li> ESP32 boards may be complex for beginners but offer a wide range of features for DIY projects. </li><li> Projects like a Wi-Fi scanner, web server, weather station, and smart … [+4631 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Pedro",
+    "title": "ESP32 iOS Controller #3DThursday #3DPrinting",
+    "description": "Build a BLE media controller for your iOS device with a touch screen and a Feather ESP32-S3 running CircuitPython. Guide: https://learn.adafruit.com/esp32-s3-ble-ios-media-controllerFeather ESP32-S3 https://www.adafruit.com/product/5323 TFT FeatherWing 3.5in …",
+    "url": "https://blog.adafruit.com/2024/07/25/esp32-ios-controller-3dthursday-3dprinting/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/ESP32-iOS-Controller-thumb-scaled.jpg",
+    "publishedAt": "2024-07-25T14:00:04Z",
+    "content": "July 25, 2024 AT 10:00 am\r\nESP32 iOS Controller #3DThursday #3DPrinting\r\nBuild a BLE media controller for your iOS device with a touch screen and a Feather ESP32-S3 running CircuitPython. \r\nGuide: ht… [+4831 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Anne Barela",
+    "title": "Feather of the Day: Adafruit ESP32-S3 Reverse TFT Feather #Adafruit #Feather #ESP32",
+    "description": "The Adafruit Feather ecosystem is so rich with hardware diversity, we wanted to share them, one each day. Today is the Adafruit ESP32-S3 Reverse TFT Feather – 4MB Flash, 2MB PSRAM, STEMMA QT!Like Missy Elliot, we like to “put our [Feather] down, flip it and r…",
+    "url": "https://blog.adafruit.com/2024/07/18/feather-of-the-day-adafruit-esp32-s3-reverse-tft-feather-adafruit-feather-esp32/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/Screenshot-2024-01-22-111822-112.png",
+    "publishedAt": "2024-07-18T13:30:15Z",
+    "content": "July 18, 2024 AT 9:30 am\r\nFeather of the Day: Adafruit ESP32-S3 Reverse TFT Feather #Adafruit #Feather #ESP32\r\nThe Adafruit Feather ecosystem is so rich with hardware diversity, we wanted to share th… [+5612 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Anne Barela",
+    "title": "Feather of the Day: Adafruit ESP32-S2 TFT Feather #Adafruit #Feather #ESP32",
+    "description": "The Adafruit Feather ecosystem is so rich with hardware diversity, we wanted to share them, one each day. Today is the Adafruit ESP32-S2 TFT Feather – STEMMA QT – 4MB Flash + 2 MB PSRAM!We’ve got a new machine here at Adafruit, it can uncover your deepest des…",
+    "url": "https://blog.adafruit.com/2024/07/11/feather-of-the-day-adafruit-esp32-s2-tft-feather-adafruit-feather-esp32/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/Screenshot-2024-01-22-111822-73.png",
+    "publishedAt": "2024-07-11T13:36:03Z",
+    "content": "July 11, 2024 AT 9:36 am\r\nFeather of the Day: Adafruit ESP32-S2 TFT Feather #Adafruit #Feather #ESP32\r\nThe Adafruit Feather ecosystem is so rich with hardware diversity, we wanted to share them, one … [+5622 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Anne Barela",
+    "title": "Feather of the Day: Adafruit ESP32-S3 TFT Feather #Adafruit #Feather #ESP32",
+    "description": "The Adafruit Feather ecosystem is so rich with hardware diversity, we wanted to share them, one each day. Today is the Adafruit ESP32-S3 TFT Feather – 4MB Flash, 2MB PSRAM, STEMMA QT!This ESP32-S3 Feather board has a built in IPS TFT color display. It’s got a…",
+    "url": "https://blog.adafruit.com/2024/07/31/feather-of-the-day-adafruit-esp32-s3-tft-feather-adafruit-feather-esp32/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/Untitled2-3.png",
+    "publishedAt": "2024-07-31T13:30:36Z",
+    "content": "July 31, 2024 AT 9:30 am\r\nFeather of the Day: Adafruit ESP32-S3 TFT Feather #Adafruit #Feather #ESP32\r\nThe Adafruit Feather ecosystem is so rich with hardware diversity, we wanted to share them, one … [+5476 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Pedro",
+    "title": "Case for ESP32 Cam #3DThursday #3DPrinting",
+    "description": "WT29_337936 shares: This case basically serves my purpose but there were several things that I didn’t like so I’ve completely redrawn it in Fusion 360. The original model didn’t fit the USB adapters I had and the mount arm would obscure the USB and antenna ho…",
+    "url": "https://blog.adafruit.com/2024/07/25/case-for-esp32-cam-3dthursday-3dprinting/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/Case-for-ESP32-Cam.webp",
+    "publishedAt": "2024-07-25T08:00:18Z",
+    "content": "July 25, 2024 AT 4:00 am\r\nCase for ESP32 Cam #3DThursday #3DPrinting\r\nWT29_337936 shares: \r\nThis case basically serves my purpose but there were several things that I didn’t like so I’ve completely r… [+4377 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Anne Barela",
+    "title": "Feather of the Day: Adafruit ESP32-S3 Feather with 8MB Flash and STEMMA QT #Adafruit #Feather",
+    "description": "The Adafruit Feather ecosystem is so rich with hardware diversity, we wanted to share them, one each day. Today is the Adafruit ESP32-S3 Feather with 8MB Flash and STEMMA QT!The Espressif ESP32-S3 has arrived in Feather format – and what a great way to get st…",
+    "url": "https://blog.adafruit.com/2024/07/08/feather-of-the-day-adafruit-esp32-s3-feather-with-4mb-flash-2mb-psram-and-stemma-qt-adafruit-feather-2/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/Screenshot-2024-01-22-111822-35.png",
+    "publishedAt": "2024-07-08T13:30:35Z",
+    "content": "July 8, 2024 AT 9:30 am\r\nFeather of the Day: Adafruit ESP32-S3 Feather with 8MB Flash and STEMMA QT #Adafruit #Feather\r\nThe Adafruit Feather ecosystem is so rich with hardware diversity, we wanted to… [+5096 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Elliot Williams",
+    "title": "Congratulations to the 2024 Business Card Challenge Winners!",
+    "description": "When you ask a Hackaday crowd to design a business card, you should expect to be surprised by what you get. But still, we were surprised by the breadth of entries! Our judges wracked their brains t…",
+    "url": "https://hackaday.com/2024/07/15/congratulations-to-the-2024-business-card-challenge-winners/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/05/business_card_challenge_featured.png",
+    "publishedAt": "2024-07-15T19:06:35Z",
+    "content": "When you ask a Hackaday crowd to design a business card, you should expect to be surprised by what you get. But still, we were surprised by the breadth of entries! Our judges wracked their brains to … [+4192 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Lifehacker.ru"
+    },
+    "author": "Макс Вильтовский",
+    "title": "Представлен робот-черепаха KT2 — игрушка, умный помощник и просто акробат",
+    "description": "Он такой милый, что может заменить домашнего котика.",
+    "url": "https://lifehacker.ru/predstavlen-robot-cherepaxa-kt2/",
+    "urlToImage": "https://cdn.lifehacker.ru/wp-content/uploads/2024/07/image_1722364159.png",
+    "publishedAt": "2024-07-30T18:44:08Z",
+    "content": "Wair Living X KameRobotics Kickstarter KT2 Kungfu Turtle. -, .\r\n: Wair Living X KameRobotics\r\n, , , . 99 , , . . KT2 . . \r\n: Wair Living X KameRobotics\r\n, . Pomodoro, : , , . \r\n: Wair Living X KameRo… [+261 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Dan Halbert",
+    "title": "CircuitPython 9.1.1 Released!",
+    "description": "From the GitHub release page:This is CircuitPython 9.1.1, the latest bugfix revision of CircuitPython, and is a new stable release.WARNING for nRF52 boards only: If your board has an nRF52 UF2 bootloader whose version is before 0.6.1, you will not be able to …",
+    "url": "https://blog.adafruit.com/2024/07/22/circuitpython-9-1-1-released/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/02/circuit_python_9_poster_sm-scaled.jpg",
+    "publishedAt": "2024-07-23T00:45:23Z",
+    "content": "July 22, 2024 AT 8:45 pm\r\nCircuitPython 9.1.1 Released!\r\nFrom the GitHub release page:\r\nThis is CircuitPython 9.1.1, the latest bugfix revision of CircuitPython, and is a new stable release.\r\nWARNING… [+5761 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Dan Halbert",
+    "title": "CircuitPython 9.1.0 Release Candidate 0 Released!",
+    "description": "From the GitHub release page:This is CircuitPython 9.1.0-rc.0, a release candidate for 9.0.0 final. This release is believed to be stable, and is meant for testing before the final release of 9.1.0.WARNING for nRF52 boards only: If your board has an nRF52 UF2…",
+    "url": "https://blog.adafruit.com/2024/07/09/circuitpython-9-1-0-release-candidate-0-released/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/02/circuit_python_9_poster_sm-scaled.jpg",
+    "publishedAt": "2024-07-09T21:45:05Z",
+    "content": "July 9, 2024 AT 5:45 pm\r\nCircuitPython 9.1.0 Release Candidate 0 Released!\r\nFrom the GitHub release page:\r\nThis is CircuitPython 9.1.0-rc.0, a release candidate for 9.0.0 final. This release is belie… [+8128 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Noe Ruiz",
+    "title": "LIVE! 3D Hangouts with Noe and Pedro",
+    "description": "Livestream starts at 11AM ETThis week @adafruit we’re showcasing our CNC rotary encoder macropad with Snap-Part NeoKey Switches and the Feather RP2040 running CircuitPython. Prototyping a wait time display for theme parks using a 4in round display and the Qua…",
+    "url": "https://blog.adafruit.com/2024/07/31/live-3d-hangouts-with-noe-and-pedro-29/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/3DH-thumb-7-31-24.jpg",
+    "publishedAt": "2024-07-31T14:50:45Z",
+    "content": "Adafruit publishes a wide range of writing and video content, including interviews and reporting on the maker market and the wider technology world. Our standards page is intended as a guide to best … [+2676 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Dan Halbert",
+    "title": "CircuitPython 9.1.0 Released!",
+    "description": "From the GitHub release page:This is CircuitPython 9.1.0, the latest minor revision of CircuitPython, and is a new stable release.WARNING for nRF52 boards only: If your board has an nRF52 UF2 bootloader whose version is before 0.6.1, you will not be able to l…",
+    "url": "https://blog.adafruit.com/2024/07/10/circuitpython-9-1-0-released/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/02/circuit_python_9_poster_sm-scaled.jpg",
+    "publishedAt": "2024-07-10T19:25:46Z",
+    "content": "July 10, 2024 AT 3:25 pm\r\nCircuitPython 9.1.0 Released!\r\nFrom the GitHub release page:\r\nThis is CircuitPython 9.1.0, the latest minor revision of CircuitPython, and is a new stable release.\r\nWARNING … [+6889 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Noe Ruiz",
+    "title": "3D Hangouts – iOS BLE Controller, CNC Rotary Macropad and Flexi Liopleurodon #3DThursday",
+    "description": "3D Hangouts – iOS BLE Controller, CNC Rotary MacroPad, Flexi LiopleurodonThis week @adafruit we’re showcasing an iOS BLE media controller using 3.5in TFT FeatherWing and Feather ESP32-S3 . Our prototype of the CNC rotary encoder macropad with Snap-Part NeoKey…",
+    "url": "https://blog.adafruit.com/2024/07/25/3d-hangouts-ios-ble-controller-cnc-rotary-macropad-and-flexi-liopleurodon-3dthursday/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/3DH-Thumb-7-24-24.jpg",
+    "publishedAt": "2024-07-25T15:00:54Z",
+    "content": "July 25, 2024 AT 11:00 am\r\n3D Hangouts iOS BLE Controller, CNC Rotary Macropad and Flexi Liopleurodon #3DThursday\r\nThis week @adafruit we’re showcasing an iOS BLE media controller using 3.5in TFT Fea… [+4867 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Noe Ruiz",
+    "title": "3D Hangouts – CNC Rotary Macropad, Theme Park Wait Time Display and Baby Raptor #3DThursday",
+    "description": "Livestream starts at 11AM ETThis week @adafruit we’re showcasing our CNC rotary encoder macropad with Snap-Part NeoKey Switches and the Feather RP2040 running CircuitPython. Prototyping a wait time display for theme parks using a 4in round display and the Qua…",
+    "url": "https://blog.adafruit.com/2024/08/01/3d-hangouts-cnc-rotary-macropad-theme-park-wait-time-display-and-baby-raptor-3dthursday/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/3DH-thumb-7-31-24.jpg",
+    "publishedAt": "2024-08-01T15:00:00Z",
+    "content": "Adafruit publishes a wide range of writing and video content, including interviews and reporting on the maker market and the wider technology world. Our standards page is intended as a guide to best … [+2676 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Noe Ruiz",
+    "title": "LIVE! 3D Hangouts with Noe and Pedro",
+    "description": "3D Hangouts – iOS BLE Controller, CNC Rotary MacroPad, Flexi LiopleurodonThis week @adafruit we’re showcasing an iOS BLE media controller using 3.5in TFT FeatherWing and Feather ESP32-S3 . Our prototype of the CNC rotary encoder macropad with Snap-Part NeoKey…",
+    "url": "https://blog.adafruit.com/2024/07/24/live-3d-hangouts-with-noe-and-pedro-28/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/3DH-Thumb-7-24-24.jpg",
+    "publishedAt": "2024-07-24T14:15:33Z",
+    "content": "This week @adafruit we’re showcasing an iOS BLE media controller using 3.5in TFT FeatherWing and Feather ESP32-S3 . Our prototype of the CNC rotary encoder macropad with Snap-Part NeoKey Switches get… [+3678 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Takara",
+    "title": "Adafruit Weekly Editorial Round-Up: CircuitPython 9.1.1 Released, ESP32-S3 BLE iOS Media Controller, USB C Dock, & more!",
+    "description": "ADAFRUIT WEEKLY EDITORIAL ROUND-UPWe’ve got so much happening here at Adafruit that it’s not always easy to keep up! Don’t fret, we’ve got you covered. Each week we’ll be posting a handy round-up of what we’ve been up to, ranging from learn guides to blog art…",
+    "url": "https://blog.adafruit.com/2024/07/28/adafruit-weekly-editorial-round-up-circuitpython-9-1-1-released-esp32-s3-ble-ios-media-controller-usb-c-dock-more/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/circuit_python_9_poster_sm-360x480-1.jpg",
+    "publishedAt": "2024-07-28T19:00:08Z",
+    "content": "July 28, 2024 AT 3:00 pm\r\nAdafruit Weekly Editorial Round-Up: CircuitPython 9.1.1 Released, ESP32-S3 BLE iOS Media Controller, USB C Dock, &amp; more!\r\nADAFRUIT WEEKLY EDITORIAL ROUND-UP\r\nWe’ve got s… [+4235 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Arya Voronova",
+    "title": "Embedded Python: MicroPython Is Amazing",
+    "description": "In case you haven’t heard, about a month ago MicroPython has celebrated its 11th birthday. I was lucky that I was able to start hacking with it soon after pyboards have shipped – the fi…",
+    "url": "https://hackaday.com/2024/07/11/embedded-python-micropython-is-amazing/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/06/Python.jpg",
+    "publishedAt": "2024-07-11T14:00:24Z",
+    "content": "In case you haven’t heard, about a month ago MicroPython has celebrated its 11th birthday. I was lucky that I was able to start hacking with it soon after pyboards have shipped – the first tech talk … [+9479 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Erin St Blaine",
+    "title": "Tutorial: NeoPixel Floor Lamp with WLED and Capacitive Touch Control",
+    "description": "Check out the latest guide from Erin St Blaine: build a modern spiral floor lamp out of a dowel and some Hot Wheels track. The lights are diffused with clear crystal gems. We love the way the plastic gems refract the light, making this lamp beautiful to view …",
+    "url": "https://blog.adafruit.com/2024/07/30/tutorial-add-12v-programmable-cafe-market-lights-to-your-outdoor-space-2/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/horiz_finished-scaled.jpeg",
+    "publishedAt": "2024-07-30T17:10:01Z",
+    "content": "Check out the latest guide from Erin St Blaine: build a modern spiral floor lamp out of a dowel and some Hot Wheels track. The lights are diffused with clear crystal gems. We love the way the plastic… [+3943 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Electronics-lab.com"
+    },
+    "author": "Debashis Das",
+    "title": "LILYGO T-Energy-S3 ESP32-S3 Dev Board Features An 18650 Battery Holder",
+    "description": "LILYGO T-Energy-S3 is an ESP32-S3 WiFi and Bluetooth-enabled IoT development board with an 18650 battery holder,...\nThe post LILYGO T-Energy-S3 ESP32-S3 Dev Board Features An 18650 Battery Holder appeared first on Electronics-Lab.com.",
+    "url": "https://www.electronics-lab.com/lilygo-t-energy-s3-esp32-s3-dev-board-features-an-18650-battery-holder/",
+    "urlToImage": "https://www.electronics-lab.com/wp-content/uploads/2024/07/T-EnergyS3-LILYGO_7.jpg",
+    "publishedAt": "2024-07-15T05:41:32Z",
+    "content": "LILYGO T-Energy-S3 is an ESP32-S3 WiFi and Bluetooth-enabled IoT development board with an 18650 battery holder, a USB-C port for charging and programming, and plenty of I/Os thanks to two 20-pin GPI… [+2080 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Electronics-lab.com"
+    },
+    "author": "Debashis Das",
+    "title": "SB Components StackyFi A ESP32-S3 Board in Raspberry Pi Zero From Factor",
+    "description": "SB Components StackyFi is an ESP32-S3 powered development board in a Raspberry Pi Zero Form Factor....\nThe post SB Components StackyFi A ESP32-S3 Board in Raspberry Pi Zero From Factor appeared first on Electronics-Lab.com.",
+    "url": "https://www.electronics-lab.com/sb-components-stackyfi-a-esp32-s3-board-in-raspberry-pi-zero-from-factor/",
+    "urlToImage": "https://www.electronics-lab.com/wp-content/uploads/2024/07/6c679ea0aa4d6a1d93e4386121dcd6de_original.jpg",
+    "publishedAt": "2024-07-26T07:01:03Z",
+    "content": "SB Components StackyFi is an ESP32-S3 powered development board in a Raspberry Pi Zero Form Factor. The board features a 40-pin GPIO header which is compatible with most Raspberry Pi HAT. The board a… [+2093 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Anne Barela",
+    "title": "ICYMI Python on Microcontrollers Newsletter: Arduino Turns to Zephyr, Projects Galore and More! #CircuitPython #Python #micropython #ICYMI @Raspberry_Pi",
+    "description": "If you missed this week’s Python on Microcontrollers Newsletter, here is the ICYMI (in case you missed it) version.To never miss another issue, subscribe now! – You’ll get one terrific newsletter each Tuesday (which is out before this post). 11,197 subscriber…",
+    "url": "https://blog.adafruit.com/2024/07/30/icymi-python-on-microcontrollers-newsletter-arduino-turns-to-zephyr-projects-galore-and-more-circuitpython-python-micropython-icymi-raspberry_pi/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/ICYMI-banner-2024-04-3.jpg",
+    "publishedAt": "2024-07-30T13:40:13Z",
+    "content": "If you missed this week’s Python on Microcontrollers Newsletter, here is the ICYMI (in case you missed it) version.\r\nTo never miss another issue, subscribe now! – You’ll get one terrific newsletter e… [+16443 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Electronics-lab.com"
+    },
+    "author": "Debashis Das",
+    "title": "Espressif Thread Border Router Supports IPv6, Service Discovery, and NAT64",
+    "description": "Espressif Thread Border Router is a SP32-H2 (802.15.4) and ESP32-S3 (WiFi + BLE) powered development board...\nThe post Espressif Thread Border Router Supports IPv6, Service Discovery, and NAT64 appeared first on Electronics-Lab.com.",
+    "url": "https://www.electronics-lab.com/espressif-thread-border-router-supports-ipv6-service-discovery-and-nat64/",
+    "urlToImage": "https://www.electronics-lab.com/wp-content/uploads/2024/07/Screenshot-2023-06-15-at-15.53.49.jpg",
+    "publishedAt": "2024-07-19T05:44:26Z",
+    "content": "Espressif Thread Border Router is a SP32-H2 (802.15.4) and ESP32-S3 (WiFi + BLE) powered development board that has acquired Thread Interoperability Certificate V1.3, which makes it a Thread-Certifie… [+1833 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Electronics-lab.com"
+    },
+    "author": "Debashis Das",
+    "title": "LILYGO T-Encoder-Pro: ESP32-S3 WiFi/BT Rotary Encoder with AMOLED Touchscreen",
+    "description": "The LILYGO T-Encoder-Pro is an ESP32-S3-based rotary encoder with a 1.2-inch AMOLED touchscreen display. The touchscreen...\nThe post LILYGO T-Encoder-Pro: ESP32-S3 WiFi/BT Rotary Encoder with AMOLED Touchscreen appeared first on Electronics-Lab.com.",
+    "url": "https://www.electronics-lab.com/lilygo-t-encoder-pro-esp32-s3-wifi-bt-rotary-encoder-with-amoled-touchscreen/",
+    "urlToImage": "https://www.electronics-lab.com/wp-content/uploads/2024/06/51XoTTL-HoL._AC_SL1000_.jpg",
+    "publishedAt": "2024-07-08T07:08:05Z",
+    "content": "The LILYGO T-Encoder-Pro is an ESP32-S3-based rotary encoder with a 1.2-inch AMOLED touchscreen display. The touchscreen features a 390×390 pixels resolution and has a pair of Qwiic connectors for ad… [+2029 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Electronics-lab.com"
+    },
+    "author": "Debashis Das",
+    "title": "LILYGO T-Glass IS A Google Glass Like Smart Glass Powered by an ESP32-S3",
+    "description": "ilyT-Glass is an ESP32-S3-powered smart glasses with a smart Bosch AI IMU. The Bosch IMU is...\nThe post LILYGO T-Glass IS A Google Glass Like Smart Glass Powered by an ESP32-S3 appeared first on Electronics-Lab.com.",
+    "url": "https://www.electronics-lab.com/lilygo-t-glass-is-a-google-glass-like-smart-glass-powered-by-an-esp32-s3/",
+    "urlToImage": "https://www.electronics-lab.com/wp-content/uploads/2024/07/lilygo-T-Glass.jpg",
+    "publishedAt": "2024-07-08T07:25:10Z",
+    "content": "ilyT-Glass is an ESP32-S3-powered smart glasses with a smart Bosch AI IMU. The Bosch IMU is an AI smart sensor that integrates a 6-axis IMU, a 32-bit customizable programmable microcontroller, and va… [+2437 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Electronics-lab.com"
+    },
+    "author": "Aditi Ambadkar",
+    "title": "LILYGO T3S3 E-Paper: ESP32-S3 WiFi & BLE SoC with LoRa Module and 2.13-inch E-Paper Display",
+    "description": "The LILYGO T3S3 E-Paper is an innovative development board that combines the ESP32-S3 WiFi and Bluetooth...\nThe post LILYGO T3S3 E-Paper: ESP32-S3 WiFi & BLE SoC with LoRa Module and 2.13-inch E-Paper Display appeared first on Electronics-Lab.com.",
+    "url": "https://www.electronics-lab.com/lilygo-t3s3-e-paper-esp32-s3-wifi-ble-soc-with-lora-module-and-2-13-inch-e-paper-display/",
+    "urlToImage": "https://www.electronics-lab.com/wp-content/uploads/2024/07/LILYGO.jpg",
+    "publishedAt": "2024-07-15T05:58:40Z",
+    "content": "The LILYGO T3S3 E-Paper is an innovative development board that combines the ESP32-S3 WiFi and Bluetooth LE SoC with a 2.13-inch e-Paper display and an SX1262 LoRa module, making it suitable for off-… [+2209 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Golioth.io"
+    },
+    "author": "Chris Gammell",
+    "title": "All Golioth Hardware Is Now Open Source",
+    "description": "Golioth is open sourcing the PCBs in their hardware platform (\"Aludel\"). This includes a main processing and communication board (\"Elixir\") and an ePaper, touch enabled PCB front panel board (\"Ostentus\")",
+    "url": "https://blog.golioth.io/all-golioth-hardware-is-now-open-source/",
+    "urlToImage": "https://blog.golioth.io/wp-content/uploads/2024/07/All-Golioth-Hardware-is-Now-Open-Source.png",
+    "publishedAt": "2024-07-17T17:31:46Z",
+    "content": "Golioth is all about sharing ideas and knowledge. This now includes our hardware, which today has been released as open source under the CERN OHL-P license. The Aludel Elixir and Ostentus are availab… [+6863 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Electronics-lab.com"
+    },
+    "author": "Debashis Das",
+    "title": "OBJEX Link S3LW IoT development board Includes Wi-Fi, Bluetooth, and LoRa Connectivity",
+    "description": "The OBJEX Link S3LW is an IoT development board built for battery-powered operations. The board features a...\nThe post OBJEX Link S3LW IoT development board Includes Wi-Fi, Bluetooth, and LoRa Connectivity appeared first on Electronics-Lab.com.",
+    "url": "https://www.electronics-lab.com/objex-link-s3lw-iot-development-board-includes-wi-fi-bluetooth-and-lora-connectivity/",
+    "urlToImage": "https://www.electronics-lab.com/wp-content/uploads/2024/07/objex-link-s3lw-angle-01_jpg_gallery-lg-scaled-e1721717646704.jpg",
+    "publishedAt": "2024-08-01T16:25:24Z",
+    "content": "The OBJEX Link S3LW is an IoT development board built for battery-powered operations. The board features a custom S3LW system-on-module (SoM) built around the ESP32-S3 MCU. The board supports Wi-Fi, … [+2369 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Arya Voronova",
+    "title": "Hack On Self: Sense Of Time",
+    "description": "Every now and then, a commercial product aims to help you in your life journey, in a novel way, making your life better through its presence. Over the years, I’ve been disappointed by such pr…",
+    "url": "https://hackaday.com/2024/08/06/hack-on-self-sense-of-time/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2017/06/biological.jpg",
+    "publishedAt": "2024-08-06T14:00:00Z",
+    "content": "Every now and then, a commercial product aims to help you in your life journey, in a novel way, making your life better through its presence. Over the years, I’ve been disappointed by such products f… [+12158 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Arduino.cc"
+    },
+    "author": "Arduino Team",
+    "title": "This DIY guitar transmitter sends digital audio to the amp",
+    "description": "When on stage, most guitarists will simply run a long cable from their guitar to the amp or mixer. But that cable can become tangled or get in the way, which is a problem for some of the more animated musicians out there. Wireless transmitters exist for them …",
+    "url": "https://blog.arduino.cc/2024/07/29/this-diy-guitar-transmitter-sends-digital-audio-to-the-amp/",
+    "urlToImage": "https://blog.arduino.cc/wp-content/uploads/2024/07/Guitar-1.jpg",
+    "publishedAt": "2024-07-29T19:48:04Z",
+    "content": "When on stage, most guitarists will simply run a long cable from their guitar to the amp or mixer. But that cable can become tangled or get in the way, which is a problem for some of the more animate… [+1662 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Electronics-lab.com"
+    },
+    "author": "Saumitra Jagdale",
+    "title": "LILYGO’s T3-S3 ESP32-S3 Board is Suited for IoT Applications",
+    "description": "The IoT industry is constantly looking for improvements in boards that fixate on communication interfaces and...\nThe post LILYGO’s T3-S3 ESP32-S3 Board is Suited for IoT Applications appeared first on Electronics-Lab.com.",
+    "url": "https://www.electronics-lab.com/t3-s3-esp32-s3/",
+    "urlToImage": "https://www.electronics-lab.com/wp-content/uploads/2024/07/T3-S3-ESP32-S3-product-Image.jpg",
+    "publishedAt": "2024-07-19T05:51:47Z",
+    "content": "The IoT industry is constantly looking for improvements in boards that fixate on communication interfaces and low-power performance. We recently came across LILYGOs T3-S3 ESP32-S3 board which can be … [+3099 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Anne Barela",
+    "title": "ICYMI Python on Microcontrollers Newsletter: New Software: Raspberry Pi OS and CircuitPython, plus much more! #CircuitPython #Python #micropython #ICYMI @Raspberry_Pi",
+    "description": "If you missed this week’s Python on Microcontrollers Newsletter, here is the ICYMI (in case you missed it) version.To never miss another issue, subscribe now! – You’ll get one terrific newsletter each Tuesday (which is out before this post). 11,133 subscriber…",
+    "url": "https://blog.adafruit.com/2024/07/09/icymi-python-on-microcontrollers-newsletter-new-software-raspberry-pi-os-and-circuitpython-plus-much-more-circuitpython-python-micropython-icymi-raspberry_pi/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/Python-on-hardware-banner-2024-05-1.png",
+    "publishedAt": "2024-07-09T13:48:45Z",
+    "content": "If you missed this week’s Python on Microcontrollers Newsletter, here is the ICYMI (in case you missed it) version.\r\nTo never miss another issue, subscribe now! – You’ll get one terrific newsletter e… [+14810 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Jamesbvaughan.com"
+    },
+    "author": "James Vaughan",
+    "title": "Reverse-engineering my speakers' API to get reasonable volume control",
+    "description": "I got some fancy new speakers last week.\nThey’re powered speakers and they have streaming service integrations built in, unlike the 35-year-old passive speakers I’m upgrading from. Overall they’re great! But they’re so loud that it’s difficult to make small v…",
+    "url": "https://jamesbvaughan.com/volume-controller-1/",
+    "urlToImage": null,
+    "publishedAt": "2024-07-25T15:11:20Z",
+    "content": "I got some fancy new speakers last week.\r\nTheyre powered speakers and they have streaming service integrations built in,\r\nunlike the 35-year-old passive speakers Im upgrading from.\r\nOverall theyre gr… [+9345 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Ozbargain.com.au"
+    },
+    "author": "Zaitronics",
+    "title": "ESP32-C3 SuperMini Wi-Fi + Bluetooth $4.00 + Delivery (Free Over $50) @ Zaitronics",
+    "description": "ESP32-C3 SuperMini on discount for $4 only. Not many available so grab while available",
+    "url": "https://www.ozbargain.com.au/node/858775",
+    "urlToImage": "https://files.ozbargain.com.au/n/75/858775l.jpg?h=dda51d80",
+    "publishedAt": "2024-07-26T06:39:07Z",
+    "content": "All trademarks are owned by their respective owners.OzBargain is an independent community website which has no association with nor endorsement by the respective trademark owners.\r\nCopyright © 2006-2… [+32 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Memfault.com"
+    },
+    "author": "Chris Merck",
+    "title": "Considerations When Building Embedded Databases",
+    "description": "Diving into the challenges of persisting device state to flash memory.",
+    "url": "https://interrupt.memfault.com/blog/choosing-or-building-an-embedded-db",
+    "urlToImage": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png",
+    "publishedAt": "2024-08-02T18:45:08Z",
+    "content": "Persisting to flash is a necessary evil for many embedded devices. Lets take a\r\nlook at some of the pitfalls and how they may be avoided.\r\nLike Interrupt? Subscribe to get our latest posts straight t… [+17034 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Ozbargain.com.au"
+    },
+    "author": "Zaitronics",
+    "title": "ESP32 38 Pin $6.5 + $8 Delivery (Free Over $50) @ Zaitronics",
+    "description": "ESP32 board with bluetooth and wifi connectivity\n\n38 pins and CP2102 chip with micro USB connection\n\n$6.5 each no minimum or maximum\n\nFree shipping over $50\n\nCable an additional $3.35\nhttps://zaitronics.com.au/products/usb-c-to-micro-cable-1m\nhttps://zaitroni…",
+    "url": "https://www.ozbargain.com.au/node/857651",
+    "urlToImage": "https://files.ozbargain.com.au/n/51/857651l.jpg?h=2630d209",
+    "publishedAt": "2024-07-19T06:18:18Z",
+    "content": "ESP32 board with bluetooth and wifi connectivity\r\n38 pins and CP2102 chip with micro USB connection\r\n$6.5 each no minimum or maximum\r\nFree shipping over $50\r\nCable an additional $3.35https://zaitroni… [+123 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Liz Clark",
+    "title": "ESP32-S3 BLE iOS Media Controller",
+    "description": "Build a Bluetooth connected touch screen media controller for your iOS devices.",
+    "url": "https://learn.adafruit.com/esp32-s3-ble-ios-media-controller/overview",
+    "urlToImage": "https://cdn-learn.adafruit.com/guides/images/000/004/044/medium800/hero-guide-thumb.jpg",
+    "publishedAt": "2024-07-18T14:27:10Z",
+    "content": "Make a media controller for your iOS device Build a Bluetooth connected touch screen media controller for your iOS devices.Learn More"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Anne Barela",
+    "title": "ICYMI Python on Microcontrollers Newsletter: CircuitPython Day 2024, a MicroPython Computer and Much More! #CircuitPython #Python #micropython #ICYMI @Raspberry_Pi",
+    "description": "If you missed this week’s Python on Microcontrollers Newsletter, here is the ICYMI (in case you missed it) version.To never miss another issue, subscribe now! – You’ll get one terrific newsletter each Tuesday (which is out before this post). 11,233 subscriber…",
+    "url": "https://blog.adafruit.com/2024/08/06/icymi-python-on-microcontrollers-newsletter-circuitpython-day-2024-a-micropython-computer-and-much-more-circuitpython-python-micropython-icymi-raspberry_pi/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/08/ICYMI-banner-2024-04.jpg",
+    "publishedAt": "2024-08-06T13:35:31Z",
+    "content": "If you missed this week’s Python on Microcontrollers Newsletter, here is the ICYMI (in case you missed it) version.\r\nTo never miss another issue, subscribe now! – You’ll get one terrific newsletter e… [+15274 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Electronics-lab.com"
+    },
+    "author": "Debashis Das",
+    "title": "Waveshare Pi5 Module BOX is a Mini Computer Kit for the Raspberry Pi 5",
+    "description": "Waveshare Pi5 Module BOX is a multi-functional all-in-one mini-computer kit designed for Raspberry Pi 5. The...\nThe post Waveshare Pi5 Module BOX is a Mini Computer Kit for the Raspberry Pi 5 appeared first on Electronics-Lab.com.",
+    "url": "https://www.electronics-lab.com/waveshare-pi5-module-box-is-a-mini-computer-kit-for-the-raspberry-pi-5/",
+    "urlToImage": "https://www.electronics-lab.com/wp-content/uploads/2024/07/pi5-module-box-a-1-e1721977740934.jpg",
+    "publishedAt": "2024-08-03T18:44:59Z",
+    "content": "Waveshare Pi5 Module BOX is a multi-functional all-in-one mini-computer kit designed for Raspberry Pi 5. The most interesting feature of this kit is that it is made from aluminum alloy and includes t… [+1809 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Cnblogs.com"
+    },
+    "author": "痞子衡",
+    "title": "《痞子衡嵌入式半月刊》 第 105 期 - 痞子衡",
+    "description": "痞子衡嵌入式半月刊： 第 105 期 这里分享嵌入式领域有用有趣的项目/工具以及一些热点新闻，农历年分二十四节气，希望在每个交节之日准时发布一期。 本期刊是开源项目（GitHub: JayHeng/pzh-mcu-bi-weekly），欢迎提交 issue，投稿或推荐你知道的嵌入式那些事儿。 上期回",
+    "url": "https://www.cnblogs.com/henjay724/p/18314326",
+    "urlToImage": null,
+    "publishedAt": "2024-07-21T04:04:00Z",
+    "content": "/\r\nGitHub: JayHeng/pzh-mcu-bi-weekly issue\r\n 104 \r\n1969721·11\r\n 4 1 \r\n1DC-UPS - 60W UPS\r\nDC-UPS UPS WLAN \r\nDC-UPS \r\n- 3\r\n- (9V/12V/12.5V/15V)\r\n- USB-C(5V, 3A)\r\n- (218650)\r\n- (esp32, esp-idf)\r\n- USB\r\n… [+254 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Stephanie",
+    "title": "New nEw NEWS From Adafruit Round-Up: April, May & June, 2024",
+    "description": "New nEw NEWs is Adafruit’s weekly newsletter that features new products, special offers and more. Sign up at Adafruit.com/Newsletter to receive New nEw NEWs! Not sure you want to add another message to your inbox? We get it. Catch up on past issues here, chec…",
+    "url": "https://blog.adafruit.com/2024/07/08/new-new-news-from-adafruit-round-up-april-may-june-2024/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2022/07/adafruit_newsletter_2021_summer_hero-e1657113266693.jpg",
+    "publishedAt": "2024-07-08T14:30:54Z",
+    "content": "New nEw NEWs is Adafruit’s weekly newsletter that features new products, special offers and more. Sign up at Adafruit.com/Newsletter to receive New nEw NEWs! \r\nNot sure you want to add another messag… [+5782 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Kocpc.com.tw"
+    },
+    "author": "KKVincent",
+    "title": "真正的射擊遊戲？腦洞玩家將《毀滅戰士》移植到電動飛機杯上",
+    "description": "由 Id Software 於 1993 年推出的《毀滅戰士》可說是奠定了整個第一人稱射擊遊戲類型的里程碑之作，但除了這個極具影響力的歷史定位之外，本作在玩家之間還存在著另一個非常有趣的形象，那就是「能夠在任何裝置上運行」。多年下來，玩家們嘗試將這款經典第一人稱射擊遊戲搬上各種意想不到的平台，像是電子計算機、智慧型冰箱、數位相機、麥當勞點餐機，甚至是電子驗孕棒等。而現在，一位玩家再次腦動大開，將這款經典射擊遊戲搬上了一個「電子飛機杯」的小螢幕上，帶來更加硬派的射擊體驗。\nThe post 真正的射擊遊戲？腦洞玩家…",
+    "url": "https://www.kocpc.com.tw/archives/555754",
+    "urlToImage": "https://www.kocpc.com.tw/wp-content/uploads/2024/07/20240712093442_0_2e1c2d.png",
+    "publishedAt": "2024-07-12T04:00:06Z",
+    "content": "Id Software 1993 \r\nAaron Christophel 80 \r\n Aaron Christophel id Software \r\n 16KB RAM 64KB 1 2 MB \r\nAaron Christophel ESP32 ESP32 \r\n(UART, universal asynchronous receiver/transmitter) Christophel PC C… [+73 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Liz Clark",
+    "title": "Feather ESP32-S3 TFT CircuitPython Day 2024 Countdown Clock",
+    "description": "In this year of chaos and calamity, one day on the horizon fills us with hope: CircuitPython Day 2024! Countdown to the snakiest day of the year (August 16, 2024) with, what else? A CircuitPython project! In this project you'll use a Feather ESP32-S3 TFT boar…",
+    "url": "https://learn.adafruit.com/feather-esp32-s3-tft-circuitpython-day-2024-countdown-clock/overview",
+    "urlToImage": "https://cdn-learn.adafruit.com/guides/images/000/004/051/medium800thumb/tft_hero.gif",
+    "publishedAt": "2024-07-31T17:08:33Z",
+    "content": "Countdown to the snakiest day of the year!In this year of chaos and calamity, one day on the horizon fills us with hope: CircuitPython Day 2024! Countdown to the snakiest day of the year (August 16, … [+237 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Stephanie",
+    "title": "Adafruit Weekly Editorial Round-Up: #BackToSchool, CircuitPython Day, NeoPixel Floor Lamp & More!",
+    "description": "ADAFRUIT WEEKLY EDITORIAL ROUND-UPWe’ve got so much happening here at Adafruit that it’s not always easy to keep up! Don’t fret, we’ve got you covered. Each week we’ll be posting a handy round-up of what we’ve been up to, ranging from learn guides to blog art…",
+    "url": "https://blog.adafruit.com/2024/08/04/adafruit-weekly-editorial-round-up-backtoschool-circuitpython-day-neopixel-floor-lamp-more/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/NewImage-43-1-1-1.png",
+    "publishedAt": "2024-08-04T19:00:25Z",
+    "content": "August 4, 2024 AT 3:00 pm\r\nAdafruit Weekly Editorial Round-Up: #BackToSchool, CircuitPython Day, NeoPixel Floor Lamp &amp; More!\r\nADAFRUIT WEEKLY EDITORIAL ROUND-UP\r\nWe’ve got so much happening here … [+4417 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Abertoatedemadrugada.com"
+    },
+    "author": "Carlos Martins",
+    "title": "Smartwatch ESP32 com medidor laser",
+    "description": "Este projecto mostra como criar um smartwatch ESP32 com sensor laser para medir distâncias e também um sensor de qualidade do ar.",
+    "url": "https://abertoatedemadrugada.com/2024/07/smartwatch-esp32-com-medidor-laser.html",
+    "urlToImage": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfRIE6ruOsNFGnL7x2BGjdt4i2_T2lDZqKLyrZUb7YJfaxd6ikQGi_2JOMPlg4BgBg5zui7VDdmqzy6H5lHPD246dSk3VWs2IjK5NfWqwKsYgdC8KSWGm1pKEaVKdA4tpmDQ_-wEfYg8cnW9SQDd8demXhPyc3hA9LyCkZHwim1TuLZ3-y8ZQJggMv-zHZ/w1200-h630-p-k-no-nu/esp32lidarwatch.jpg",
+    "publishedAt": "2024-07-20T17:30:00Z",
+    "content": "Este projecto mostra como criar um smartwatch ESP32 com sensor laser para medir distâncias e também um sensor de qualidade do ar.\n\n\nO pequeno mas imensamente potente ESP32 é usado para todo o tipo de… [+1188 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Goodereader"
+    },
+    "author": "Navkiran Dhaliwal",
+    "title": "LILYGO T3S3 E-Paper Combines with 2.13-inch E-Paper Display",
+    "description": "Image credit:  CNX-software LILYGO T3S3 E-Paper is an ESP32-S3 WiFi and Bluetooth LE development board with a 2.13-inch e-Paper display and an SX1262 LoRa module that should make it suitable for off-grid messsaging even under sunlight. LILYGO has made some ES…",
+    "url": "https://goodereader.com/blog/e-paper/lilygo-t3s3-e-paper-combines-with-2-13-inch-e-paper-display",
+    "urlToImage": "https://assets.goodereader.com/blog/uploads/images/2024/07/13003718/LILYGO-epaper-display.jpg",
+    "publishedAt": "2024-07-13T12:21:29Z",
+    "content": "Image credit:  CNX-software\r\nLILYGO T3S3 E-Paper is an ESP32-S3 WiFi and Bluetooth LE development board with a 2.13-inch e-Paper display and an SX1262 LoRa module that should make it suitable for off… [+2860 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Angelica",
+    "title": "COMING SOON – Adafruit QT Py CH32V203 Dev Board with STEMMA QT",
+    "description": "COMING SOON – Adafruit QT Py CH32V203 Dev Board with STEMMA QTComing soon! Sign up to be notified when these are in stock and shippingWhat a cutie pie! Or is it… a QT Py? This diminutive dev board features the powerful CH32V203 low-cost processor that’s all t…",
+    "url": "https://blog.adafruit.com/2024/07/17/coming-soon-adafruit-qt-py-ch32v203-dev-board-with-stemma-qt/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/5996_iso_ORIG_2024_07.jpg",
+    "publishedAt": "2024-07-17T20:30:48Z",
+    "content": "July 17, 2024 AT 4:30 pm\r\nCOMING SOON – Adafruit QT Py CH32V203 Dev Board with STEMMA QT\r\nComing soon! Sign up to be notified when these are in stock and shipping\r\nWhat a cutie pie! Or is it… a QT Py… [+4767 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Debashis Das",
+    "title": "4.3-inch ESP32-S3 wireless touchscreen display features terminal block with RS485, CAN Bus, I2C, DIO",
+    "description": "Waveshare ESP32-S3 touch LCD is a ESP32-S3 based touchscreen development board with CAN, RS485, I2C, RTC, and SD card slots and much more.",
+    "url": "https://www.cnx-software.com/2024/07/22/4-3-inch-esp32-s3-wireless-touchscreen-display-terminal-block-rs485-can-bus-i2c-dio/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/07/Waveshare-ESP32-S3-Touch-dev-baord.jpg",
+    "publishedAt": "2024-07-22T00:30:10Z",
+    "content": "Waveshare “ESP32-S3-Touch-LCD-4.3B” is a capacitive touch display development board built around an ESP32-S3 SoC with RS485, CAN Bus, I2C, and isolated DIO interfaces provided through a terminal bloc… [+3056 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Jean-Luc Aufranc (CNXSoft)",
+    "title": "ESP32-P4-Function-EV-Board development board launched for $55 with 7-inch display and camera module",
+    "description": "Espressif Systems \"ESP32-P4-Function-EV-Board\" - the official ESP32-P4 development board - is now available in limited quantities on Espressif's",
+    "url": "https://www.cnx-software.com/2024/08/07/esp32-p4-function-ev-board-development-board-launched-for-55-with-7-inch-display-and-camera-module/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/08/ESP32-P4-development-board.jpg",
+    "publishedAt": "2024-08-07T09:15:00Z",
+    "content": "Espressif Systems “ESP32-P4-Function-EV-Board” – the official ESP32-P4 development board – is now available in limited quantities on Espressif’s AliExpress store for $55.44, and some other AliExpress… [+3713 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Tomisin Olujinmi",
+    "title": "The ESP32 Marauder Pocket Unit v2 is a wireless penetration device with an onboard GPS module and touchscreen",
+    "description": "The ESP32 Marauder Pocket Unit with GPS v2 is a portable Wi-Fi and Bluetooth penetration tool powered by an ESP32 module and used to test and analyze",
+    "url": "https://www.cnx-software.com/2024/07/10/the-esp32-marauder-pocket-unit-v2-is-a-wireless-penetration-device-with-an-onboard-gps-module-and-touchscreen/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/07/MarauderUnit2WithCase-3.jpg",
+    "publishedAt": "2024-07-10T06:00:40Z",
+    "content": "The ESP32 Marauder Pocket Unit with GPS v2 is a portable Wi-Fi and Bluetooth penetration tool powered by an ESP32 module and used to test and analyze wireless networks.\r\nIt features a 2.8-inch touchs… [+2359 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Jean-Luc Aufranc (CNXSoft)",
+    "title": "Waveshare ESP32-S3-Zero is a tiny WiFi and BLE IoT module with a USB-C port, up to 32 GPIOs",
+    "description": "Waveshare ESP32-S3-Zero is a tiny (23.5x18 mm) module based on Espressif ESP32-S3 WiFi 4 and BLE microcontroller with two rows of nine through holes plus",
+    "url": "https://www.cnx-software.com/2024/08/07/waveshare-esp32-s3-zero-is-a-tiny-wifi-and-ble-iot-module-with-a-usb-c-port-up-to-32-gpios/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/08/ESP32-S3-Zero.jpg",
+    "publishedAt": "2024-08-06T17:01:07Z",
+    "content": "Waveshare ESP32-S3-Zero is a tiny (23.5×18 mm) module based on Espressif ESP32-S3 WiFi 4 and BLE microcontroller with two rows of nine through holes plus 16 pads for GPIOs, a USB-C port for power and… [+2459 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "heise online"
+    },
+    "author": "Christof Windeck",
+    "title": "RISC-V-Entwicklerboard mit Espressif ESP32-P4",
+    "description": "Espressif bringt immer mehr Chips mit RISC-V-Kernen. Der vergleichsweise starke ESP32-P4 kommt nun auf einem 65-Euro-Board für Smart-Home-Technik.",
+    "url": "https://www.heise.de/news/RISC-V-Entwicklerboard-mit-Espressif-ESP32-P4-9827306.html",
+    "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/6/4/7/5/1/6/ESP-32-P4-16-9-f390859413cecc06.jpg",
+    "publishedAt": "2024-08-07T13:11:00Z",
+    "content": "Der chinesische Chiphersteller Espressif ist für seine billigen und weitverbreiteten Mikrocontroller mit integriertem WLAN bekannt, ESP8266 und ESP32. Der neue ESP32-P4 ist deutlich leistungsstärker,… [+2676 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Jean-Luc Aufranc (CNXSoft)",
+    "title": "Arduino and LVGL-compatible ESP32-C3 board features a 1.28-inch round touchscreen display fully housed in a case",
+    "description": "The ESP32-2424S012 is an ESP32-C3 WiFi and BLE development board with a 1.28-inch round touchscreen color display that is fully housed in a black or white",
+    "url": "https://www.cnx-software.com/2024/08/06/arduino-and-lvgl-compatible-esp32-c3-board-features-a-1-28-inch-round-touchscreen-display-fully-housed-in-a-case/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/08/ESP32-2424S012-round-display-full-enclosure.jpg",
+    "publishedAt": "2024-08-05T17:01:29Z",
+    "content": "The ESP32-2424S012 is an ESP32-C3 WiFi and BLE development board with a 1.28-inch round touchscreen color display that is fully housed in a black or white plastic enclosure and suitable for Arduino a… [+2899 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Adafruit.com"
+    },
+    "author": "Anne Barela",
+    "title": "ICYMI Python on Microcontrollers Newsletter: CircuitPython 9.1 Released, Arduino Adopts Qwiic and so much more! #CircuitPython #Python #micropython #ICYMI @Raspberry_Pi",
+    "description": "If you missed this week’s Python on Microcontrollers Newsletter, here is the ICYMI (in case you missed it) version.To never miss another issue, subscribe now! – You’ll get one terrific newsletter each Tuesday (which is out before this post). 11,156 subscriber…",
+    "url": "https://blog.adafruit.com/2024/07/16/icymi-python-on-microcontrollers-newsletter-circuitpython-9-1-released-arduino-adopts-qwiic-and-so-much-more-circuitpython-python-micropython-icymi-raspberry_pi/",
+    "urlToImage": "https://cdn-blog.adafruit.com/uploads/2024/07/ICYMI-banner-2024-04-1.jpg",
+    "publishedAt": "2024-07-16T13:35:58Z",
+    "content": "If you missed this week’s Python on Microcontrollers Newsletter, here is the ICYMI (in case you missed it) version.\r\nTo never miss another issue, subscribe now! – You’ll get one terrific newsletter e… [+17856 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Liliputing"
+    },
+    "author": "Brad Linder",
+    "title": "Tulip Creative Computer is a small, cheap, open source PC for making music and more (available for $59, but you can also build your own)",
+    "description": "The Tulip Creative Computer is an open source computer designed for making music or coding simple games or other applications. It’s not exactly the most powerful little computer money can buy, but it doesn’t take a lot of money to buy one: you can pick up a p…",
+    "url": "https://liliputing.com/tulip-creative-computer-is-a-small-cheap-open-source-pc-for-making-music-and-more-available-for-59-but-you-can-also-build-your-own/",
+    "urlToImage": "https://liliputing.com/wp-content/uploads/2024/08/tulip_02.jpg",
+    "publishedAt": "2024-08-05T14:18:50Z",
+    "content": "The Tulip Creative Computer is an open source computer designed for making music or coding simple games or other applications.\r\nIt’s not exactly the most powerful little computer money can buy, but i… [+1517 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Geeky Gadgets"
+    },
+    "author": "Julian Horsey",
+    "title": "PiPower 3 – Raspberry Pi UPS module for uninterrupted power",
+    "description": "Have you ever experienced the frustration of losing hours of work on your Raspberry Pi due to an unexpected power outage? It’s a common problem that can derail even the most well-planned projects. This innovative Raspberry Pi UPS module offers robust power ma…",
+    "url": "https://www.geeky-gadgets.com/raspberry-pi-ups/",
+    "urlToImage": "https://www.geeky-gadgets.com/wp-content/uploads/2024/07/Raspberry-Pi-UPS-module.jpg",
+    "publishedAt": "2024-07-12T11:45:03Z",
+    "content": "Have you ever experienced the frustration of losing hours of work on your Raspberry Pi due to an unexpected power outage? It’s a common problem that can derail even the most well-planned projects. Th… [+3925 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Jean-Luc Aufranc (CNXSoft)",
+    "title": "LILYGO T3S3 E-Paper combines ESP32-S3 WiFi & BLE SoC with LoRa module, 2.13-inch e-Paper display",
+    "description": "LILYGO T3S3 E-Paper is an ESP32-S3 WiFi and Bluetooth LE development board with a 2.13-inch e-Paper display and an SX1262 LoRa module that should make it",
+    "url": "https://www.cnx-software.com/2024/07/11/lilygo-t3s3-e-paper-combines-esp32-s3-wifi-ble-soc-with-lora-module-2-13-inch-e-paper-display/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/07/ESP32-S3-LoRa-E-Paper-development-board.jpg",
+    "publishedAt": "2024-07-11T08:17:59Z",
+    "content": "LILYGO T3S3 E-Paper is an ESP32-S3 WiFi and Bluetooth LE development board with a 2.13-inch e-Paper display and an SX1262 LoRa module that should make it suitable for off-grid messsaging even under s… [+3181 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Jean-Luc Aufranc (CNXSoft)",
+    "title": "StackyFi ESP32-S3 board features camera connector, 40-pin GPIO header for Raspberry Pi HAT (Crowdfunding)",
+    "description": "SB Components' StackyFi is an ESP32-S3 WiFi and Bluetooth IoT board with a 40-pin GPIO header compatible with most Raspberry Pi HAT expansion boards and a",
+    "url": "https://www.cnx-software.com/2024/07/17/stackyfi-esp32-s3-camera-board-40-pin-gpio-header-raspberry-pi-hat/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/07/StackyFi-ESP32-S3-Raspberry-Pi-Zero-board.jpg",
+    "publishedAt": "2024-07-17T04:53:48Z",
+    "content": "SB Components’ StackyFi is an ESP32-S3 WiFi and Bluetooth IoT board with a 40-pin GPIO header compatible with most Raspberry Pi HAT expansion boards and a camera connector for image capture to a micr… [+2889 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Tomisin Olujinmi",
+    "title": "TinyWatch S3 is an open-source, customizable smartwatch powered by ESP32-S3 SoC",
+    "description": "The TinyWatch S3 is an ESP32-S3 development board in a smartwatch form factor from Seon Rozenblum, also known as Unexpected Maker. It is powered by the",
+    "url": "https://www.cnx-software.com/2024/07/25/tinywatch-s3-is-an-open-source-customizable-smartwatch-powered-by-esp32-s3-soc/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/07/tinywatch-s3-1.jpg",
+    "publishedAt": "2024-07-25T02:26:36Z",
+    "content": "The TinyWatch S3 is an ESP32-S3 development board in a smartwatch form factor from Seon Rozenblum, also known as Unexpected Maker.\r\nIt is powered by the ESP32-S3 wireless microcontroller with 8MB qua… [+3046 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Sayantan Nandy",
+    "title": "NBIOT/LTE-M Air Monitor – A solar-powered ESP32-S3 multi-sensor board with SIM7080G NB-IoT & LTE-M modem",
+    "description": "Solar-powered NBIOT/LTE-M Air Monitor with ESP32-S3-WROOM-1, LTE Cat.M1/NB1/NB2, SIM7080G, for reliable remote monitoring.",
+    "url": "https://www.cnx-software.com/2024/08/01/nbiot-lte-m-air-monitor-solar-powered-esp32-s3-multi-sensor-board-with-sim7080g-nb-iot-lte-m-modem/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/08/nbiotlte-m_air_monitor_air_temperaturehumiditylight_co2_-2_1200.jpg",
+    "publishedAt": "2024-08-01T10:34:36Z",
+    "content": "The NBIOT/LTE-M Air Monitor is a solar-powered device that utilizes a combination of ESP32-S3 and SIM7080G modules for remote environmental monitoring. It monitors and transmits environmental paramet… [+4402 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Jean-Luc Aufranc (CNXSoft)",
+    "title": "LILYGO T-ETH-ELite ESP32-S3 Ethernet PoE board supports stackable LoRaWAN and Cellular expansion modules",
+    "description": "LILYGO T-ETH-Elite ESP32-S3 board features an Ethernet RJ45 (PoE) port and stackable shields for LoRaWAN, 2G, NB-IoT, or/and 4G LTE cellular.",
+    "url": "https://www.cnx-software.com/2024/07/30/lilygo-t-eth-elite-esp32-s3-ethernet-poe-board-supports-stackable-lorawan-and-cellular-expansion-modules/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/07/LILYGO-T-ETH-Elite-ESP32-S3-Ethernet-board-LoRaWAN-mPCIE-cellular-expansion.jpg",
+    "publishedAt": "2024-07-30T08:23:03Z",
+    "content": "LILYGO T-ETH-Elite is an ESP32-S3-powered IoT board with an Ethernet RJ45 port supporting PoE and a 40-pin GPIO header for stackable shields that offer support for LoRaWAN, 2G, NB-IoT, or/and 4G LTE … [+3468 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Jean-Luc Aufranc (CNXSoft)",
+    "title": "LILYGO T-Halow is an ESP32-S3 board with long-range WiFi HaLoW, OV2640/OV5640 camera support",
+    "description": "LILYGO T-Halow is an ESP32-S3 board equipped with a WiFi HaLow module with up to 1.2km range, a connector compatible with OV2640 and OV5640 camera",
+    "url": "https://www.cnx-software.com/2024/07/24/lilygo-t-halow-esp32-s3-board-long-range-wifi-halow-ov2640-ov5640-camera/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/07/ESP32-S3-WiFi-HaLow-board.jpg",
+    "publishedAt": "2024-07-24T08:21:06Z",
+    "content": "LILYGO T-Halow is an ESP32-S3 board equipped with a WiFi HaLow module with up to 1.2km range, a connector compatible with OV2640 and OV5640 camera modules, and an 18650 battery holder for power, as w… [+3995 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Tomisin Olujinmi",
+    "title": "Qsen-07 multi-sensor wireless board can detect CO2, VOC, temperature, humidity, ambient light, and attitude",
+    "description": "The Qsen-07 multi-sensor board is an ESP32 wireless development board that combines several useful sensors into one device, making it easier to control,",
+    "url": "https://www.cnx-software.com/2024/07/16/qsen-07-multi-sensor-wireless-board-can-detect-co2-voc-temperature-humidity-ambient-light-and-attitude/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/07/qsen-07-board-2.jpg",
+    "publishedAt": "2024-07-16T00:43:06Z",
+    "content": "The Qsen-07 multi-sensor board is an ESP32 wireless development board that combines several useful sensors into one device, making it easier to control, monitor, and enhance your home environment. It… [+3725 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Debashis Das",
+    "title": "Minino ESP32-C6 board is designed for IoT security and penetration testing",
+    "description": "Minino security tool is a kitty-shaped ESP32-C6 powered cybersecurity device for analyzing 2.4GHz communications and probing IoT devices. It supports",
+    "url": "https://www.cnx-software.com/2024/07/15/minino-esp32-c6-board-is-designed-for-iot-security-and-penetration-testing/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/07/Minino-the-Kitty-Shape-IoT-AnalysisTool.jpg",
+    "publishedAt": "2024-07-14T17:01:31Z",
+    "content": "Minino security tool is a kitty-shaped ESP32-C6 powered cybersecurity device for analyzing 2.4GHz communications and probing IoT devices. It supports Bluetooth Low Energy, Wi-Fi 6, Zigbee, Thread, an… [+3819 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Debashis Das",
+    "title": "ESP32-S3 LCD Driver Board supports both circular and square displays",
+    "description": "Waveshare ESP32-S3 LCD Driver Board is a compact development board designed to simplify the GUI development process. The company mentions that the board",
+    "url": "https://www.cnx-software.com/2024/07/11/esp32-s3-lcd-driver-board-supports-both-circular-and-square-displays/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/07/Waveshare-ESP32-S3-LCD-Driver-Board-1.jpg",
+    "publishedAt": "2024-07-10T17:01:54Z",
+    "content": "Waveshare ESP32-S3 LCD Driver Board is a compact development board designed to simplify the GUI development process. The company mentions that the board supports 2.1-inch, 2.8-inch, and 4-inch displa… [+4037 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Jean-Luc Aufranc (CNXSoft)",
+    "title": "M5Stamp Fly ESP32-S3 WiFi drone is controlled by the M5Atom WiFi joystick controller using ESPNOW",
+    "description": "M5Stack M5Stamp Fly is a tiny ESP32-S3 WiFi drone based on the company's M5Stamp S3 WiFi 4 and BLE IoT module, equipped with four motors and several",
+    "url": "https://www.cnx-software.com/2024/08/02/m5stamp-fly-esp32-s3-wifi-drone-is-controlled-by-the-m5atom-wifi-joystick-controller-using-espnow/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/08/M5Stamp-Fly-ESP32-Drone.jpg",
+    "publishedAt": "2024-08-02T07:35:16Z",
+    "content": "M5Stack M5Stamp Fly is a tiny ESP32-S3 WiFi drone based on the company’s M5Stamp S3 WiFi 4 and BLE IoT module, equipped with four motors and several sensors. and controllable the M5Atom WiFi joystick… [+3385 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Sparkfun.com"
+    },
+    "author": "Chris McCarty",
+    "title": "Take Your Projects to New Heights with SparkFun RTK EVK",
+    "description": "SparkFun's newest RTK option is now available!",
+    "url": "https://www.sparkfun.com/news/11262",
+    "urlToImage": null,
+    "publishedAt": "2024-07-12T11:04:00Z",
+    "content": "Hello everyone and welcome back to another Friday Product Post here at SparkFun Electronics! This week, we only have a single product, but we promise that it's a big one! We are happy to introduce al… [+4184 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Linuxgizmos.com"
+    },
+    "author": "Giorgio Mendoza",
+    "title": "Olimex Showcases Develoment Board Design Based on ESP32-P4 RISC-V SoC",
+    "description": "Espressif Systems announced the ESP32-P4 over a year ago. While the chip is not yet available for retail, a prototype development board featuring the chip was recently showcased by Olimex. This board includes multiple interfaces, such as an Ethernet connector…",
+    "url": "https://linuxgizmos.com/olimex-showcases-develoment-board-design-based-on-esp32-p4-risc-v-soc/",
+    "urlToImage": "https://linuxgizmos.com/files/esp32-p4-devkit_rev_a-side.webp",
+    "publishedAt": "2024-07-26T23:09:29Z",
+    "content": "TwitterFacebook LinkedInRedditPinterestEmail\r\nEspressif Systems announced the ESP32-P4 over a year ago. While the chip is not yet available for retail, a prototype development board featuring the chi… [+1985 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Nabto.com"
+    },
+    "author": "Carsten Rhod Gregersen",
+    "title": "Industrial IoT: Exploring Microcontrollers for Robust Applications",
+    "description": "When we think of the Internet of Things (IoT), our imaginations are often limited to consumer applications: smart homes, smart transportation, smart offices, etc. However, these account for just the tip of the iceberg when it comes to IoT. Just beneath the su…",
+    "url": "https://www.nabto.com/best-industrial-microcontrollers/",
+    "urlToImage": "https://dz2cdn1.dzone.com/storage/article-thumb/17826158-thumb.jpg",
+    "publishedAt": "2024-08-02T21:00:00Z",
+    "content": "When we think of the Internet of Things (IoT), our imaginations are often limited to consumer applications: smart homes, smart transportation, smart offices, etc. However, these account for just the … [+8658 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Jean-Luc Aufranc (CNXSoft)",
+    "title": "LOLIN S3 Mini Pro – A tiny ESP32-S3 board with a 0.85-inch display and a multi-color PCB",
+    "description": "LOLIN S3 Mini Pro is a tiny ESP32-S3 WiFi and BLE board with a 0.85-inch display and it's one of the first boards I've seen with a multi-color PCB that",
+    "url": "https://www.cnx-software.com/2024/07/24/lolin-s3-mini-pro-a-tiny-esp32-s3-board-with-a-0-85-inch-display-and-a-multi-color-pcb/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/07/LOLIN-S3-Mini-Pro-multi-color-PCB-board.jpg",
+    "publishedAt": "2024-07-23T17:01:06Z",
+    "content": "LOLIN S3 Mini Pro is a tiny ESP32-S3 WiFi and BLE board with a 0.85-inch display and it’s one of the first boards I’ve seen with a multi-color PCB that some PCB manufacturers have been offered recent… [+2033 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Debashis Das",
+    "title": "Makerfabs SenseLora 4G gateway supports LTE Cat 1 and WiFi 4 connectivity, features solar battery charger",
+    "description": "The Makerfabs SenseLora 4G Gateway is a device that collects data from LoRa sensors (like temperature and humidity sensors) and sends that data over a 4G",
+    "url": "https://www.cnx-software.com/2024/08/07/makerfabs-senselora-4g-gateway-supports-lte-cat-1-and-wifi-4-connectivity-features-solar-battery-charger/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/08/SenseLoRa_4G-LTE-CAT1-Gateway.jpg",
+    "publishedAt": "2024-08-07T07:32:12Z",
+    "content": "The Makerfabs SenseLora 4G Gateway is a device that collects data from LoRa sensors (like temperature and humidity sensors) and sends that data over a 4G network to a cloud service or directly to you… [+3518 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Nikkei.com"
+    },
+    "author": "羽田野 太巳＝futomi 代表取締役社長",
+    "title": "非力だが安価、産業用途に適したLinuxベースのSBC「M5Stack CoreMP135」を試す",
+    "description": "中国M5Stack Technologyの「M5Stack」といえば、中国Espressif Systemsのマイコン「ESP32」を採用したWi-Fi、Bluetooth内蔵のLCD付きマイコン開発キットというイメージを持つのではないだろうか。2024年4月にEspressif SystemsがM5Stack Technologyの株式の過半数を取得し、傘下に収めた。これにより両社の関係はより強...",
+    "url": "https://xtech.nikkei.com/atcl/nxt/column/18/01109/080500059/",
+    "urlToImage": "https://xtech.nikkei.com/atcl/nxt/column/18/01109/080500059/topm.jpg?20220512",
+    "publishedAt": "2024-08-06T22:08:42Z",
+    "content": "M5Stack TechnologyM5StackEspressif SystemsESP32Wi-FiBluetoothLCD20244Espressif SystemsM5Stack Technology\r\nM5Stack TechnologyLinuxSBC2023Raspberry Pi CM4M5Stack CM4Stack\r\n20245M5Stack CoreMP135CoreMP1… [+174 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Liliputing"
+    },
+    "author": "Brad Linder",
+    "title": "Zerowriter Ink is an open source word processor with an E Ink display and a mechanical keyboard (crowdfunding)",
+    "description": "The Zerowriter Ink is an upcoming E Ink typewriter/word processor that fits into the growing (but still very niche) category of distraction-free writing devices. It combines a mechanical keyboard with a 5 inch E Ink display. Sure, you could use a laptop compu…",
+    "url": "https://liliputing.com/zerowriter-ink-is-an-open-source-word-processor-with-an-e-ink-display-and-a-mechanical-keyboard-crowdfunding/",
+    "urlToImage": "https://liliputing.com/wp-content/uploads/2024/07/zw-ink_03.jpg",
+    "publishedAt": "2024-07-27T21:57:25Z",
+    "content": "The Zerowriter Ink is an upcoming E Ink typewriter/word processor that fits into the growing (but still very niche) category of distraction-free writing devices.\r\nIt combines a mechanical keyboard wi… [+3393 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Habr.com"
+    },
+    "author": "smart_alex (Timeweb Cloud)",
+    "title": "Как выбрать контроллер для DIY (сводная таблица по 30++ моделям с комментариями)",
+    "description": "В этой статье речь пойдёт о выборе контроллера для DIY из ассортимента компании Kincony. Почему именно Kincony? Потому, что эта компания (в отличие от всех остальных) имеет беспрецедентно широкий модельный ряд контроллеров на ESP32 для DIY — на данный момент …",
+    "url": "https://habr.com/ru/companies/timeweb/articles/819285/#post-content-body",
+    "urlToImage": "https://habrastorage.org/webt/n4/bo/2j/n4bo2jphn3rnapb95d2n_feb4xm.jpeg",
+    "publishedAt": "2024-07-13T17:10:08Z",
+    "content": "DIY Kincony. Kincony? , ( ) ESP32 DIY 40 .\r\nKincony . , , . .\r\n. \r\n , .\r\n, , DIY .\r\n, , .. , Kincony.\r\nA2, A4, A6, A8, A16, A32, A64, A128, A256. /. ( ) .\r\n«E» «A», . , « », ( ).\r\n, «A» . «Other» ( )… [+1035 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Habr.com"
+    },
+    "author": "CodeName33",
+    "title": "Управляем нашей лодкой прямо с веб-страницы на телефоне",
+    "description": "Итак, мы будем делать автопилот для лодки, который будет содержать довольно простую механическую часть, а все вычисления будут производиться прямо в веб-приложении браузера. Короче, идем под кат, я все расскажу.",
+    "url": "https://habr.com/ru/articles/828938/#post-content-body",
+    "urlToImage": "https://habrastorage.org/getpro/habr/upload_files/2df/d68/2ff/2dfd682ff202f55eceb7d10834bf5c00.png",
+    "publishedAt": "2024-07-19T10:28:59Z",
+    "content": ", , , - .\r\n?\r\n, , . , , , :\r\n , , ?\r\n, GPS, , , , , - , . , . , , , , , . , , , . , , - , , , , .\r\n . , , , .\r\n ? (choose your destiny)\r\n , . , , . GPS, BLE. , , . ESP32. BLE , Windows Android ( ). ,… [+3817 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Jean-Luc Aufranc (CNXSoft)",
+    "title": "Tuya Ivy smart flower pot monitors your plant’s inner feelings",
+    "description": "No need to check the calendar, it's not the first of April, and Tuya Ivy is indeed a smart WiFi-connected flower pot with a display that will report your",
+    "url": "https://www.cnx-software.com/2024/07/31/tuya-ivy-smart-flower-pot-monitors-your-plants-inner-feelings/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/07/Tuya-Ivy-Smart-Flower-Pot.jpg",
+    "publishedAt": "2024-07-31T03:49:30Z",
+    "content": "No need to check the calendar, it’s not the first of April, and Tuya Ivy is indeed a smart WiFi-connected flower pot with a display that will report your plant’s thirst for water, need for more light… [+2410 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Smzdm.com"
+    },
+    "author": "YikLiu",
+    "title": "ESPresence，HA的室内定位",
+    "description": "前言：人体存在传感器 可以解决一部分卧室内是否持续有人的问题，为什么是一部分，根据我目前的使用情况来看，睡觉的时候盖被子会有误报的情况，当然，可以用自动化来解决这个问题，比如当我或者我老...",
+    "url": "https://post.smzdm.com/p/a5oedd7x/",
+    "urlToImage": "https://qna.smzdm.com/202407/27/66a50e0117a181071.jpg_fo742.jpg",
+    "publishedAt": "2024-07-27T15:34:11Z",
+    "content": "ESPresence\r\nESPresenceesp32\r\n1esp32\r\n2homeassistant\r\n3mqtt\r\n4\r\nesp32\r\nhttp://espresense.com/firmware\r\n esp32connectesp32connect\r\n wifiwifibugwifiesp32wifiwifiESPresencewifissidwifi192.168.X.1ESPresen… [+980 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Sayantan Nandy",
+    "title": "ReSpeaker Lite Voice Assistant Kit combines XMOS XU-316 and ESP32-S3 for advanced voice processing, Home Assistant integration",
+    "description": "Seeed Studio's ReSpeaker Lite Kit, with XMOS XU-316 and XIAO ESP32S3, offers advanced voice processing and smart home control.",
+    "url": "https://www.cnx-software.com/2024/08/05/respeaker-lite-voice-assistant-kit-combines-xmos-xu-316-and-esp32-s3-for-advanced-voice-processing-home-assistant-integration/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/08/2-e1722694326792.jpg",
+    "publishedAt": "2024-08-05T04:54:10Z",
+    "content": "Seeed Studio’s ReSpeaker Lite Series includes the ReSpeaker Lite 2-Mic Array and Voice Assistant Kit, featuring the XMOS XU-316 AI sound chip for advanced voice processing and integration with Home A… [+4009 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Goodereader"
+    },
+    "author": "Sovan Mandal",
+    "title": "Zerowriter Ink e-Paper Typewriter Crowd Funding Campaign to Start Soon",
+    "description": "Here’s introducing the Zerowriter Ink, the typewriter with an E Ink display. If that is sounding familiar, that’s because the Zerowriter Ink happens to be the commercial version of the Zerowriter e-paper typewriter that creator Adam Wilk had revealed late las…",
+    "url": "https://goodereader.com/blog/technology/zerowriter-ink-e-paper-typewriter-crowd-funding-campaign-to-start-soon",
+    "urlToImage": "https://assets.goodereader.com/blog/uploads/images/2024/07/27155746/zerowriter-ink.png",
+    "publishedAt": "2024-07-27T20:36:47Z",
+    "content": "Here’s introducing the Zerowriter Ink, the typewriter with an E Ink display. If that is sounding familiar, that’s because the Zerowriter Ink happens to be the commercial version of the Zerowriter e-p… [+2691 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Seeedstudio.com"
+    },
+    "author": "Rachel",
+    "title": "Announcing the Seeed Studio XIAO 3pcs Pack",
+    "description": "Unlock your projects with the XIAO 3pcs Pack! Enjoy 10% off and free shipping on these powerful, compact microcontrollers ideal for TinyML. Equipped with ESP32, RP2040, nRF52840, and SAMD21 chips, XIAO boards are Arduino-compatible and perfect for space-const…",
+    "url": "https://www.seeedstudio.com/blog/2024/08/05/xiao-3pcs-pack-limited-time-offer/",
+    "urlToImage": null,
+    "publishedAt": "2024-08-05T09:07:18Z",
+    "content": "Since we launched the popular Seeed Studio XIAO series, a collection of thumb-sized MCUs, weve received a wealth of feedback from our enthusiastic community. Among the top requests were the inclusion… [+3895 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Habr.com"
+    },
+    "author": "AzazKamaz (Яндекс)",
+    "title": "Спидран в реальности: история робота, который быстрее всех в мире собирает кубик Рубика",
+    "description": "Всем привет! Сегодня я опишу свой путь от человека, который не умел собирать кубик Рубика, к человеку, который всё ещё не умеет делать это сам, но уже использует робота для этой задачи.Для начала определимся с исходными данными. Как у программиста, у меня был…",
+    "url": "https://habr.com/ru/companies/yandex/articles/831708/#post-content-body",
+    "urlToImage": "https://habrastorage.org/getpro/habr/upload_files/ec0/d97/d6d/ec0d97d6d022f7fbdfe4bfad3ae6e16b.jpg",
+    "publishedAt": "2024-08-01T09:00:04Z",
+    "content": "!  ,   ,  ,   ,     .\r\n    .   ,    (  , ).      (  LEGO MINDSTORMS).\r\n ,    MIT \r\n 0,38 .   , ,      .        , ,     ,      .\r\n  ,     ,     . , , « ».\r\n, :\r\n<ol><li> .     ,     ,   .\r\n</li><li> .… [+3304 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Tom's Hardware UK"
+    },
+    "author": "Les Pounder",
+    "title": "Cytron Maker Uno RP2040 Review: Budget-focused board",
+    "description": "Based upon the Raspberry Pi Pico’s RP2040, but designed to resemble the classic Arduino Uno, Cytron’s latest board takes aim at the low-cost end of the educators budget.",
+    "url": "https://www.tomshardware.com/maker-stem/rp2040-boards/cytron-maker-uno-rp2040-review",
+    "urlToImage": "https://cdn.mos.cms.futurecdn.net/FrrdmXgaACjpNkCX8BAmLb-1200-80.jpg",
+    "publishedAt": "2024-07-19T12:00:34Z",
+    "content": "Fresh on the success of its Edu Pico\r\n, Cytron has something else for the maker / educator who wants to get into coding with the Raspberry Pi Pico\r\n’s RP2040 chip. Cytron’s $15 Maker Uno RP2040\r\n is … [+8259 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Habr.com"
+    },
+    "author": "little-brother",
+    "title": "Свой контроллер для Oculus Quest 2 на ESP32",
+    "description": "Стандартные контроллеры популярных VR-гарнитур имеют сильно ограниченные возможности взаимодействия с виртуальным миром и некоторые задачи управления им практически не под силу, напр. имитация руля с коробкой передач. По схожей причине в мире игр уже давно су…",
+    "url": "https://habr.com/ru/articles/831228/#post-content-body",
+    "urlToImage": "https://habr.com/share/publication/831228/677f3eb0d93601d0d9348e615569adc4/",
+    "publishedAt": "2024-08-01T08:08:00Z",
+    "content": "1. Godot. 4.2.2.2. Mobile-.\r\n3. «Project &gt; Project Settings...». «XR &gt; OpenXR» «XR &gt; Shaders» Enabled. .\r\n4. AssetLib Godot OpenXR Vendors plugin.\r\n5. , OpenXR-, \r\nextends Node3D\r\nfunc _read… [+863 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Habr.com"
+    },
+    "author": "lesha108",
+    "title": "Информатор для стиральной машины",
+    "description": "Когда увлекаюсь работой, забываю обо всём, есть такое. Но бытовые проблемы никуда не исчезают и дают о себе знать. Лет десять назад осознал, что в век интернета уже надо что-то делать с тем, что я постоянно забываю вытащить бельё из стиральной машины. Приспос…",
+    "url": "https://habr.com/ru/articles/834172/#post-content-body",
+    "urlToImage": "https://habrastorage.org/getpro/habr/upload_files/9b9/cb6/876/9b9cb68761030b22beec2f9162c77564.jpg",
+    "publishedAt": "2024-08-06T12:14:10Z",
+    "content": ", , . . , - , . . , , ESP32 Rust. .\r\n 2010 . ( ) , . . - , . , . , . , , .\r\n , , , . . . . . , , , , . (F3) , , . , . , .\r\n, , 220 . , , , . . . , .\r\n TP-LINK TL-MR3020 . WiFi, ssmtp, -. . , , . , . … [+2577 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Prtimes.jp"
+    },
+    "author": null,
+    "title": "M5Stack社新製品、プログラマブルなドローンとコントローラ「M5Stamp Fly」「M5Atom Joystick」をスイッチサイエンスウェブショップにて2024年8月2日より販売開始",
+    "description": "株式会社スイッチサイエンスのプレスリリース（2024年8月2日 16時29分）M5Stack社新製品、プログラマブルなドローンとコントローラ「M5Stamp Fly」「M5Atom Joystick」をスイッチサイエンスウェブショップにて2024年8月2日より販売開始",
+    "url": "https://prtimes.jp/main/html/rd/p/000000168.000064534.html",
+    "urlToImage": "https://prcdn.freetls.fastly.net/release_image/64534/168/64534-168-d72d19affb744808faa66ff61fe6bae8-1354x763.png?format=jpeg&auto=webp&fit=bounds&width=2400&height=1260",
+    "publishedAt": "2024-08-02T07:29:16Z",
+    "content": "M5StackM5Stamp FlyM5Atom Joystick202482\r\nM5Stamp FlyStampS3AutoManual263\r\nM5Atom JoystickAtomS3STM32522RGB LEDM5Stamp Fly\r\nM5Stamp Fly\r\nM5Stamp Fly\r\n<table><tr><th>M5StampS3\r\n</th><td>ESP32-S3@Xtensa… [+1164 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Jean-Luc Aufranc (CNXSoft)",
+    "title": "SparkFun RTK EVK offers GNSS with centimeter accuracy, WiFi, Bluetooth, 4G LTE Cat 1, and Ethernet connectivity",
+    "description": "SparkFun RTK EVK is a fully-enclosed GNSS platform designed for fixed or mobile high-precision positioning and navigation applications with centimeter",
+    "url": "https://www.cnx-software.com/2024/07/16/sparkfun-rtk-evk-offers-gnss-with-centimeter-accuracy-wifi-bluetooth-4g-lte-cat-1-and-ethernet-connectivity/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/07/Sparkfun-RTK-EVK.jpg",
+    "publishedAt": "2024-07-15T17:01:33Z",
+    "content": "SparkFun RTK EVK is a fully-enclosed GNSS platform designed for fixed or mobile high-precision positioning and navigation applications with centimeter accuracy thanks to RTK (real-time kinematic) tec… [+5828 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "heise online"
+    },
+    "author": "Daniel Schwabe",
+    "title": "Starterkit für Sprachsteuerung von Seeed Studio",
+    "description": "Seeed Studio hat ein neues ReSpeaker-Produkt veröffentlicht. Der ReSpeaker Lite bereitet Stimmeingaben mit KI auf, die man mit ESP oder PC weiterverarbeitet.",
+    "url": "https://www.heise.de/news/Starterkit-fuer-Sprachsteuerung-von-Seeed-Studio-9827172.html",
+    "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/6/4/7/4/4/7/image1-b5dc5619de8b08e5.png",
+    "publishedAt": "2024-08-07T12:49:00Z",
+    "content": "Der ReSpeaker Lite ist dafür ausgelegt, Projekte mit Sprachsteuerung auszustatten. Es handelt sich um ein Mikrofon-Array mit zwei PDM-MEMS-Mikrofonen, das mit einem Chip gepaart ist, der KI-basierte … [+3235 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Trendhunter.com"
+    },
+    "author": "Michael Hemsworth",
+    "title": "Digital E Ink Typwriters - The Zerowriter Ink Offers a Week of Battery Life (TrendHunter.com)",
+    "description": "(TrendHunter.com) The Zerowriter Ink is a modernized take on the humble typewriter that's engineered to provide users with access to analog-inspired typing experiences at leisure. The typewriter is equipped...",
+    "url": "https://www.trendhunter.com/trends/zerowriter-ink",
+    "urlToImage": "https://cdn.trendhunterstatic.com/thumbs/541/zerowriter-ink.jpeg?auto=webp",
+    "publishedAt": "2024-07-26T04:30:02Z",
+    "content": "The Zerowriter Ink is a modernized take on the humble typewriter that's engineered to provide users with access to analog-inspired typing experiences at leisure. The typewriter is equipped with a mec… [+530 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Debashis Das",
+    "title": "4-inch LF40 square touchscreen display modules are designed for Luckfox Pico Ultra development board",
+    "description": "Luckfox LF40-480480-ARK and LF40-720720-ARK are two new 4-inch square touchscreen display modules specially designed for the Luckfox Pico Ultra micro Arm",
+    "url": "https://www.cnx-software.com/2024/07/09/4-inch-lf40-square-touchscreen-display-modules-are-designed-for-luckfox-pico-ultra-development-board/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/07/Luckfox-IPS-Touch-Displays-LF40-480480-ARK-and-LF40-720720-ARK.jpg",
+    "publishedAt": "2024-07-09T02:30:11Z",
+    "content": "Luckfox LF40-480480-ARK and LF40-720720-ARK are two new 4-inch square touchscreen display modules specially designed for the Luckfox Pico Ultra micro Arm Linux development board. Both displays featur… [+3562 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Cnblogs.com"
+    },
+    "author": "削微寒",
+    "title": "《HelloGitHub》第 100 期 - 削微寒",
+    "description": "HelloGitHub 每月 28 号（遇到周末就会提前发，不想占用大家宝贵的周末时间^_^），分享 GitHub 上有趣、入门级的开源项目，让你更好地体验开源的魅力。",
+    "url": "https://www.cnblogs.com/xueweihan/p/18324251",
+    "urlToImage": null,
+    "publishedAt": "2024-07-26T00:28:00Z",
+    "content": "HelloGitHub\r\nHelloGitHub GitHub \r\ngithub.com/521xueweihan/HelloGitHub\r\nPythonJavaGoC/C++Swift...\r\n28\r\nC \r\n1darktable\r\n2gnucash WindowsLinux macOS \r\nC# \r\n3git-credential-manager Git .NET Git git Git G… [+4010 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "heise online"
+    },
+    "author": "Heinz Behling",
+    "title": "YULC: LED-Controller mit ESP32 kann onboard bis zu 20 A Strom liefern",
+    "description": "Alte Weisheit: LED-Stripes mit mehreren hundert Leuchtdioden erfordern eine externe Stromzuführung. Der neue Controller YULC kann bis zu 20 A direkt liefern.",
+    "url": "https://www.heise.de/news/YULC-LED-Controller-mit-ESP32-kann-onboard-bis-zu-20-A-Strom-liefern-9800978.html",
+    "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/6/3/3/5/8/5/yulc-edd5b0b343e0c33e.jpg",
+    "publishedAt": "2024-07-15T15:00:00Z",
+    "content": "YULC, das steht für \"Yes, a USB Type-C LED Controller\", kann LED-Streifen mit Leuchtdioden des Typs WS2812 (5 V) direkt mit Strom versorgen, und zwar sogar vom USB-C-Anschluss aus. Das ist keine Selb… [+2001 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Habr.com"
+    },
+    "author": "DAN_SEA (RUVDS.com)",
+    "title": "Самодельная газонокосилка как коммерческий проект?",
+    "description": "Картинка youtube-канал «Machinery Nation»\r\n\n\nРазгар лета диктует иной раз любопытные идеи, которые могут помочь прокачаться в куче технических направлений сразу: помочь закрыть гештальт на тему самореализации в качестве робототехника (ведь одно дело — участво…",
+    "url": "https://habr.com/ru/companies/ruvds/articles/828640/#post-content-body",
+    "urlToImage": "https://habrastorage.org/webt/_0/uj/qp/_0ujqpfcwtra9rr0tiurozuboi4.jpeg",
+    "publishedAt": "2024-07-18T13:00:28Z",
+    "content": "youtube- «Machinery Nation», : ( , breadboard-, ). .\r\n, .\r\n, , , « », -.\r\n, . , , , .\r\n, , .\r\n, ( , - ).\r\n, ? ( , ?):\r\n : , , ;-)\r\n, , ( ) . 26 .. , - , «gerotor», :\r\n, .\r\n, , , .\r\n, , , :\r\n : , , , … [+1090 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Habr.com"
+    },
+    "author": "same_one",
+    "title": "Мотор «от Xiaomi»",
+    "description": "Как известно, движение — жизнь. А пошаговое движение — надёжный путь к любой цели (даже если эта цель в простом движении по кругу). Вот и я, лениво передвигаясь...",
+    "url": "https://habr.com/ru/articles/833912/#post-content-body",
+    "urlToImage": "https://habr.com/share/publication/833912/4be00b070fe181a3a8d8990bd4014dd2/",
+    "publishedAt": "2024-08-05T12:15:41Z",
+    "content": ", .     (    ). ,     . «Xiaomi Cyber Gear», , 2024- .\r\n ,   ,    Xiaomi Cyber Dog.      ,    Unitree,   ,   . , DIY,   ,   .\r\n ,    ,       . ,  ,   .\r\n  ,    ...  , ,   ,   . , qr  WiChat  , . .\r\n,… [+483 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNX Software"
+    },
+    "author": "Jean-Luc Aufranc (CNXSoft)",
+    "title": "The Open Home Foundation adds HACS, microWakeWord, and Music Assistant open-source projects",
+    "description": "HACS, microWakeWord, and Music Assistant projects have been added to the Open Home Foundation launched a few months ago to manage open-source projects",
+    "url": "https://www.cnx-software.com/2024/08/01/the-open-home-foundation-adds-hacs-microwakeword-and-music-assistant-open-source-projects/",
+    "urlToImage": "https://www.cnx-software.com/wp-content/uploads/2024/08/Open-Home-Foundation-adds-HACS-microWakeWord-Music-Assistant.jpg",
+    "publishedAt": "2024-08-01T03:55:49Z",
+    "content": "HACS, microWakeWord, and Music Assistant projects have been added to the Open Home Foundation launched a few months ago to manage open-source projects related to Home Assistant and Smart Home applica… [+1870 chars]"
+  }
+]

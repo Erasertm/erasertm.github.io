@@ -1,0 +1,88 @@
+      /* Stilovi tijela i članaka ostaju isti */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #333;
+                color: #f4f4f4;
+            }
+            .article {
+                background-color: #444;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+            .article a {
+                color: #66B2FF;
+            }
+        }
+
+        #articles-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            #articles-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .article {
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .article img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s;
+        }
+
+        .article h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .article p {
+            margin: 10px 0;
+        }
+
+        .article a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        /* Stilovi za gumbove za odabir JSON fajlova */
+        #json-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .json-button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .json-button:hover {
+            background-color: #0056b3;
+        }

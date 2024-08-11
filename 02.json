@@ -1,0 +1,1302 @@
+[
+  {
+    "source": {
+      "id": null,
+      "name": "Yahoo Entertainment"
+    },
+    "author": "Pranav Dixit",
+    "title": "A hacking group reportedly leaked confidential data from thousands of Disney Slack channels.",
+    "description": "A hacking group leaked over a terabyte of confidential data from more than 10,000 Slack channels belonging to Disney, the Wall Street Journal reported on Monday. The leaked information includes discussions about ad campaigns, computer code, details about unre…",
+    "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_f8538f3b-3272-4c4a-94ae-84c0b1bbb147",
+    "urlToImage": null,
+    "publishedAt": "2024-07-16T00:11:24Z",
+    "content": "If you click 'Accept all', we and our partners, including 237 who are part of the IAB Transparency &amp; Consent Framework, will also store and/or access information on a device (in other words, use … [+678 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Kyle Barr",
+    "title": "Rabbit Says Former Employee Handed Hacking Collective the Keys to the R1’s Backend",
+    "description": "The Rabbit had an outside firm perform a security audit on Rabbit’s AI device and “large action model,” though the hacking group says the report misses the point.",
+    "url": "https://gizmodo.com/rabbit-former-employee-handed-hacking-collective-the-keys-to-the-r1s-2000482297",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/08/Rabbit-R1-with-Skull1.png",
+    "publishedAt": "2024-08-01T20:20:36Z",
+    "content": "Rabbit, the company behind the perfunctory and potentially problematic Rabbit R1, now claims that a since-fired employee gave a hacker and developer collective access to all its various API keys, all… [+4968 chars]"
+  },
+  {
+    "source": {
+      "id": "wired",
+      "name": "Wired"
+    },
+    "author": "Kim Zetter",
+    "title": "AT&T Paid a Hacker $370,000 to Delete Stolen Phone Records",
+    "description": "A security researcher who assisted with the deal says he believes the only copy of the complete dataset of call and text records of “nearly all” AT&T customers has been wiped—but some risks may remain.",
+    "url": "https://www.wired.com/story/atandt-paid-hacker-300000-to-delete-stolen-call-records/",
+    "urlToImage": "https://media.wired.com/photos/669401be433b897879b41841/191:100/w_1280,c_limit/1247531909",
+    "publishedAt": "2024-07-14T17:57:27Z",
+    "content": "US telecom giant AT&amp;T, which disclosed Friday that hackers had stolen the call records for tens of millions of its customers, paid a member of the hacking team more than $300,000 to delete the da… [+3255 chars]"
+  },
+  {
+    "source": {
+      "id": "wired",
+      "name": "Wired"
+    },
+    "author": "Andy Greenberg",
+    "title": "How Russia-Linked Malware Cut Heat to 600 Ukrainian Buildings in Deep Winter",
+    "description": "The code, the first of its kind, was used to sabotage a heating utility in Lviv at the coldest point in the year—what appears to be yet another innovation in Russia’s torment of Ukrainian civilians.",
+    "url": "https://www.wired.com/story/russia-ukraine-frostygoop-malware-heating-utility/",
+    "urlToImage": "https://media.wired.com/photos/669eaedf0d77a600b9edc671/191:100/w_1280,c_limit/How-Russia-Linked-Malware-Cut-Heating-to-600-Ukrainian-Buildings-Amid-a-Winter-Freeze-GettyImages-1910714939.jpg",
+    "publishedAt": "2024-07-23T09:00:00Z",
+    "content": "Lvivteploenergo didn't respond to WIRED's request for comment, nor did the SBU. Ukraine's cybersecurity agency, the State Services for Special Communication and Information Protection, declined to co… [+3746 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Al Williams",
+    "title": "Hacking Airline WiFi the Hard Way",
+    "description": "We’ve all been there. You are on a flight, there’s WiFi, but you hate to pay the few bucks just to watch dog videos. What to do? Well, we would never suggest you engage in theft of serv…",
+    "url": "https://hackaday.com/2024/07/10/hacking-airline-wifi-the-hard-way/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/07/air.png",
+    "publishedAt": "2024-07-11T02:00:27Z",
+    "content": "We’ve all been there. You are on a flight, there’s WiFi, but you hate to pay the few bucks just to watch dog videos. What to do? Well, we would never suggest you engage in theft of service, but as an… [+1247 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Elliot Williams",
+    "title": "It’s Not Unsual to Love Hacking",
+    "description": "Most of what we do here at Hackaday is look out for cool projects and then write them up so that you all know about them. Nothing is better than being really stoked about a clever hack and then bei…",
+    "url": "https://hackaday.com/2024/07/13/its-not-unsual-to-love-hacking/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2021/01/FavoriteThings.jpg",
+    "publishedAt": "2024-07-13T14:00:35Z",
+    "content": "Most of what we do here at Hackaday is look out for cool projects and then write them up so that you all know about them. Nothing is better than being really stoked about a clever hack and then being… [+1963 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Al Williams",
+    "title": "Hackaday Podcast Episode 279: Solar Flares, Flash Cells, and Free Airline WiFi",
+    "description": "Get your weekly fix of great hacks with your guides, Elliot Williams and Al Williams. This week, the guys talk about hacking airline WiFi, vanishing cloud services, and hobbies adjacent to hacking,…",
+    "url": "https://hackaday.com/2024/07/12/hackaday-podcast-episode-279-solar-flares-flash-cells-and-free-airline-wifi/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2016/05/microphone.jpg",
+    "publishedAt": "2024-07-12T16:00:36Z",
+    "content": "Get your weekly fix of great hacks with your guides, Elliot Williams and Al Williams. This week, the guys talk about hacking airline WiFi, vanishing cloud services, and hobbies adjacent to hacking, s… [+652 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Charissa Cheong",
+    "title": "I quit my day job at 29 by investing in real estate. I'm now a stay-at-home dad building generational wealth for my kids.",
+    "description": "At 30, Matt Krueger is a stay-at-home dad thanks to his real estate investments. He first started house hacking in 2015.",
+    "url": "https://www.businessinsider.com/quit-job-real-estate-investing-house-hacking-heloc-2024-7",
+    "urlToImage": "https://i.insider.com/668f9a4939de72f47bca2ecb?width=1200&format=jpeg",
+    "publishedAt": "2024-07-11T09:44:06Z",
+    "content": "Krueger quit his job in sales in 2022. He said real estate investment allowed him to become a stay-at-home dad and spend more time with his family.Courtesy of Matt Krueger.\r\n<ul><li>Matt Krueger quit… [+8647 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Jacob Zinkula",
+    "title": "A New Hampshire couple who wants to retire by age 35 shares the 'house-hacking' strategy that's grown their net worth to over $800,000",
+    "description": "A New Hampshire-based couple wants to retire by age 35 and become full-time parents. A house-hacking strategy could make this possible.",
+    "url": "https://www.businessinsider.com/how-to-retire-early-buy-property-rent-out-financial-independence-2024-7",
+    "urlToImage": "https://i.insider.com/669e8a082d66759f66fcf5ac?width=1200&format=jpeg",
+    "publishedAt": "2024-07-23T10:03:02Z",
+    "content": "Lauren and Ian Simpson are living a FIRE lifestyle in the hopes of retiring by age 35.Lauren Simpson\r\n<ul><li>A New Hampshire couple who are 28 years old are trying to retire by age 35.</li><li>Aggre… [+5957 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Matthew Gault",
+    "title": "A 20-Year-Old Rom Site Is Shutting Down and Moving to the Internet Archive",
+    "description": "The famous community site for strange and beautiful remixes cites copyright pressures that have \"increased dramatically with takedowns and legal burden\" as part of the reason.",
+    "url": "https://gizmodo.com/a-20-year-old-rom-site-is-shutting-down-and-moving-to-the-internet-archive-2000482650",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/08/GettyImages-540703933.jpg",
+    "publishedAt": "2024-08-02T17:30:12Z",
+    "content": "For 20 years ROMHacking.net was a community where people shared and worked on hacks and remixes of old games. Now, citing burnout and trouble behind the scenes, the site’s founder has announced its g… [+3678 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Dan Maloney",
+    "title": "Hacking an IoT Camera Reveals Hard-Coded Root Password",
+    "description": "Hacking — at least the kind where you’re breaking into stuff — is very much a learn-by-doing skill. There’s simply no substitute for getting your hands dirty and just trying …read more",
+    "url": "https://hackaday.com/2024/07/24/hacking-an-iot-camera-reveals-hard-coded-root-password/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/07/cam_root.png",
+    "publishedAt": "2024-07-25T05:00:59Z",
+    "content": "Hacking — at least the kind where you’re breaking into stuff — is very much a learn-by-doing skill. There’s simply no substitute for getting your hands dirty and just trying something. But that doesn… [+1638 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Yahoo Entertainment"
+    },
+    "author": "Danny Gallagher",
+    "title": "Google will give users free dark web monitoring",
+    "description": "Google announced in an update on Tuesday that its dark web monitoring service, also known as “dark web report,” will be made available to all Google users in 46 countries including the US and UK at the end of the month, according to Fast Company. The feature …",
+    "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_56768852-d63c-4275-904a-9258d2c987b6",
+    "urlToImage": null,
+    "publishedAt": "2024-07-09T22:25:57Z",
+    "content": "If you click 'Accept all', we and our partners, including 237 who are part of the IAB Transparency &amp; Consent Framework, will also store and/or access information on a device (in other words, use … [+678 chars]"
+  },
+  {
+    "source": {
+      "id": "wired",
+      "name": "Wired"
+    },
+    "author": "Matt Burgess",
+    "title": "Notorious Hacker Kingpin ‘Tank’ Is Finally Going to Prison",
+    "description": "The cybercrime boss, who helped lead the prolific Zeus malware gang and was on the FBI’s “most wanted” list for years, has been sentenced to 18 years and ordered to pay more than $73 million.",
+    "url": "https://www.wired.com/story/vyacheslav-igorevich-penchukov-tank-zeus-malware-sentencing/",
+    "urlToImage": "https://media.wired.com/photos/668f064b53d2b3f197340350/191:100/w_1280,c_limit/security_fbi_wanted_hacker_fraud.jpg",
+    "publishedAt": "2024-07-11T16:37:09Z",
+    "content": "For more than a decade, Vyacheslav Igorevich Penchukova Ukrainian who used the online hacker name Tankmanaged to evade cops. When FBI and Ukrainian officials raided his Donetsk apartment in 2010, the… [+2919 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Yahoo Entertainment"
+    },
+    "author": "Associated Press",
+    "title": "One Tech Tip: Protecting yourself against SIM swapping",
+    "description": "SIM-swapping is a growing form of identity theft that goes beyond hacking into an email or social media account.  In this case, the thieves take over your...",
+    "url": "https://www.yahoo.com/tech/one-tech-tip-protecting-yourself-040753794.html",
+    "urlToImage": "https://s.yimg.com/ny/api/res/1.2/.5zhPNXvBJz88R49NU3bQg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/ap.org/f6aca34327f91c7903e6320b7937c9a9",
+    "publishedAt": "2024-07-14T04:07:53Z",
+    "content": "NEW YORK (AP) SIM-swapping is a growing form of identity theft that goes beyond hacking into an email or social media account. In this case, the thieves take over your phone number. Any calls or text… [+4474 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Arya Voronova",
+    "title": "Need A USB Sniffer? Use Your Pico!",
+    "description": "Ever wanted to sniff USB device communications? The usual path was buying an expensive metal box with USB connectors, using logic analyzers, or wiring devboards together and hacking some software …read more",
+    "url": "https://hackaday.com/2024/08/03/need-a-usb-sniffer-use-your-pico/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/08/hadimg_pico_usbsniff_feat.jpg",
+    "publishedAt": "2024-08-03T23:00:00Z",
+    "content": "Ever wanted to sniff USB device communications? The usual path was buying an expensive metal box with USB connectors, using logic analyzers, or wiring devboards together and hacking some software to … [+1584 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Al Williams",
+    "title": "Hacking a Brother Label Maker: Is your CUPS half empty or half full?",
+    "description": "On the one hand, we were impressed that a tiny Brother label maker actually uses CUPS to support printing. Like [Sdomi], we were less than impressed at how old a copy it was using – – 1…",
+    "url": "https://hackaday.com/2024/07/07/hacking-a-brother-label-maker-is-your-cups-half-empty-or-half-full/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/07/brother.png",
+    "publishedAt": "2024-07-07T08:00:47Z",
+    "content": "On the one hand, we were impressed that a tiny Brother label maker actually uses CUPS to support printing. Like [Sdomi], we were less than impressed at how old a copy it was using – – 1.6.1. Of cours… [+1094 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Arya Voronova",
+    "title": "Embedded Python: MicroPython Is Amazing",
+    "description": "In case you haven’t heard, about a month ago MicroPython has celebrated its 11th birthday. I was lucky that I was able to start hacking with it soon after pyboards have shipped – the fi…",
+    "url": "https://hackaday.com/2024/07/11/embedded-python-micropython-is-amazing/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/06/Python.jpg",
+    "publishedAt": "2024-07-11T14:00:24Z",
+    "content": "In case you haven’t heard, about a month ago MicroPython has celebrated its 11th birthday. I was lucky that I was able to start hacking with it soon after pyboards have shipped – the first tech talk … [+9479 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hubspot.com"
+    },
+    "author": "kbodnar@hubspot.com (Kipp Bodnar)",
+    "title": "AI Experiment: Hacking HubSpot Chat to Improve the Customer Experience",
+    "description": "Discover how integrating AI into customer chat skyrocketed KPIs. Learn about the outcomes from this AI experiment and how you can test it yourself.",
+    "url": "https://blog.hubspot.com/marketing/ai-chat-experiment#article",
+    "urlToImage": "https://www.hubspot.com/hubfs/ai-customer-experience.webp",
+    "publishedAt": "2024-07-25T11:00:00Z",
+    "content": "We integrated AI into our website chat and our KPIs flew off the charts. Heres exactly how we did it and what we learned along the way.\r\nKey Outcomes:\r\n<ul><li>43% increase in chat conversion rates</… [+6927 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Dan Maloney",
+    "title": "Hackaday Podcast Episode 280: TV Tubes as Amplifiers, Smart Tech in Sportsballs, and Adrian Gives Us the Fingie",
+    "description": "Despite the summer doldrums, it was another big week in the hacking world, and Elliot sat down with Dan for a rundown. Come along for the ride as Dan betrays his total ignorance of soccer/football,…",
+    "url": "https://hackaday.com/2024/07/19/hackaday-podcast-episode-280-tv-tubes-as-amplifiers-smart-tech-in-sportsballs-and-adrian-gives-us-the-fingie/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2016/05/microphone.jpg",
+    "publishedAt": "2024-07-19T16:00:51Z",
+    "content": "Despite the summer doldrums, it was another big week in the hacking world, and Elliot sat down with Dan for a rundown. Come along for the ride as Dan betrays his total ignorance of soccer/football, m… [+856 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Dan Maloney",
+    "title": "Celebrating the [Jack Ells] Automatic Photometric Telescope",
+    "description": "Here at Hackaday, we take pride in presenting the freshest hacks and the best of what’s going on today in the world of hardware hacking. But sometimes, we stumble upon a hack from the past so…",
+    "url": "https://hackaday.com/2024/07/11/celebrating-the-jack-ells-automatic-photometric-telescope/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/07/jack_ells.png",
+    "publishedAt": "2024-07-11T08:00:52Z",
+    "content": "Here at Hackaday, we take pride in presenting the freshest hacks and the best of what’s going on today in the world of hardware hacking. But sometimes, we stumble upon a hack from the past so compell… [+1786 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Tom Nardi",
+    "title": "Supercon 2023: Why More Hackers Should Earn Their Wings",
+    "description": "Hacking has taken on many different meanings over the years, but if you’re here reading these words, we’ll assume your definition is pretty close to ours. To hack is to explore and lear…",
+    "url": "https://hackaday.com/2024/07/10/supercon-2023-why-more-hackers-should-earn-their-wings/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/07/mloduch23_feat.jpg",
+    "publishedAt": "2024-07-10T17:00:13Z",
+    "content": "Hacking has taken on many different meanings over the years, but if you’re here reading these words, we’ll assume your definition is pretty close to ours. To hack is to explore and learn, to find new… [+6484 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Lucas Ropek",
+    "title": "Disney’s Internal Slack Messages Reportedly Leak in 1 Terabyte Tranche From Hacktivists",
+    "description": "The threat actor behind the alleged breach claims it is a \"hacktivist\" group dedicated to defending artists from generative AI.",
+    "url": "https://gizmodo.com/hacktivists-reportedly-leak-1-terabyte-tranche-of-disneys-internal-slack-messages-2000473698",
+    "urlToImage": "https://gizmodo.com/app/uploads/2020/10/wxr3zthpxefzmytvoh0k.jpg",
+    "publishedAt": "2024-07-16T14:05:27Z",
+    "content": "A cybercriminal claims to have leaked a large tranche of corporate data stolen from Disney. The supposed 1.1 terabyte data haul includes a large number of internal Slack messages, which the hackers c… [+2137 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Matt Novak",
+    "title": "North Korean Man Indicted for Ransomware Attacks on U.S. Health Care Companies",
+    "description": "Rim Jong Hyok allegedly targeted NASA and defense contractors as well.",
+    "url": "https://gizmodo.com/north-korean-man-indicted-for-ransomware-attacks-on-u-s-health-care-companies-2000479109",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/07/Screenshot-2024-07-25-at-11.39.25 AM.jpg",
+    "publishedAt": "2024-07-25T19:15:49Z",
+    "content": "A man allegedly working for North Korean intelligence was indicted by U.S. prosecutors on Thursday for conspiracy to hack computers at NASA and military bases, along with serious ransomware attacks a… [+2142 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Matthew Gault",
+    "title": "America’s Cyber Security Agency Picks Its First Head of AI",
+    "description": "The pick comes at a time when CISA’s head has compared the new technology to nuclear weapons.",
+    "url": "https://gizmodo.com/americas-cyber-security-agency-picks-its-first-head-of-ai-2000482281",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/08/LISA.jpg",
+    "publishedAt": "2024-08-01T18:00:54Z",
+    "content": "Washington D.C. has been scrambling for years to find artificial intelligence experts to navigate a world where LLMs and AI models may supercharge every aspect of our lives. This week the Cybersecuri… [+1897 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "ReadWrite"
+    },
+    "author": "Radek Zielinski",
+    "title": "Cardano founder pitches Elon Musk decentralized solution for X’s woes",
+    "description": "Following a recent hacking incident on X (formerly Twitter) affecting AI developer Ben Goertzel, Cardano (ADA) creator Charles Hoskinson has… Continue reading Cardano founder pitches Elon Musk decentralized solution for X’s woes\nThe post Cardano founder pitch…",
+    "url": "https://readwrite.com/cardano-founder-pitches-elon-musk-decentralized-solution-for-xs-woes/",
+    "urlToImage": "https://readwrite.com/wp-content/uploads/2024/07/a-large-white-x-on-a-black-background-with-green-d-2REZRyeDSAaKzcRXC6Hdzg-HY_L2BFuRSiNul63px-4BA.jpeg",
+    "publishedAt": "2024-07-17T16:23:56Z",
+    "content": "Following a recent hacking incident on X (formerly Twitter)affecting AI developer Ben Goertzel, Cardano (ADA) creator Charles Hoskinson has suggested implementing decentralized identifiers (DIDs) to … [+2573 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Slashdot.org"
+    },
+    "author": "EditorDavid",
+    "title": "AT&T Paid $370,000 For the Deletion of Stolen Phone Call Records",
+    "description": "AT&T paid more than $300,000 to a member of the team that stole call records for tens of millions of customers, reports Wired — \"to delete the data and provide a video demonstrating proof of deletion.\"\n\n\nThe hacker, who is part of the notorious ShinyHunters h…",
+    "url": "https://yro.slashdot.org/story/24/07/14/1919219/att-paid-370000-for-the-deletion-of-stolen-phone-call-records",
+    "urlToImage": "https://a.fsdn.com/sd/topics/att_64.png",
+    "publishedAt": "2024-07-14T19:22:00Z",
+    "content": "The hacker, who is part of the notorious ShinyHunters hacking group that has stolen data from a number of victims through unsecured Snowflake cloud storage accounts, tells WIRED that AT&amp;T paid th… [+1359 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Schneier.com"
+    },
+    "author": "Bruce Schneier",
+    "title": "Hacking Scientific Citations",
+    "description": "Some scholars are inflating their reference counts by sneaking them into metadata:\nCitations of scientific work abide by a standardized referencing system: Each reference explicitly mentions at least the title, authors’ names, publication year, journal or con…",
+    "url": "https://www.schneier.com/blog/archives/2024/07/hacking-scientific-citations.html",
+    "urlToImage": null,
+    "publishedAt": "2024-07-15T17:13:08Z",
+    "content": "Some scholars are inflating their reference counts by sneaking them into metadata:\nCitations of scientific work abide by a standardized referencing system: Each reference explicitly mentions at least… [+1682 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Matthew Gault",
+    "title": "OpenAI Wants to See All of the New York Times Reporters’ Notes and Memos",
+    "description": "Court documents revealed that the tech giant is demanding to see the Times's \"notes, interview memos, records of materials cited, or other ‘files’\" related to millions of stories.",
+    "url": "https://gizmodo.com/openai-wants-to-see-all-of-the-new-york-times-reporters-notes-and-memos-2000476238",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/07/GettyImages-1462188008.jpg",
+    "publishedAt": "2024-07-18T14:45:24Z",
+    "content": "The New York Times’s copyright lawsuit against OpenAI is getting ugly. As part of the discovery process, OpenAI wants the Times to turn over its reporters notes, interview memos, records of materials… [+3073 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "North Korea hackers trying to steal nuclear secrets, US and UK warn",
+    "description": "A hacking group known as Andariel has been seeking information in a range of areas - from uranium enrichment to tanks, submarines and torpedoes.",
+    "url": "https://www.bbc.com/news/articles/cjl6p3wj52no",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/cdbc/live/b7a19020-4aa6-11ef-9d7d-8f2c8d9c3d2a.jpg",
+    "publishedAt": "2024-07-25T18:12:10Z",
+    "content": "North Korean hackers are attempting to steal nuclear and military secrets from governments and private companies around the world, the UK, US and South Korea have warned.\r\nThey say the group - known … [+2574 chars]"
+  },
+  {
+    "source": {
+      "id": "wired",
+      "name": "Wired"
+    },
+    "author": "Adam Bumas",
+    "title": "Everyone Is Trying to Make This TikTok Go Viral—and It Never Will",
+    "description": "The app’s algorithm is so powerful that ordinary TikTok users can’t get their favorite videos into the record books. Homegrown viral campaigns like the egg that took over Instagram are a thing of the past.",
+    "url": "https://www.wired.com/story/everyone-is-trying-to-make-this-tiktok-go-viral-and-it-never-will/",
+    "urlToImage": "https://media.wired.com/photos/668de974eaea23f11012345e/191:100/w_1280,c_limit/culture_viral_tiktok_algorithm.jpg",
+    "publishedAt": "2024-07-10T11:00:00Z",
+    "content": "It would be easy to put this down to stan armiesestablished fans of these creators, clashing over the video in a kind of proxy war to glorify their communitybut its not along such rigid lines. Whenev… [+4421 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "MacRumors"
+    },
+    "author": "Tim Hardwick",
+    "title": "Google Advanced Protection Program Adds Single Passkey Set-Up Option",
+    "description": "Google today announced that has added a new passkey set-up option to its Advanced Protection Program, allowing Pixel and iPhone owners to use their device's biometric authentication instead of physical security keys.\n\n\n\n\n\nFor those unfamiliar with the Advance…",
+    "url": "https://www.macrumors.com/2024/07/10/google-advanced-protection-program-passkeys/",
+    "urlToImage": "https://images.macrumors.com/t/2tuexhe5D1bkNZI1aSaczv0IVnw=/1916x/article-new/2024/07/google-advanced-protection-program.jpg",
+    "publishedAt": "2024-07-10T11:52:41Z",
+    "content": "Google today announced that has added a new passkey set-up option to its Advanced Protection Program, allowing Pixel and iPhone owners to use their device's biometric authentication instead of physic… [+1124 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Slashdot.org"
+    },
+    "author": "EditorDavid",
+    "title": "How Chinese Attackers Breached an ISP to Poison Insecure Software Updates with Malware",
+    "description": "An anonymous reader shared this report from BleepingComputer:\nA Chinese hacking group tracked as StormBamboo has compromised an undisclosed internet service provider (ISP) to poison automatic software updates with malware. Also tracked as Evasive Panda, Dagge…",
+    "url": "https://it.slashdot.org/story/24/08/03/1854257/how-chinese-attackers-breached-an-isp-to-poison-insecure-software-updates-with-malware",
+    "urlToImage": "https://a.fsdn.com/sd/topics/security_64.png",
+    "publishedAt": "2024-08-03T20:34:00Z",
+    "content": "An anonymous reader shared this report from BleepingComputer:\r\nA Chinese hacking group tracked as StormBamboo has compromised an undisclosed internet service provider (ISP) to poison automatic softwa… [+1364 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Be vigilant to fake emails, calls and websites, cyber agencies warn",
+    "description": "Agencies in the UK and Australia are warning people to be vigilante to fake emails, calls and websites.",
+    "url": "https://www.bbc.com/news/articles/cq5xy12pynyo",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/e610/live/14220950-468e-11ef-ac12-f16ca979d7d8.jpg",
+    "publishedAt": "2024-07-20T11:50:44Z",
+    "content": "Cyber-security experts and agencies around the world are warning people about a wave of opportunistic hacking attempts linked to the IT outage.\r\nAlthough there is no evidence that the CrowdStrike out… [+2765 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Redthreatsec.com"
+    },
+    "author": "Andrew Lemon",
+    "title": "Give Me the Green Light Part 1: Hacking Traffic Control Systems",
+    "description": "Adventures in Responsible Disclosure",
+    "url": "https://www.redthreatsec.com/blog/greenlightspart1",
+    "urlToImage": "http://static1.squarespace.com/static/62b27122953f5641092829de/6690114981aad138b541f70b/6690114a81aad138b541f713/1720731083143/greenlight.png?format=1500w",
+    "publishedAt": "2024-07-18T13:24:44Z",
+    "content": "In this series of blog posts Ill be discussing my finding dealing with traffic controllers and other traffic systems. I had hoped to present the information at DefCon but my CFP wasnt accepted. This … [+2581 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Kenneth Niemeyer,Lakshmi Varanasi",
+    "title": "OpenAI's latest reputation problem: hackers",
+    "description": "Hackers accessed OpenAI's internal systems last year and stole messages about AI design, prompting security concerns.",
+    "url": "https://www.businessinsider.com/openai-ai-data-hack-security-concerns-china-2024-7",
+    "urlToImage": "https://i.insider.com/668852b91aace5b3ada4cf8f?width=1200&format=jpeg",
+    "publishedAt": "2024-07-06T16:01:18Z",
+    "content": "Hackers accessed messages inside OpenAI's internal messaging systems about AI models like ChatGPT.NurPhoto/Getty Images\r\n<ul><li>Hackers infiltrated OpenAI in early 2023, but the company chose not to… [+3234 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Kk.org"
+    },
+    "author": "claudia",
+    "title": "Book Freak 166: The Hacking of the American Mind",
+    "description": "How Corporate America Hijacked Our Pursuit of Happiness",
+    "url": "https://kk.org/cooltools/book-freak-166-the-hacking-of-the-american-mind/",
+    "urlToImage": null,
+    "publishedAt": "2024-07-31T15:00:00Z",
+    "content": "Hi Book Freaks! Welcome to another issue of the newsletter that delivers useful ideas from a wide variety of books. I would love to learn from readers about books that have changed their thinking and… [+2908 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Yahoo Entertainment"
+    },
+    "author": "Lawrence Bonk",
+    "title": "A nifty hack made Mario a playable character in 1994's Donkey Kong Country",
+    "description": "Mario and Donkey Kong have been rivals, frenemies, go-kart competitors and tennis partners. The Italian plumber once kidnapped Donkey Kong’s son. DK once, uh, took over Mario’s toy company (?) and stole a bunch of little figurines\r\n for some reason. They have…",
+    "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_d09bbbe8-9096-422b-a38c-67cc42c41b15",
+    "urlToImage": null,
+    "publishedAt": "2024-07-19T16:40:36Z",
+    "content": "If you click 'Accept all', we and our partners, including 236 who are part of the IAB Transparency &amp; Consent Framework, will also store and/or access information on a device (in other words, use … [+678 chars]"
+  },
+  {
+    "source": {
+      "id": "ars-technica",
+      "name": "Ars Technica"
+    },
+    "author": "Nate Anderson",
+    "title": "Who are the two major hackers Russia just received in a prisoner swap?",
+    "description": "Both men committed major financial crimes—and had powerful friends.",
+    "url": "https://arstechnica.com/security/2024/08/who-are-the-two-major-hackers-russia-just-received-in-a-prisoner-swap/",
+    "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2024/01/russia-state-hacking-760x380.jpg",
+    "publishedAt": "2024-08-02T00:14:25Z",
+    "content": "0\r\nAs part of todays blockbuster prisoner swap between the US and Russia, which freed the journalist Evan Gershkovich and several Russian opposition figures, Russia received in return a motley collec… [+5471 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "ReadWrite"
+    },
+    "author": "Sam Shedden",
+    "title": "Microsoft demands China staff use iPhones not Android phones – report",
+    "description": "Microsoft has announced that its employees in China will only be allowed to use iPhones for work-related activities starting in… Continue reading Microsoft demands China staff use iPhones not Android phones – report\nThe post Microsoft demands China staff use …",
+    "url": "https://readwrite.com/microsoft-china-iphones-not-android-phones/",
+    "urlToImage": "https://readwrite.com/wp-content/uploads/2024/07/a-cinematic-digital-artwork-featuring-the-iconic-m-XXAK9GwRuKmP_9FsOiCsw-UuAjmjPiRPefVwWUxjdlYg.jpeg",
+    "publishedAt": "2024-07-08T09:21:42Z",
+    "content": "Microsoft has announced that its employees in China will only be allowed to use iPhones for work-related activities starting in September.\r\nThe move comes as the US tech giant’s global Secure Future … [+1373 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Theregister.com"
+    },
+    "author": "Jessica Lyons",
+    "title": "Kaspersky challenges US government to prove case over hacking claims",
+    "description": "Proposes 'comprehensive assessment framework' to check and verify\nKaspersky has hit back after the US government banned its products by proposing independent verification.…<!--#include virtual='/data_centre/_whitepaper_textlinks_top.html' -->",
+    "url": "https://www.theregister.com/2024/07/18/kaspersky_us_government/",
+    "urlToImage": "https://regmedia.co.uk/2017/09/05/shutterstock_kaspersky.jpg",
+    "publishedAt": "2024-07-18T16:29:05Z",
+    "content": "Kaspersky has hit back after the US government banned its products by proposing independent verification.\r\nThe embattled Russian antivirus maker pledged to comply with US Department of Commerce rulin… [+2733 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Lucas Ropek",
+    "title": "Cybercriminals Stole Text and Call Records From ‘Nearly All’ of AT&T’s Customers",
+    "description": "In a cybersecurity debacle so bad it could only belong to a telecom provider, AT&T has announced that pretty much all of its customer data was just hijacked.",
+    "url": "https://gizmodo.com/cybercriminals-stole-text-and-call-records-from-nearly-all-of-atts-customers-2000469842",
+    "urlToImage": "https://gizmodo.com/app/uploads/2019/04/btx8uoyky9fzcmoc4gdg.jpg",
+    "publishedAt": "2024-07-12T17:10:13Z",
+    "content": "If you’re an AT&amp;T customer, you have a brand new reason to hate your cellular provider. In a turn of events that is somehow both entirely predictable and totally pathetic, the second-largest wire… [+4074 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Lewin Day",
+    "title": "Giving The Original Xbox 256 MB Of Memory",
+    "description": "The original Xbox forever changed the console world, because it was basically just PC components laced together in a slightly different architecture. It featured a Pentium 733 MHz CPU with …read more",
+    "url": "https://hackaday.com/2024/07/10/giving-the-original-xbox-256-mb-of-memory/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/07/How-I-put-256MB-of-RAM-in-the-original-Xbox-39-31-screenshot.png",
+    "publishedAt": "2024-07-11T05:00:01Z",
+    "content": "The original Xbox forever changed the console world, because it was basically just PC components laced together in a slightly different architecture. It featured a Pentium 733 MHz CPU with just 64MB … [+1208 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Harvard Magazine"
+    },
+    "author": "vitaminwater@example.com",
+    "title": "Prepare for AI Hackers",
+    "description": "Human systems of all kinds may soon be vulnerable to subversion by artificial intelligence.",
+    "url": "https://www.harvardmagazine.com/node/82809",
+    "urlToImage": "https://www.harvardmagazine.com/sites/default/files/img/article/0223/hm_ma23_art_page_04_image_0007.jpg",
+    "publishedAt": "2024-07-13T03:47:29Z",
+    "content": "In 2016, tens of thousands of computer-security researchers gathered at the Ballys Las Vegas for DEF CON, the worlds largest hacker convention. During the four-day conference, attendees witnessed tal… [+7238 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Al Williams",
+    "title": "Making a Solid State 6AK8 Tube",
+    "description": "[M Caldeira] had a project in mind: replacing a common vacuum tube with a solid-state equivalent. The tube in question was an EABC80 or 6AK8 triple diode triode. The key was identifying a high-volt…",
+    "url": "https://hackaday.com/2024/07/22/making-a-solid-state-6ak8-tube/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/07/tube.png",
+    "publishedAt": "2024-07-22T15:30:30Z",
+    "content": "[M Caldeira] had a project in mind: replacing a common vacuum tube with a solid-state equivalent. The tube in question was an EABC80 or 6AK8 triple diode triode. The key was identifying a high-voltag… [+829 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Elliot Williams",
+    "title": "Repeatable “One-Click” Fusion, From Your Cellphone",
+    "description": "Sometimes you spend so much time building and operating your nuclear fusor that you neglect the creature comforts, like a simple fusion control profile or a cellphone app to remote control the whol…",
+    "url": "https://hackaday.com/2024/07/06/repeatable-one-click-fusion-from-your-cellphone/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/07/plasma_featured.png",
+    "publishedAt": "2024-07-07T05:00:35Z",
+    "content": "Sometimes you spend so much time building and operating your nuclear fusor that you neglect the creature comforts, like a simple fusion control profile or a cellphone app to remote control the whole … [+1199 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNET"
+    },
+    "author": "Ian Sherr",
+    "title": "Google Makes Dark Web Monitoring Free For Everyone",
+    "description": "The tech giant used to charge for access to its dark web report service, now it's free with a Google Account.",
+    "url": "https://www.cnet.com/tech/services-and-software/google-makes-dark-web-monitoring-free-for-everyone/",
+    "urlToImage": "https://www.cnet.com/a/img/resize/56b43fb1620e15d78ccf3359901f6c3328e44f40/hub/2024/07/10/ab664ebd-b4fd-4368-86ef-57807457be46/fingertips-on-neon-keyboard-hacker-gettyimages-1175885065.jpg?auto=webp&fit=crop&height=675&width=1200",
+    "publishedAt": "2024-07-10T17:42:28Z",
+    "content": "Google said its dark web monitoring service will be made free to anyone with a Google Account starting this month, giving away automated tools to help people detect when their personal information le… [+2500 chars]"
+  },
+  {
+    "source": {
+      "id": "the-next-web",
+      "name": "The Next Web"
+    },
+    "author": "Siôn Geschwindt",
+    "title": "Internet cables cut as Paris Olympics cat-and-mouse continues",
+    "description": "Several long-distance fibre-optic cables in France were “sabotaged” overnight, according to local police, causing widespread disruptions to internet services across the country.  The perpetrators remain at large, as the cat-and-mouse between police and crimin…",
+    "url": "https://thenextweb.com/news/internet-cables-cut-as-paris-olympics-cat-and-mouse-continues",
+    "urlToImage": "https://img-cdn.tnwcdn.com/image/tnw-blurple?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2024%2F07%2Finternet-cables-cut-paris-olympics.jpg&signature=6ed3577e5f19da6b675039cee245b1a7",
+    "publishedAt": "2024-07-29T15:22:47Z",
+    "content": "Several long-distance fibre-optic cables in France were sabotaged overnight, according to local police, causing widespread disruptions to internet services across the country. \r\nThe perpetrators rema… [+1708 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Fix NHS gaps or face more attacks - ex cyber chief",
+    "description": "Experts warn outdated NHS IT systems remain vulnerable after the cyber attack on hospitals.",
+    "url": "https://www.bbc.com/news/articles/czd9glyx414o",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/b8c7/live/1d608870-3a13-11ef-8147-b71ad54f8e8a.png",
+    "publishedAt": "2024-07-08T00:18:09Z",
+    "content": "By by Guy Lynn and Stephen Menon, guy_lynn, BBC Investigations, London\r\nCiaran Martin, former head of the National Cyber Security Centre said hack was \"one of the most serious cyber incidents in Brit… [+5071 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Julian Scheffers",
+    "title": "Creating 1 um Features The Hacker Way",
+    "description": "[Breaking Taps] has done some lithography experiments in the past, including some test patterns and a rudimentary camera sensor. But now, it’s time to turn it up a notch with 1µm garage semic…",
+    "url": "https://hackaday.com/2024/08/06/creating-1%c2%b5m-features-the-hacker-way/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/08/1um.webp",
+    "publishedAt": "2024-08-06T11:00:00Z",
+    "content": "[Breaking Taps] has done some lithography experiments in the past, including some test patterns and a rudimentary camera sensor. But now, it’s time to turn it up a notch with 1µm garage semiconductor… [+1415 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "ReadWrite"
+    },
+    "author": "Ali Rees",
+    "title": "Apple has issued urgent spyware attack warning in 98 countries",
+    "description": "Apple has warned users across 98 nations that they may be the subject of mercenary spyware attacks, similar to a… Continue reading Apple has issued urgent spyware attack warning in 98 countries\nThe post Apple has issued urgent spyware attack warning in 98 cou…",
+    "url": "https://readwrite.com/apple-has-issued-spyware-attack-warnings-in-98-countries/",
+    "urlToImage": "https://readwrite.com/wp-content/uploads/2024/07/a-vibrant-and-abstract-digital-art-piece-featuring-3YJy-ydLQEKEGRU_NtWDyw-8XLg23OwR_Wu7LWhlbW8nQ.jpeg",
+    "publishedAt": "2024-07-11T09:56:57Z",
+    "content": "Apple has warned users across 98 nations that they may be the subject of mercenary spyware attacks, similar to a warning about spyware attacks that reached 92 countries in April.\r\nAccording to its we… [+1974 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "ReadWrite"
+    },
+    "author": "Suswati Basu",
+    "title": "Why GTA 6 leak reaction surprised ex-Rockstar developer",
+    "description": "A former Rockstar Games developer has said that recent leaks about Grand Theft Auto 6 were not a big deal,… Continue reading Why GTA 6 leak reaction surprised ex-Rockstar developer\nThe post Why GTA 6 leak reaction surprised ex-Rockstar developer appeared firs…",
+    "url": "https://readwrite.com/gta-6-leak-rockstar-developer/",
+    "urlToImage": "https://readwrite.com/wp-content/uploads/2024/07/Why-GTA-6-leak-reaction-surprised-ex-Rockstar-developer.png",
+    "publishedAt": "2024-07-30T12:11:42Z",
+    "content": "A former Rockstar Games developer has said that recent leaks about Grand Theft Auto 6 were not a big deal, despite it being one of the biggest data breaches in the history of the games industry. In a… [+2008 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Theregister.com"
+    },
+    "author": "Connor Jones",
+    "title": "Scattered Spider's fave new ransomware tools are RansomHub and Qilin",
+    "description": "Extortionists left hanging after rivals crawled into the woodwork\nThe Scattered Spider cybercrime group is now using RansomHub and Qilin ransomware variants in its attacks, illustrating a possible power shift among hacking groups.…",
+    "url": "https://www.theregister.com/2024/07/16/scattered_spider_ransom/",
+    "urlToImage": "https://regmedia.co.uk/2024/07/16/spider_shutterstock.jpg",
+    "publishedAt": "2024-07-16T18:05:11Z",
+    "content": "The Scattered Spider cybercrime group is now using RansomHub and Qilin ransomware variants in its attacks, illustrating a possible power shift among hacking groups.\r\nThis is all according to the inci… [+4232 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "ReadWrite"
+    },
+    "author": "Radek Zielinski",
+    "title": "Mt. Gox to repay investors in Bitcoin",
+    "description": "Mt. Gox, once the world’s leading Bitcoin (BTC) exchange, is set to begin repaying investors using Bitcoin and Bitcoin Cash (BCH).… Continue reading Mt. Gox to repay investors in Bitcoin\nThe post Mt. Gox to repay investors in Bitcoin appeared first on ReadWri…",
+    "url": "https://readwrite.com/mt-gox-to-repay-investors-in-bitcoin/",
+    "urlToImage": "https://readwrite.com/wp-content/uploads/2024/07/97b8c89d-4828-4803-b037-04d74e631a19.webp",
+    "publishedAt": "2024-07-08T16:29:11Z",
+    "content": "Mt. Gox, once the world’s leading Bitcoin (BTC) exchange, is set to begin repaying investors using Bitcoin and Bitcoin Cash (BCH).\r\nThe repayment was announced on July 5 over a decade after Mt. Gox’s… [+2101 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Techdirt"
+    },
+    "author": "Gretchen Heckmann",
+    "title": "Daily Deal: The Complete 2024 Penetration Testing & Ethical Hacking Training Bundle",
+    "description": "The Complete 2024 Penetration Testing & Ethical Hacking Training Bundle has 9 courses to help you learn to fight back against cyber threats. Courses include hands-on lessons on penetration testing for AWS, IoT, and web apps, along with hacking basics and a fe…",
+    "url": "https://www.techdirt.com/2024/07/10/daily-deal-the-complete-2024-penetration-testing-ethical-hacking-training-bundle-2/",
+    "urlToImage": "https://www.techdirt.com/wp-content/themes/techdirt/assets/images/td-rect-logo-white.png",
+    "publishedAt": "2024-07-10T18:07:00Z",
+    "content": "from the good-deals-on-cool-stuff dept\r\nThe Complete 2024 Penetration Testing &amp; Ethical Hacking Training Bundle has 9 courses to help you learn to fight back against cyber threats. Courses includ… [+395 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Tom Nardi",
+    "title": "Retro Inspired Cyberdeck Scrolls Around Cyberspace",
+    "description": "It’s difficult to nail down exactly what counts as a “real” cyberdeck in this brave new era of bespoke computing. But at the minimum, most in the community would agree that a prop…",
+    "url": "https://hackaday.com/2024/07/25/retro-inspired-cyberdeck-scrolls-around-cyberspace/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2024/07/cyberdore_feat.jpg",
+    "publishedAt": "2024-07-25T11:00:06Z",
+    "content": "It’s difficult to nail down exactly what counts as a “real” cyberdeck in this brave new era of bespoke computing. But at the minimum, most in the community would agree that a proper deck should have … [+2001 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Hannah Abraham",
+    "title": "AI-powered vending machines that sell bullets could be hacked, says a cybersecurity expert",
+    "description": "The US has rolled out AI-powered vending machines that dispense bullets to anyone who has a valid ID. An expert says they can be hacked.",
+    "url": "https://www.businessinsider.com/ai-powered-ammo-vending-machines-could-be-hacked-expert-us-2024-7",
+    "urlToImage": "https://i.insider.com/668c036b1aace5b3ada4fcc7?width=1200&format=jpeg",
+    "publishedAt": "2024-07-08T16:10:28Z",
+    "content": "The bullet-dispensing vending machines are the first of their kind in the US.American Rounds/YouTube\r\n<ul><li>Vending machines that dispense bullets have been rolled out in Alabama, Oklahoma, and Tex… [+3678 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Uncrate.com"
+    },
+    "author": null,
+    "title": "SLNT Essentials Faraday Tech Organizer",
+    "description": "Keep your gadgets and info secure on the go inside this Faraday Tech Organizer from SLNT. At its core is a patented Silent Pocket Faraday cage that protects a phone or tablet from wireless tracking, snooping, and hacking. Additional RFID-blocking pockets offe…",
+    "url": "https://shop.uncrate.com/products/essentials-faraday-tech-organizer",
+    "urlToImage": "http://shop.uncrate.com/cdn/shop/files/slnt-tech-organizer-21.jpg?v=1722630646",
+    "publishedAt": "2024-08-02T18:30:03Z",
+    "content": "Editor’s Note\r\nKeep your gadgets and info secure on the go inside this Faraday Tech Organizer from SLNT. At its core is a patented Silent Pocket Faraday cage that protects a phone or tablet from wire… [+411 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Slashdot.org"
+    },
+    "author": "BeauHD",
+    "title": "It May Soon Be Legal To Jailbreak AI To Expose How It Works",
+    "description": "An anonymous reader quotes a report from 404 Media: A group of researchers, academics, and hackers are trying to make it easier to break AI companies' terms of service to conduct \"good faith research\" that exposes biases, inaccuracies, and training data witho…",
+    "url": "https://slashdot.org/story/24/07/18/221240/it-may-soon-be-legal-to-jailbreak-ai-to-expose-how-it-works",
+    "urlToImage": "https://a.fsdn.com/sd/topics/ai_64.png",
+    "publishedAt": "2024-07-19T03:30:00Z",
+    "content": "A group of researchers, academics, and hackers are trying to make it easier to break AI companies' terms of service to conduct \"good faith research\" that exposes biases, inaccuracies, and training da… [+3342 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Search Engine Journal"
+    },
+    "author": "Heather Campbell",
+    "title": "Hacking Digital PR: How to Earn High-Authority Links from US Media via @sejournal, @hethr_campbell",
+    "description": "Join us LIVE on July 31 and learn simple hacks for attaining thousands of high authority links using Digital PR.\nThe post Hacking Digital PR: How to Earn High-Authority Links from US Media appeared first on Search Engine Journal.",
+    "url": "https://www.searchenginejournal.com/hacking-digital-pr-how-to-earn-high-authority-links-from-us-media/522669/",
+    "urlToImage": "https://www.searchenginejournal.com/wp-content/uploads/2024/07/purelinq-webinar-7312024-featured-776.jpg",
+    "publishedAt": "2024-07-22T20:10:33Z",
+    "content": "Having trouble getting your website mentioned on big news sites to boost your search engine rankings? You’re not the only one.\r\nMany businesses find it hard to get these links. But what if you could … [+3119 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Slashdot.org"
+    },
+    "author": "msmash",
+    "title": "Jailed Cybercriminals Returned To Russia in Historic Prisoner Swap",
+    "description": "A blockbuster prisoner exchange between the United States, Russia and Germany on Thursday included at least two prominent cybercriminals held by the U.S. on charges of financially motivated cybercrime and hacking to facilitate insider trading. Cyberscoop repo…",
+    "url": "https://news.slashdot.org/story/24/08/01/185226/jailed-cybercriminals-returned-to-russia-in-historic-prisoner-swap",
+    "urlToImage": "https://a.fsdn.com/sd/topics/usa_64.png",
+    "publishedAt": "2024-08-01T18:05:00Z",
+    "content": "The prisoners were part of a deal that freed 16 people from Russia, including Wall Street Journal reporter Evan Gershkovich and former U.S. Marine Paul Whelan. A White House spokesperson confirmed th… [+1219 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Arya Voronova",
+    "title": "Hack All The Things, Get All The Schematics",
+    "description": "When I was growing up, about 4 or 5 years old, I had an unorthodox favourite type of reading material: service manuals for my dad’s audio equipment. This got to the point that I kept asking m…",
+    "url": "https://hackaday.com/2024/07/08/hack-all-the-things-get-all-the-schematics/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2018/04/circuitvr.jpg",
+    "publishedAt": "2024-07-08T17:00:09Z",
+    "content": "When I was growing up, about 4 or 5 years old, I had an unorthodox favourite type of reading material: service manuals for my dad’s audio equipment. This got to the point that I kept asking my parent… [+9969 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Rock Paper Shotgun"
+    },
+    "author": "Nic Reuben",
+    "title": "Moody cyberpunk “Tech-Noir Tactics” All Walls Must Fall is now free to keep on Steam",
+    "description": "Time hopping in Berlin usually means queuing several hours for a club, only to magically find yourself either right back at the end of the line, or else waking up on the U-Bahn three days later with tinnitus and currywurst spilled down your Acronym jacket. No…",
+    "url": "https://www.rockpapershotgun.com/moody-cyberpunk-tech-noir-tactics-all-walls-must-fall-is-now-free-to-keep-on-steam",
+    "urlToImage": "https://assetsio.gnwcdn.com/all-walls-must-fall.jpg?width=1200&height=630&fit=crop&enable=upscale&auto=webp",
+    "publishedAt": "2024-07-08T11:27:37Z",
+    "content": "Time hopping in Berlin usually means queuing several hours for a club, only to magically find yourself either right back at the end of the line, or else waking up on the U-Bahn three days later with … [+2142 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Disney investigating massive leak of internal messages",
+    "description": "A hacking group says it has leaked internal data from the media giant to protest its use of AI.",
+    "url": "https://www.bbc.com/news/articles/cprq1d280ggo",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/9048/live/e11977c0-42f8-11ef-aca1-5dfeff73157d.jpg",
+    "publishedAt": "2024-07-16T10:06:51Z",
+    "content": "Disney has confirmed it is investigating an apparent leak of internal messages by a hacking group, which claims it is \"protecting artists' rights\".\r\nThe group, Nullbulge, said it had gained access to… [+2699 chars]"
+  },
+  {
+    "source": {
+      "id": "the-next-web",
+      "name": "The Next Web"
+    },
+    "author": "Siôn Geschwindt",
+    "title": "Paris Olympics app a ‘prime target for cybercriminals’",
+    "description": "The Paris Olympics 2024 kicked off today. But as the City of Light opens its gates to millions of spectators, officials are bracing themselves for a cyber war. Analysts predict that there could be as many as four billion cyber attacks at this year’s Games. Th…",
+    "url": "https://thenextweb.com/news/paris-olympics-app-cybersecurity-hackers",
+    "urlToImage": "https://img-cdn.tnwcdn.com/image/tnw-blurple?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2024%2F07%2Fparis-olympics-2024-cybersecurity-app.jpg&signature=d81990d5a132de8bfc70b73e05c20375",
+    "publishedAt": "2024-07-26T13:20:14Z",
+    "content": "The Paris Olympics 2024 kicked off today. But as the City of Light opens its gates to millions of spectators, officials are bracing themselves for a cyber war.\r\nAnalysts predict that there could be a… [+3321 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Android Central"
+    },
+    "author": "nandika.iyerravi@futurenet.com (Nandika Ravi)",
+    "title": "Don't let Prime Day scams dampen your shopping spree. Here's what to look for",
+    "description": "Prime Days are almost here, and there's a heightened need to watch for scammy deals that could tear into your pocket.",
+    "url": "https://www.androidcentral.com/apps-software/amazon-prime-day-scams-to-look-for",
+    "urlToImage": "https://cdn.mos.cms.futurecdn.net/kuNDnfxYYqJSTdkS9qQWDM-1200-80.jpg",
+    "publishedAt": "2024-07-15T17:00:33Z",
+    "content": "What you need to know\r\n<ul><li>Amazon Prime Days pose as a perfect opportunity for hackers to target users' wallets and extract sensitive information from them.</li><li>Data shows that, in June alone… [+6063 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Yahoo Entertainment"
+    },
+    "author": "David Shepardson",
+    "title": "AT&T says data from around 109 million US customer accounts illegally downloaded",
+    "description": "WASHINGTON (Reuters) -AT&T said Friday the company suffered a massive hacking incident as data from about 109 million customer accounts containing records of...",
+    "url": "https://finance.yahoo.com/news/t-says-data-around-109-111210088.html",
+    "urlToImage": "https://media.zenfs.com/en/reuters-finance.com/38ada83f6c8a4b0d979121f7d522f681",
+    "publishedAt": "2024-07-12T11:12:10Z",
+    "content": "By David Shepardson\r\nWASHINGTON (Reuters) -AT&amp;T said Friday the company suffered a massive hacking incident as data from about 109 million customer accounts containing records of calls and texts … [+2115 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Tomshw.it"
+    },
+    "author": "Giacomo Todeschini",
+    "title": "The Operator, tra hacking e cospirazioni | Recensione",
+    "description": "Lavorare per l’FDI, il Federale Department of Intelligence, non deve essere per nulla semplice. Pressioni di ogni sorta, omicidi e altri crimini all’ordine del giorno, la vita umana sempre...",
+    "url": "https://www.tomshw.it/videogioco/the-operator-tra-hacking-e-cospirazioni-recensione",
+    "urlToImage": "https://www.tomshw.it/storage/media/2024/07/28754/The-Operator-(1)-(1).png",
+    "publishedAt": "2024-07-22T13:16:54Z",
+    "content": "Lavorare per l’FDI, il Federale Department of Intelligence, non deve essere per nulla semplice. Pressioni di ogni sorta, omicidi e altri crimini all’ordine del giorno, la vita umana sempre sul filo d… [+4596 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Uncrate.com"
+    },
+    "author": null,
+    "title": "Seiko Prospex SRPL13 Samurai Dive Watch",
+    "description": "Seiko relaunched the beloved dive watch to celebrate the Seiko Samurai's 20th anniversary with a few major updates. Officially called the Seiko Prospex SRPL13, this sturdy yet surprisingly compact aquatic watch features a stainless steel case and bracelet, a …",
+    "url": "https://shop.uncrate.com/products/seiko-prospex-srpl13-samuari-dive-watch",
+    "urlToImage": "http://shop.uncrate.com/cdn/shop/files/seiko-sports-srpl13-31.jpg?v=1721663263",
+    "publishedAt": "2024-07-22T18:30:01Z",
+    "content": "Editor’s Note\r\nSeiko relaunched the beloved dive watch to celebrate the Seiko Samurai's 20th anniversary with a few major updates. Officially called the Seiko Prospex SRPL13, this sturdy yet surprisi… [+773 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Yahoo Entertainment"
+    },
+    "author": "Danny Gallagher",
+    "title": "Hack and payback Instagram scammer gets nabbed after bragging about it on a podcast",
+    "description": "A guest who appeared on the No Jumper podcast to boast about a hack and payback scheme involving his victims’ social media accounts could face federal charges. Idriss Qibaa, also known as “Dani” and “Unlocked” who authorities allege ran the social media hacki…",
+    "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_025a7f8a-5a66-4400-a1f7-3a8cad76fa1a",
+    "urlToImage": null,
+    "publishedAt": "2024-08-02T20:25:09Z",
+    "content": "If you click 'Accept all', we and our partners, including 237 who are part of the IAB Transparency &amp; Consent Framework, will also store and/or access information on a device (in other words, use … [+678 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Github.io"
+    },
+    "author": null,
+    "title": "My pet theory of how great software gets started",
+    "description": "(Inspired by yungporko’s Ask HN post, which got me thinking.)\nPretty much every community, dojo, workplace, subculture, scene you can imagine in the modern day had a software sub-scene embedded within it. It can be as small as “that guy who does our Excel”, o…",
+    "url": "https://hiandrewquinn.github.io/til-site/posts/my-pet-theory-of-how-great-software-gets-started/",
+    "urlToImage": "https://hiandrewquinn.github.io/til-site/papermod-cover.png",
+    "publishedAt": "2024-07-16T15:52:39Z",
+    "content": "(Inspired by\r\nyungporko’s Ask HN post,\r\nwhich got me thinking.)\r\nPretty much every community, dojo, workplace, subculture, scene you can imagine\r\nin the modern day had a software sub-scene embedded w… [+1333 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Wwwhatsnew.com"
+    },
+    "author": "Juan Diego Polo",
+    "title": "La democratización del hacking de chips: El impacto del RayV Lite",
+    "description": "Imagina poder hackear un chip de computadora con un simple puntero láser y un kit que cuesta menos de 500 dólares. Este es el innovador concepto detrás del RayV Lite, una herramienta creada por los hackers de seguridad Sam Beaumont y Larry “Patch” Trowell de …",
+    "url": "https://wwwhatsnew.com/2024/08/02/la-democratizacion-del-hacking-de-chips-el-impacto-del-rayv-lite/",
+    "urlToImage": "https://wwwhatsnew.com/wp-content/uploads/2024/08/laser.webp",
+    "publishedAt": "2024-08-02T06:00:24Z",
+    "content": "Imagina poder hackear un chip de computadora con un simple puntero láser y un kit que cuesta menos de 500 dólares. Este es el innovador concepto detrás del RayV Lite, una herramienta creada por los h… [+3710 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Cremieux.xyz"
+    },
+    "author": "Cremieux",
+    "title": "Ranking Fields by p-Value Suspiciousness",
+    "description": "What proportion of reported p-values in your favorite field are between 0.05 and 0.01?",
+    "url": "https://www.cremieux.xyz/p/ranking-fields-by-p-value-suspiciousness",
+    "urlToImage": "https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F96bf49b8-a69f-409e-9c5f-0a94eaee313b_1331x730.jpeg",
+    "publishedAt": "2024-07-09T10:04:28Z",
+    "content": "p-hacking is a pervasive problem in the sciences. Its been the downfall of many a scientist and the source of many a pop sci article. Many people have analyzed this phenomenon and produced some prett… [+7454 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Shubhangi Goel",
+    "title": "Delta just issued a warning shot to CrowdStrike about the money it wants to help cover some losses from the huge outage",
+    "description": "The carrier has hired star attorney David Boies to seek damages from CrowdStrike and Microsoft for the computer outage, CNBC reported.",
+    "url": "https://www.businessinsider.com/delta-hires-david-boies-lawyers-crowdstrike-microsoft-pay-damages-2024-7",
+    "urlToImage": "https://i.insider.com/66a87684fb6d32635ee4cb42?width=1200&format=jpeg",
+    "publishedAt": "2024-07-30T08:00:17Z",
+    "content": "Delta Air Lines has hired lawyers to seek damages from Crowdstrike.Nicolas Economou/NurPhoto via Getty Images\r\n<ul><li>Delta Air Lines seeks damages from CrowdStrike and Microsoft for a July software… [+4145 chars]"
+  },
+  {
+    "source": {
+      "id": "ars-technica",
+      "name": "Ars Technica"
+    },
+    "author": "Kevin Purdy",
+    "title": "Legendary ROM hacking site shutting down after almost 20 years",
+    "description": "Disputes about how to keep the site going led founder to archive and close it.",
+    "url": "https://arstechnica.com/gaming/2024/08/rom-hackings-premier-site-is-going-read-only-after-internal-struggle/",
+    "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2024/08/marioland2_color2-760x380.png",
+    "publishedAt": "2024-08-02T20:04:22Z",
+    "content": "Enlarge/ A thing that exists through ROM hacking, and ROMHacking.net: Super Mario Land 2, in color.\r\n13\r\nIf there was something wrong with an old game, or you wanted to make a different version of it… [+3263 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Hannah Getahun,Kwan Wei Kevin Tan",
+    "title": "Here's the who's who of business moguls descending on Sun Valley in rural Idaho for a weeklong summer camp for billionaires",
+    "description": "Open AI CEO Sam Altman and Disney CEO Bob Iger are at Allen & Co.'s Sun Valley Conference. Elon Musk and Warren Buffett will not be in attendance.",
+    "url": "https://www.businessinsider.com/sun-valley-conference-idaho-photos-2024-7",
+    "urlToImage": "https://i.insider.com/668dfd80b2528216eeb4fbb7?width=1200&format=jpeg",
+    "publishedAt": "2024-07-10T08:25:03Z",
+    "content": "The annual Sun Valley conference is attended every year by business leaders across the globe.Brendan McDermid/Reuters\r\n<ul><li>The Allen & Co. Sun Valley Conference draws the ultrawealthy to Idaho fo… [+5664 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Jacob Shamsian",
+    "title": "CrowdStrike's terms and conditions say most customers would just get a refund due to the massive outage, cybersecurity lawyer says",
+    "description": "CrowdStrike and cybersecurity insurers can expect years of lawsuits after a botched update sparked a devastating outage.",
+    "url": "https://www.businessinsider.com/crowdstrike-terms-conditions-limits-damages-to-refund-2024-7",
+    "urlToImage": "https://i.insider.com/669ab66d80d4d5da13d58285?width=1200&format=jpeg",
+    "publishedAt": "2024-07-19T19:33:49Z",
+    "content": "The CrowdStrike outage disrupted airlines, causing delays and grounding flights.AP Photo/Ross D. Franklin\r\n<ul><li>CrowdStrike's botched update caused flight disruptions, 911 call issues, and medical… [+4706 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Tim Paradis",
+    "title": "It's time to fix your calendar so you can get more done and be happier",
+    "description": "Meetings tend to increase as the year progresses, hurting productivity. Experts suggest auditing your calendar to trim unnecessary gatherings.",
+    "url": "https://www.businessinsider.com/cutting-work-meetings-can-make-you-happier-and-more-productive-2024-7",
+    "urlToImage": "https://i.insider.com/66a41db41a227600e6322827?width=1200&format=jpeg",
+    "publishedAt": "2024-07-28T13:36:20Z",
+    "content": "Wednesday was the most popular day for meetings in 2023, according to Calendly.Rudzhan Nagiev/Getty Images\r\n<ul><li>The time spent in work meetings can rise as the year goes on, but a midyear reasses… [+5270 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "AppleInsider"
+    },
+    "author": "news@appleinsider.com (Wesley Hilliard)",
+    "title": "Phone encryption debate will reignite over attempted Trump assassination",
+    "description": "Former President Donald Trump would-be assassin's locked phone is in FBI custody. Stand by for the next attack on encryption, privacy, and security.Privacy and security rely on encryption, a bane to investigatorsThe manufacturer of the shooter's phone is unkn…",
+    "url": "https://appleinsider.com/articles/24/07/15/phone-encryption-debate-will-reignite-over-attempted-trump-assassination",
+    "urlToImage": "https://photos5.appleinsider.com/gallery/60376-124155-Privacy-xl.jpg",
+    "publishedAt": "2024-07-15T18:35:37Z",
+    "content": "Privacy and security rely on encryption, a bane to investigators\r\nFormer President Donald Trump would-be assassin's locked phone is in FBI custody. Stand by for the next attack on encryption, privacy… [+2559 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Semafor.com"
+    },
+    "author": "Tom Chivers, Marta Biino",
+    "title": "Nearly 10 BILLION passwords leaked in biggest-ever breach...",
+    "description": "Nearly 10 BILLION passwords leaked in biggest-ever breach...\r\n\n \n \n \n (Third column, 12th story, link)\r\n\n \r\n\n \r\n\n \n Related stories:U.S., Allies Issue Rare Warning on Chinese Hacking Group...",
+    "url": "https://www.semafor.com/article/07/09/2024/nearly-10-billion-passwords-leaked-in-what-could-be-biggest-ever-breach",
+    "urlToImage": "https://img.semafor.com/7e9c44900ce8bba1659540a2c582c0b4475ba7ab-3500x2333.jpg?rect=0,248,3500,1838&w=1200&h=630&q=75&auto=format",
+    "publishedAt": "2024-07-10T00:58:39Z",
+    "content": "The rise of credential stuffing attacks\r\nNot all the passwords in the compilation appeared to be new  in other words, they have been leaked previously but the way they were presented, in a single, se… [+525 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Yahoo Entertainment"
+    },
+    "author": "FATIMA HUSSEIN",
+    "title": "What's worse than thieves hacking into your bank account? When they steal your phone number, too",
+    "description": "One Monday morning in May, I woke up and grabbed my cell phone to read the news and scroll through memes.  Using my home Wi-Fi connection, I checked my email...",
+    "url": "https://finance.yahoo.com/news/whats-worse-thieves-hacking-bank-040154841.html",
+    "urlToImage": "https://s.yimg.com/ny/api/res/1.2/WZfqVe8Lgd4KILuy6BPz9Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/ap_finance_articles_694/d1128a3a8a8b7b39cb7398a31331d0ae",
+    "publishedAt": "2024-07-14T04:01:54Z",
+    "content": "WASHINGTON (AP) One Monday morning in May, I woke up and grabbed my cell phone to read the news and scroll through memes. But it was out of cell service. I couldn't make calls or texts.\r\nThat, though… [+6510 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "New Atlas"
+    },
+    "author": "Joe Salas",
+    "title": "Hacking EVs and level 3 chargers through 1920's technology",
+    "description": "Engineers at Southwest Research Institute have discovered a vulnerability in DC fast-charging stations that allows hackers to gain access to your electric vehicle while you're sipping a coffee.Continue ReadingCategory: Automotive, TransportTags: Hack, Electri…",
+    "url": "https://newatlas.com/automotive/hacking-ev-level3-dc-fast-charging/",
+    "urlToImage": "https://assets.newatlas.com/dims4/default/b080b97/2147483647/strip/true/crop/1438x755+0+102/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F4d%2Fcc%2Fea1d5fd64d848315dbcbcce94861%2Faitm-diagramb.png&na.image_optimisation=0",
+    "publishedAt": "2024-07-21T03:23:57Z",
+    "content": "Engineers at Southwest Research Institute have discovered a vulnerability in DC fast-charging stations that allows hackers to gain access to your electric vehicle while you're sipping a coffee.\r\nPowe… [+4932 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Digital Trends"
+    },
+    "author": "Trevor Mogg",
+    "title": "AT&T paid big bucks to a hacker to delete stolen customer data, report claims",
+    "description": "AT&T has reportedly paid $370,000 to a hacker to delete all of the customer data that was stolen in a recent security breach.",
+    "url": "https://www.digitaltrends.com/mobile/att-paid-370k-to-hacker-to-delete-stolen-data-report/",
+    "urlToImage": "https://www.digitaltrends.com/wp-content/uploads/2020/03/att-store-1200x0-1.jpg?resize=1200%2C630&p=1",
+    "publishedAt": "2024-07-15T01:45:15Z",
+    "content": "AT&amp;T\r\nFollowing AT&amp;T’s admission on Friday that a security breach had impacted tens of millions of its customers, a new report claims that the carrier paid around $370,000 to the hacker to de… [+2268 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Tomshw.it"
+    },
+    "author": "Andrea Maiellano",
+    "title": "Addio a ROM Hacking: dopo quasi 20 anni finisce un'era",
+    "description": "La celebre piattaforma RomHacking.net, punto di riferimento per appassionati del modding di videogiochi classici, chiude i battenti dopo quasi 20 anni di attività. Il fondatore del sito ha annu...",
+    "url": "https://www.tomshw.it/videogioco/addio-a-rom-hacking-dopo-20-anni-finisce-unera-2024-08-03",
+    "urlToImage": "https://www.tomshw.it/storage/media/2024/08/30175/Romhacking-mario-land-2.png",
+    "publishedAt": "2024-08-03T09:57:50Z",
+    "content": "La celebre piattaforma RomHacking.net, punto di riferimento per appassionati del modding di videogiochi classici, chiude i battenti dopo quasi 20 anni di attività. Il fondatore del sito ha annunciato… [+2724 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Rock Paper Shotgun"
+    },
+    "author": "Edwin Evans-Thirlwell",
+    "title": "Deck-building space sim Breachways re-emerges from warp with an August early access release date",
+    "description": "In theory I'm down to review Breachway, a roguelike deck-building space sim which is sort of FTL but 3D and with cards. The second I wrested this privilege from Ed Thorn's resentful fingers, however, developers Edgeflow Studio and publishers Hooded Horse dela…",
+    "url": "https://www.rockpapershotgun.com/deck-building-space-sim-breachways-re-emerges-from-warp-with-an-august-early-access-release-date",
+    "urlToImage": "https://assetsio.gnwcdn.com/1_Xx3t57C.jpg?width=1200&height=630&fit=crop&enable=upscale&auto=webp",
+    "publishedAt": "2024-07-12T13:11:01Z",
+    "content": "In theory I'm down to review Breachway, a roguelike deck-building space sim which is sort of FTL but 3D and with cards. The second I wrested this privilege from Ed Thorn's resentful fingers, however,… [+2390 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "The Intercept"
+    },
+    "author": "Shawn Musgrave",
+    "title": "“Gay Furry Hackers” Claim Credit for Hacking Heritage Foundation Over Project 2025",
+    "description": "The hacker collective SiegedSec says it infiltrated the conservative think tank to oppose its campaign against trans rights.\nThe post “Gay Furry Hackers” Claim Credit for Hacking Heritage Foundation Over Project 2025 appeared first on The Intercept.",
+    "url": "http://theintercept.com/2024/07/09/gay-furry-hackers-claim-credit-for-hacking-heritage-foundation-over-project-2025/",
+    "urlToImage": "https://theintercept.com/wp-content/uploads/2024/07/GettyImages-1434768243.jpg?fit=3984%2C2656&w=1200&h=800",
+    "publishedAt": "2024-07-09T15:01:41Z",
+    "content": "SiegedSec, a collective of self-proclaimed gay furry hackers, has claimed credit for breaching online databases of the Heritage Foundation, the conservative think tank that spearheaded the rightwing … [+2074 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Theregister.com"
+    },
+    "author": "Iain Thomson",
+    "title": "Billion-dollar bust as international op shutters Cryptonator wallet",
+    "description": "Chap named 'Roman Boss' accused of being just that at a cryptocash laundering outfit\nUsers of Cryptonator – an online digital wallet and cryptocurrency exchange – received an unpleasant surprise last weekend after the service was shuttered in a combined opera…",
+    "url": "https://www.theregister.com/2024/08/06/cryptonator_closure_international_operation/",
+    "urlToImage": "https://regmedia.co.uk/2024/08/05/cryptonator.jpg",
+    "publishedAt": "2024-08-06T06:30:08Z",
+    "content": "Users of Cryptonator an online digital wallet and cryptocurrency exchange received an unpleasant surprise last weekend after the service was shuttered in a combined operation run by the FBI, the US I… [+3015 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Thomas Brewster, Forbes Staff, \n Thomas Brewster, Forbes Staff\n https://www.forbes.com/sites/thomasbrewster/",
+    "title": "The Wiretap: This Company Raised $21 Million To Build An AI Assistant For Data Breach Investigations",
+    "description": "Plus: Cops take on Cobalt Strike, one of cybercriminals’ favorite hacking tools.",
+    "url": "https://www.forbes.com/sites/thomasbrewster/2024/07/09/the-wiretap-company-raises-21-million-to-build-an-ai-assistant-for-data-breach-investigations/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/668ce096b77d2eb259eecc83/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-07-09T11:50:19Z",
+    "content": "The Wiretap is your weekly digest of cybersecurity, internet privacy and surveillance news. To get it in your inbox, subscribe here.\r\ngetty\r\nMuch has been made of AIs ability to create a disaster. Wh… [+3739 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Theregister.com"
+    },
+    "author": "Jessica Lyons",
+    "title": "UK cops arrest teen suspect in MGM cyberattack probe",
+    "description": "17-year-old cuffed as FBI says it will 'relentlessly pursue' miscreants around the globe\nCops in the UK have arrested a suspected member of the notorious Scattered Spider crime gang, which is accused of crippling MGM Resorts in Las Vegas with ransomware last …",
+    "url": "https://www.theregister.com/2024/07/19/uk_mgm_suspect_arrested/",
+    "urlToImage": "https://regmedia.co.uk/2024/07/19/shutterstock_mgm_las_vegas.jpg",
+    "publishedAt": "2024-07-19T21:51:06Z",
+    "content": "Cops in the UK have arrested a suspected member of the notorious Scattered Spider crime gang, which is accused of crippling MGM Resorts in Las Vegas with ransomware last summer.\r\nWest Midlands police… [+1885 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Digital Trends"
+    },
+    "author": "Carli Velocci",
+    "title": "Play this 2016 cyberpunk classic for free on Prime Gaming this month",
+    "description": "Prime Gaming is packed for August, with multiple Square Enix titles, an excellent indie roguelike, Baldur's Gate 2, and more games you can claim for free.",
+    "url": "https://www.digitaltrends.com/gaming/amazon-prime-gaming-deus-ex-august-2024/",
+    "urlToImage": "https://www.digitaltrends.com/wp-content/uploads/2021/04/deus-ex-mankind-divided.jpg?resize=1200%2C630&p=1",
+    "publishedAt": "2024-08-01T18:31:29Z",
+    "content": "Square Enix\r\nAmazon announced its August Prime Gaming lineup on Thursday, and it’s bringing some Square Enix classics. One such title is the cyberpunk RPG Deux Ex: Mankind Divided, which might scratc… [+2607 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Trunkrs.dev"
+    },
+    "author": null,
+    "title": "Trunk: Build, bundle and ship your Rust WASM application to the web",
+    "description": "Comments",
+    "url": "https://trunkrs.dev/",
+    "urlToImage": null,
+    "publishedAt": "2024-07-23T14:15:31Z",
+    "content": "Trunk is a WASM web application bundler for Rust. Trunk uses a simple, optional-config pattern for building &amp; bundling WASM, JS snippets &amp; other assets (images, css, scss) via a source HTML f… [+3431 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BleepingComputer"
+    },
+    "author": "Bill Toulas",
+    "title": "Telegram zero-day allowed sending malicious Android APKs as videos",
+    "description": "A Telegram for Android zero-day vulnerability dubbed 'EvilVideo' allowed attackers to send malicious Android APK payloads disguised as video files.",
+    "url": "https://www.bleepingcomputer.com/news/security/telegram-zero-day-allowed-sending-malicious-android-apks-as-videos/",
+    "urlToImage": "https://www.bleepstatic.com/content/hl-images/2023/09/08/Telegram.jpg",
+    "publishedAt": "2024-07-22T22:19:39Z",
+    "content": "A Telegram for Android zero-day vulnerability dubbed 'EvilVideo' allowed attackers to send malicious Android APK payloads disguised as video files.\r\nA threat actor named 'Ancryno' first began selling… [+3126 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Wwwhatsnew.com"
+    },
+    "author": "Juan Diego Polo",
+    "title": "La amenaza creciente de los ataques narrativos potenciados por IA",
+    "description": "La inteligencia artificial (IA) está transformando todos los aspectos de nuestra vida, por lo que no es sorprendente que también esté siendo utilizada para fines menos nobles. Los ataques narrativos, una nueva forma de ciberataque que combina desinformación y…",
+    "url": "https://wwwhatsnew.com/2024/08/01/la-amenaza-creciente-de-los-ataques-narrativos-potenciados-por-ia/",
+    "urlToImage": "https://wwwhatsnew.com/wp-content/uploads/2024/07/amenaza-IA.webp",
+    "publishedAt": "2024-08-01T06:00:22Z",
+    "content": "La inteligencia artificial (IA) está transformando todos los aspectos de nuestra vida, por lo que no es sorprendente que también esté siendo utilizada para fines menos nobles. Los ataques narrativos,… [+3288 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Googlewatchblog.de"
+    },
+    "author": "Jens",
+    "title": "Googles Red Teams sorgen für Sicherheit: So arbeiten die internen Angreifer + ein mahnendes Hacking-Beispiel",
+    "description": "Bei Google stehen Sicherheit und der Schutz der Nutzerdaten an erster Stelle, das betont man seit sehr vielen Jahren und stellt das auch immer wieder unter Beweis. Jetzt gibt man interessante Einblicke darin, wie man die Sicherheit bestmöglich gewährleistet u…",
+    "url": "https://www.googlewatchblog.de/2024/08/googles-red-teams-sorgen-fuer-sicherheit-so-arbeiten-die-internen-angreifer-ein-mahnendes-hacking-beispiel/",
+    "urlToImage": "https://www.googlewatchblog.de/wp-content/uploads/malware-android.jpg",
+    "publishedAt": "2024-08-04T16:00:27Z",
+    "content": "Bei Google stehen Sicherheit und der Schutz der Nutzerdaten an erster Stelle, das betont man seit sehr vielen Jahren und stellt das auch immer wieder unter Beweis. Jetzt gibt man interessante Einblic… [+3046 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Schneier.com"
+    },
+    "author": "Bruce Schneier",
+    "title": "A Better Investigatory Board for Cyber Incidents",
+    "description": "When an airplane crashes, impartial investigatory bodies leap into action, empowered by law to unearth what happened and why. But there is no such empowered and impartial body to investigate CrowdStrike’s faulty update that recently unfolded, ensnarling banks…",
+    "url": "https://www.schneier.com/blog/archives/2024/08/a-better-investigatory-board-for-cyber-incidents.html",
+    "urlToImage": null,
+    "publishedAt": "2024-08-02T21:43:24Z",
+    "content": "When an airplane crashes, impartial investigatory bodies leap into action, empowered by law to unearth what happened and why. But there is no such empowered and impartial body to investigate CrowdStr… [+8297 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "CrowdStrike IT outage affected 8.5 million Windows devices, Microsoft says",
+    "description": "It’s the first time that a number has been put on the glitch that is still causing problems around the world.",
+    "url": "https://www.bbc.com/news/articles/cpe3zgznwjno",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/2bda/live/f864fb00-46bf-11ef-93d9-870ecb62df8e.jpg",
+    "publishedAt": "2024-07-20T17:46:43Z",
+    "content": "By Joe Tidy, Cyber correspondent, BBC News\r\nMicrosoft says it estimates that 8.5m computers around the world were disabled by the global IT outage.\r\nIts the first time that a number has been put on t… [+3335 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Stackdiary.com"
+    },
+    "author": "Alex Ivanovs",
+    "title": "MSI warranty claim database was publicly accessible via Google",
+    "description": "According to the YouTube channel Gamers Nexus, over 600,000 customer warranty claims for MSI products were publicly accessible via Google search. MSI, a",
+    "url": "https://stackdiary.com/msi-warranty-claim-database-was-publicly-accessible-via-google/",
+    "urlToImage": "https://stackdiary.com/wp-content/uploads/2024/07/MSI-warranty-claim-database-was-exposed-via-Google-Search.jpg",
+    "publishedAt": "2024-07-13T12:09:23Z",
+    "content": "According to the YouTube channel Gamers Nexus, over 600,000 customer warranty claims for MSI products were publicly accessible via Google search. MSI, a leading computer hardware and peripherals manu… [+3042 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNET"
+    },
+    "author": "Ian Sherr",
+    "title": "Apple's SOS Live Video Gets More Support From 911 Operators Ahead of iOS 18 Launch",
+    "description": "Calling 911 in some places will offer FaceTime-like video with iOS 18 in the fall.",
+    "url": "https://www.cnet.com/tech/mobile/apples-sos-live-video-gets-more-support-from-911-operators-ahead-of-ios-18-launch/",
+    "urlToImage": "https://www.cnet.com/a/img/resize/637585c49ca773f1ce21fc8ee9748da0092edb0b/hub/2024/07/24/27779ba0-d5d0-4150-8a30-0ad5b3d1dd20/911-call-gettyimages-1652926628.jpg?auto=webp&fit=crop&height=675&width=1200",
+    "publishedAt": "2024-07-24T21:11:00Z",
+    "content": "If you have to call 911 emergency services sometime a few months from now, you may get an option to switch on live video, kind of like a FaceTime video call. That's because emergency platforms RapidS… [+2229 chars]"
+  },
+  {
+    "source": {
+      "id": "polygon",
+      "name": "Polygon"
+    },
+    "author": "Cass Marshall",
+    "title": "The Operator is the deep state sim I’ve craved for so long",
+    "description": "Bureau 81 is the developer behind The Operator, a clever puzzle game that takes place on the computer terminal of a Federal Division of Intelligence agent.",
+    "url": "https://www.polygon.com/review/24203919/the-operator-indie-game-mystery-puzzle-federal-intelligence",
+    "urlToImage": "https://cdn.vox-cdn.com/thumbor/P9aJXDAoMOWqzxZq7uW5_PacpRM=/0x38:1920x1043/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/25541610/ss_c2162aee1a8cb70b0b01187d24775a9b84b8689a.jpg",
+    "publishedAt": "2024-07-23T17:00:00Z",
+    "content": "Knowledge is power, and there are few games where thats as literal as The Operator. \r\nThe Operator is an indie game where you take up the role of Evan Tanner, a fresh-faced recruit at the Federal Dep… [+4250 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "9to5Mac"
+    },
+    "author": "Bradley Chambers",
+    "title": "Aqara releases new U200 smart lock with Apple home key support",
+    "description": "Aqara U200 with advanced security features, Matter support, Thread support, and integration with Apple home key.\n\n\n\n more…",
+    "url": "https://9to5mac.com/2024/07/09/aqara-u200/",
+    "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2024/07/Aqara-u200.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+    "publishedAt": "2024-07-09T13:17:03Z",
+    "content": "Apple’s home key continues to slowly make its way into more smart home locks. Aqara, fresh off the release of the U50 smart lock, has just released the Aqara U200 with advanced security features, Mat… [+2692 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Jonathan Bennett",
+    "title": "This Week in Security: EvilVideo, Crowdstrike, and InSecure Boot",
+    "description": "First up this week is the story of EvilVideo, a clever telegram exploit that disguises an APK as a video file. The earliest record we have of this exploit is on June 6th when it was advertised on a…",
+    "url": "https://hackaday.com/2024/07/26/this-week-in-security-evilvideo-crowdstrike-and-insecure-boot/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2016/01/darkarts.jpg",
+    "publishedAt": "2024-07-26T14:00:18Z",
+    "content": "First up this week is the story of EvilVideo, a clever telegram exploit that disguises an APK as a video file. The earliest record we have of this exploit is on June 6th when it was advertised on a h… [+6319 chars]"
+  }
+]

@@ -1,0 +1,565 @@
+<html><head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat with AI</title>
+  <style>
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #343541;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+  background-color: #202123;
+  color: white;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+}
+
+.header h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.chat-area {
+  flex-grow: 1;
+  background-color: #40414f;
+  border-radius: 5px;
+  padding: 15px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  margin-top: 10px;
+}
+
+#userInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #40414f;
+  color: white;
+  border: 1px solid #565869;
+  border-radius: 5px;
+  resize: vertical;
+  min-height: 40px;
+  max-height: 200px;
+}
+
+#sendButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #10a37f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#sendButton:hover {
+  background-color: #1a7f64;
+}
+
+#modelSelect {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #40414f;
+  color: white;
+  border: 1px solid #565869;
+  border-radius: 5px;
+}
+
+.created-by {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  word-wrap: break-word;
+}
+
+.user {
+  background-color: #2a2b32;
+}
+
+.assistant {
+  background-color: #343541;
+}
+
+.system {
+  background-color: #444654;
+  font-style: italic;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  border-top: 3px solid #10a37f;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.chat-history-item {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #2a2b32;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.chat-history-item:hover {
+  background-color: #40414f;
+}
+
+.chat-history-item.selected {
+  background-color: #40414f;
+}
+
+.chat-history-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.chat-history-button {
+  background-color: #565869;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 3px 6px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.chat-history-button:hover {
+  background-color: #6e7087;
+}
+
+.new-chat-button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #10a37f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.new-chat-button:hover {
+  background-color: #1a7f64;
+}
+
+#debugButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #565869;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#debugButton:hover {
+  background-color: #6e7087;
+}
+
+.eyeball-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 5px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #40414f;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.popup-content {
+  color: white;
+  white-space: pre-wrap;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+</style></head><body>
+<div class="container">
+  <div class="sidebar">
+    <button class="new-chat-button" id="newChatButton">New Chat</button>
+    <div id="chatHistory"></div>
+  </div>
+  <div class="main-content">
+    <div class="header">
+      <h1>Chat with Every AI FREE</h1>
+      <button id="debugButton">Debug</button>
+    </div>
+    <div class="chat-area" id="chat-area">
+      <!-- Chat messages will be inserted here -->
+    </div>
+    <textarea id="userInput" placeholder="Type your message here..." rows="1"></textarea>
+    <button id="sendButton">Send</button>
+    <select id="modelSelect">
+      <option value="">Loading models...</option>
+    </select>
+    <div class="footer">
+      Chat with Every AI FREE. Free Research Preview. Our goal is to make AI systems more natural and safe to interact with. Your feedback will help us improve.
+    </div>
+    
+  </div>
+</div>
+
+<div id="overlay" class="overlay"></div>
+<div id="popup" class="popup">
+  <button class="close-popup" onclick="closePopup()">×</button>
+  <div id="popupContent" class="popup-content"></div>
+</div>
+
+<script>
+const systemPrompt = `You are an AI assistant. Respond in a helpful, respectful, and honest manner.`;
+let selectedModel = '';
+let currentChatId = null;
+let debugMode = false;
+
+function generateUniqueId() {
+  return Date.now().toString(36) + Math.random().toString(36).substr(2);
+}
+
+function addMessage(role, content) {
+  const chatArea = document.getElementById('chat-area');
+  const messageDiv = document.createElement('div');
+  messageDiv.className = `message ${role}`;
+  const prefix = role === 'user' ? 'User: ' : (role === 'assistant' ? 'AI: ' : '');
+  messageDiv.textContent = prefix + content;
+  chatArea.appendChild(messageDiv);
+  chatArea.scrollTop = chatArea.scrollHeight;
+
+  // Save message to local storage
+  if (currentChatId) {
+    let chats = JSON.parse(localStorage.getItem('aiChats')) || {};
+    if (!chats[currentChatId]) {
+      chats[currentChatId] = { messages: [], name: `Chat ${currentChatId.substr(0, 6)}...` };
+    }
+    chats[currentChatId].messages.push({role, content});
+    localStorage.setItem('aiChats', JSON.stringify(chats));
+    updateChatHistory();
+  }
+}
+
+function addLoadingSpinner() {
+  const chatArea = document.getElementById('chat-area');
+  const spinnerDiv = document.createElement('div');
+  spinnerDiv.className = 'message system';
+  spinnerDiv.innerHTML = 'AI: <div class="loading-spinner"></div>';
+  chatArea.appendChild(spinnerDiv);
+  chatArea.scrollTop = chatArea.scrollHeight;
+  return spinnerDiv;
+}
+
+function startNewChat() {
+  currentChatId = generateUniqueId();
+  document.getElementById('chat-area').innerHTML = '';
+  addMessage('system', 'How can I assist you today?');
+  updateChatHistory();
+}
+
+function updateChatHistory() {
+  const chatHistory = document.getElementById('chatHistory');
+  chatHistory.innerHTML = '';
+  const chats = JSON.parse(localStorage.getItem('aiChats')) || {};
+  Object.keys(chats).forEach(chatId => {
+    const chatDiv = document.createElement('div');
+    chatDiv.className = 'chat-history-item';
+    if (chatId === currentChatId) {
+      chatDiv.classList.add('selected');
+    }
+    
+    const chatName = document.createElement('span');
+    chatName.textContent = chats[chatId].name || `Chat ${chatId.substr(0, 6)}...`;
+    chatDiv.appendChild(chatName);
+    
+    const buttonsDiv = document.createElement('div');
+    buttonsDiv.className = 'chat-history-buttons';
+    
+    const renameButton = document.createElement('button');
+    renameButton.textContent = 'Rename';
+    renameButton.className = 'chat-history-button';
+    renameButton.onclick = (e) => {
+      e.stopPropagation();
+      renameChat(chatId);
+    };
+    
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.className = 'chat-history-button';
+    deleteButton.onclick = (e) => {
+      e.stopPropagation();
+      deleteChat(chatId);
+    };
+    
+    if (debugMode) {
+      const eyeballButton = document.createElement('button');
+      eyeballButton.innerHTML = '👁️';
+      eyeballButton.className = 'eyeball-button';
+      eyeballButton.onclick = (e) => {
+        e.stopPropagation();
+        showChatData(chatId);
+      };
+      buttonsDiv.appendChild(eyeballButton);
+    }
+    
+    buttonsDiv.appendChild(renameButton);
+    buttonsDiv.appendChild(deleteButton);
+    
+    chatDiv.appendChild(buttonsDiv);
+    chatHistory.appendChild(chatDiv);
+    
+    chatDiv.onclick = () => loadChat(chatId);
+  });
+}
+
+function loadChat(chatId) {
+  if (currentChatId === chatId) return; // Don't reload if it's already the current chat
+  currentChatId = chatId;
+  const chats = JSON.parse(localStorage.getItem('aiChats')) || {};
+  const chatMessages = chats[chatId].messages || [];
+  const chatArea = document.getElementById('chat-area');
+  chatArea.innerHTML = '';
+  chatMessages.forEach(message => addMessage(message.role, message.content));
+  updateChatHistory(); // Update to show the selected chat
+}
+
+function renameChat(chatId) {
+  const chats = JSON.parse(localStorage.getItem('aiChats')) || {};
+  const newName = prompt('Enter new name for the chat:', chats[chatId].name);
+  if (newName !== null) {
+    chats[chatId].name = newName;
+    localStorage.setItem('aiChats', JSON.stringify(chats));
+    updateChatHistory();
+  }
+}
+
+function deleteChat(chatId) {
+  if (confirm('Are you sure you want to delete this chat?')) {
+    const chats = JSON.parse(localStorage.getItem('aiChats')) || {};
+    delete chats[chatId];
+    localStorage.setItem('aiChats', JSON.stringify(chats));
+    if (currentChatId === chatId) {
+      startNewChat();
+    } else {
+      updateChatHistory();
+    }
+  }
+}
+
+function showChatData(chatId) {
+  const chats = JSON.parse(localStorage.getItem('aiChats')) || {};
+  const chatData = chats[chatId];
+  const totalCharCount = chatData.messages.reduce((count, message) => count + message.content.length, 0);
+  
+  let popupContent = `Chat ID: ${chatId}\n`;
+  popupContent += `Chat Name: ${chatData.name}\n`;
+  popupContent += `Total Character Count: ${totalCharCount}\n\n`;
+  popupContent += `Messages:\n`;
+  chatData.messages.forEach((message, index) => {
+    popupContent += `\n[${index + 1}] ${message.role}: ${message.content}\n`;
+  });
+
+  document.getElementById('popupContent').textContent = popupContent;
+  document.getElementById('popup').style.display = 'block';
+  document.getElementById('overlay').style.display = 'block';
+}
+
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+  document.getElementById('overlay').style.display = 'none';
+}
+
+// Fetch AI models
+fetch('https://api.discord.rocks/v1/models')
+  .then(response => response.json())
+  .then(data => {
+    const select = document.getElementById('modelSelect');
+    select.innerHTML = ''; // Clear loading option
+    data.data.forEach(model => {
+      const option = document.createElement('option');
+      option.value = model.id;
+      option.textContent = model.id;
+      select.appendChild(option);
+    });
+    select.value = 'llama-3-70b-chat-turbo';
+    selectedModel = 'llama-3-70b-chat-turbo';
+  })
+  .catch(error => console.error('Error fetching AI models:', error));
+
+// Handle model selection
+document.getElementById('modelSelect').addEventListener('change', (event) => {
+  selectedModel = event.target.value;
+});
+
+// Handle send button click
+function sendMessage() {
+  const userInput = document.getElementById('userInput');
+  const message = userInput.value.trim();
+  if (message) {
+    addMessage('user', message);
+    sendMessageToAI(message);
+    userInput.value = '';
+    userInput.style.height = 'auto';
+  }
+}
+
+document.getElementById('sendButton').addEventListener('click', sendMessage);
+
+// Handle textarea input and keypress
+const userInput = document.getElementById('userInput');
+
+userInput.addEventListener('input', function() {
+  this.style.height = 'auto';
+  this.style.height = (this.scrollHeight) + 'px';
+});
+
+userInput.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter' && !event.shiftKey) {
+    event.preventDefault();
+    sendMessage();
+  }
+});
+
+function sendMessageToAI(message) {
+  const loadingSpinner = addLoadingSpinner();
+  fetch('https://api.discord.rocks/v1/chat/completions', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model: selectedModel,
+      messages: [
+        { role: 'system', content: systemPrompt },
+        ...getCurrentChatMessages(),
+        { role: 'user', content: message }
+      ],
+      max_tokens: 150
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    loadingSpinner.remove();
+    if (data.choices && data.choices.length > 0) {
+      addMessage('assistant', data.choices[0].message.content);
+    } else {
+      addMessage('system', 'Sorry, I couldn\'t generate a response.');
+    }
+  })
+  .catch(error => {
+    loadingSpinner.remove();
+    console.error('Error sending message to AI:', error);
+    addMessage('system', 'Sorry, there was an error communicating with the AI.');
+  });
+}
+
+function getCurrentChatMessages() {
+  const chats = JSON.parse(localStorage.getItem('aiChats')) || {};
+  return currentChatId && chats[currentChatId] ? chats[currentChatId].messages : [];
+}
+
+// New Chat button
+document.getElementById('newChatButton').addEventListener('click', startNewChat);
+
+// Debug button
+document.getElementById('debugButton').addEventListener('click', () => {
+  debugMode = !debugMode;
+  updateChatHistory();
+});
+
+// Initialize
+updateChatHistory();
+if (!currentChatId) {
+  startNewChat();
+} else {
+  loadChat(currentChatId);
+}
+
+// Close popup when clicking outside
+document.getElementById('overlay').addEventListener('click', closePopup);
+</script>
+</body></html>

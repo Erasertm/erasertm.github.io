@@ -1,0 +1,214 @@
+{
+    "status": "ok",
+    "totalResults": 16,
+    "articles": [
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Anne Tergesen and Oyin Adedoyin",
+    "title": "The 401(k) Investors Convinced That Target-Date Funds Miss the Mark",
+    "description": "They are the default choice for millions of retirement savers who are automatically enrolled in 401(k) plans. But some investors are moving out of them.",
+    "url": "https://www.wsj.com/personal-finance/retirement/401k-savers-target-date-funds-alternatives-6e4e6f75",
+    "urlToImage": "https://s.yimg.com/ny/api/res/1.2/vpX9wLwvLmMrZLSsPX0riA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02MDA-/https://media.zenfs.com/en/the_wall_street_journal_hosted_996/200e36a41d4da40ee64854c3bc289a4d",
+    "publishedAt": "2024-08-04T01:00:00Z",
+    "content": "A group of investors are shunning the most popular retirement investment on Wall Street.\r\nTarget-date funds are a professionally managed portfolio of stocks and bonds that recalibrates the mix as we … [+6270 chars]"
+    },
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Emily Bary, Therese Poletti, Tomi Kilgore",
+    "title": "Apple earnings: Stock rises as iPhone revenue beats estimates",
+    "description": "Apple reported results for its fiscal third quarter after the close of trading on Thursday. Follow along live as MarketWatch analyzes the expectations and results.",
+    "url": "https://www.wsj.com/livecoverage/apple-earnings-iphone-results-revenue-ai-q3",
+    "urlToImage": "https://images.mktw.net/im-18007061/social",
+    "publishedAt": "2024-08-01T20:33:59Z",
+    "content": "Apple's stock chart shows that there's greater risk of a bearish technical breakdown after earnings than a bullish breakout.\r\nDownside levels to watch include last week's lowest intraday price of $21… [+999 chars]"
+    },
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Tomi Kilgore",
+    "title": "Amazon made $400 million on its equity investments in the second quarter",
+    "description": "Amazon plans to report second-quarter earnings after the close of trading Thursday. MarketWatch will be breaking down the expectations and results.",
+    "url": "https://www.wsj.com/livecoverage/amazon-earnings-results-q2-aws-ai-prime-spending-retail",
+    "urlToImage": "https://mw3.wsj.net/mw5/content/logos/mw_logo_social.png",
+    "publishedAt": "2024-08-01T17:29:59Z",
+    "content": "Amazon disclosed earlier this week that its equity investments in public companies were valued at a total of $2.525 billion as of June 30.\r\nThe bulk of that was from an investment in electric vehicle… [+714 chars]"
+    },
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Joseph Adinolfi, Emily Bary, Vivien Lou Chen, Isabel Wang, Ciara Linnane, Jamie Chisholm",
+    "title": "U.S. stocks forfeit early gains as Wall Street awaits Amazon, Apple earnings",
+    "description": "Follow all the latest U.S. market action for Thursday here.",
+    "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-futures-steady-ahead-of-apple-earnings",
+    "urlToImage": "https://images.mktw.net/im-34752006/social",
+    "publishedAt": "2024-08-01T14:32:30Z",
+    "content": "While stock futures held on to earlier gains, Treasury yields moved lower on Thursday after the release of the latest batch of U.S. economic data.\r\nInvestors appeared to focus on the latest reading o… [+968 chars]"
+    },
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Steve Goldstein, Jamie Chisholm",
+    "title": "Bank of England cuts rates for first time in over four years",
+    "description": "Follow live coverage of the Bank of England rate decision.",
+    "url": "https://www.wsj.com/livecoverage/bank-of-england-decision-market-split-on-whether-first-rate-cut-of-cycle-to-come",
+    "urlToImage": "https://images.mktw.net/im-35983513/social",
+    "publishedAt": "2024-08-01T11:04:21Z",
+    "content": "The market is torn on whether the Bank of England will make its first rate cut of the cycle, when it announces its decision at noon local time, or 7 a.m. Eastern. An unusual period of quiet due to th… [+961 chars]"
+    },
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Emily Bary, Tomi Kilgore",
+    "title": "Meta earnings: Stock rises as the Facebook parent gives upbeat outlook",
+    "description": "Meta reported its second-quarter earnings after Wednesday's close. MarketWatch will be breaking down the expectations and results.",
+    "url": "https://www.wsj.com/livecoverage/meta-earnings-results-ai-q2-facebook-revenue-instagram",
+    "urlToImage": "https://images.mktw.net/im-93074937/social",
+    "publishedAt": "2024-07-31T20:08:49Z",
+    "content": "Investors in Meta's stock shouldn't expect another double-digit, post-earnings move, or at least that what the options market is saying.\r\nWill the options market be right for a change?\r\nFollowing Met… [+939 chars]"
+    },
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Jeffry Bartash, Greg Robb, Steve Goldstein",
+    "title": "WATCH: Jerome Powell speaks after the Fed's interest-rate decision",
+    "description": "Follow all the action from the Federal Open Market Committee meeting and Jerome Powell press conference.",
+    "url": "https://www.wsj.com/livecoverage/fed-meeting-u-s-central-bank-likely-to-suggest-a-rate-cut-is-coming-soon",
+    "urlToImage": "https://images.mktw.net/im-274289/social",
+    "publishedAt": "2024-07-31T18:43:32Z",
+    "content": "Wall Street has largely become convinced the Fed will cut rates in September, but there are still a few holdouts.\r\nOne of them is Stephen Stanley, chief economist of Santander Capital Markets. Stanle… [+1250 chars]"
+    },
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Isabel Wang",
+    "title": "Why the Fed has to 'thread a needle' today, according to this strategist",
+    "description": "Follow all the latest U.S. market action for Wednesday here.",
+    "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-futures-rise-ahead-of-fed-decision-and-meta-earnings",
+    "urlToImage": "https://mw3.wsj.net/mw5/content/logos/mw_logo_social.png",
+    "publishedAt": "2024-07-31T14:57:49Z",
+    "content": "The Federal Reserve is likely to indicate that a reduction in borrowing costs could come as soon as September in its policy statement and in Chair Jerome Powell's press conference Wednesday afternoon… [+893 chars]"
+    },
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Therese Poletti, Emily Bary, Tomi Kilgore",
+    "title": "AMD sees gross margins climb amid record data-center results",
+    "description": "AMD reported second-quarter results after Tuesday's closing bell, and investors will be keenly focused on the company's AI revenue forecast. Follow along live as MarketWatch breaks down the results.",
+    "url": "https://www.wsj.com/livecoverage/amd-earnings-results-q2-semiconductor-ai-advanced-micro-devices",
+    "urlToImage": "https://images.mktw.net/im-774775/social",
+    "publishedAt": "2024-07-30T21:05:55Z",
+    "content": "Shares of AMD jumped 2.6% in Tuesdays after-hours session, after the semiconductor maker and artificial intelligence play reported second-quarter earnings that beat expectations and raised its full-y… [+1089 chars]"
+    },
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Heather Haddon",
+    "title": "McDonald’s Sales Soften, Sounding Alarm for Restaurants as Diners Curb Visits",
+    "description": "The fast-food giant said it is focusing on value with consumers continuing to tighten their budgets.",
+    "url": "https://www.wsj.com/business/earnings/mcdonalds-mcd-q2-earnings-report-2024-7010ea3a",
+    "urlToImage": "https://s.yimg.com/ny/api/res/1.2/wpr4yLnPYAsdgvuATkyY1g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02MDA-/https://media.zenfs.com/en/the_wall_street_journal_hosted_996/5dc98ee7f1476661832203c5c1219d30",
+    "publishedAt": "2024-07-29T14:57:00Z",
+    "content": "McDonalds kicked off a string of quarterly reports from U.S. restaurant chains this week. - jaimi joy/Reuters\r\nMcDonalds said its sales last quarter sputtered as the burger giant grappled with consum… [+3987 chars]"
+    },
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Alexander Osipovich",
+    "title": "NYSE’s Longtime IPO Pitchman, John Tuttle, to Leave After 17 Years",
+    "description": "Tuttle helped persuade companies such as Palantir and Snowflake to list on the Big Board, rather than Nasdaq.",
+    "url": "https://www.wsj.com/finance/nyses-longtime-ipo-pitchman-john-tuttle-to-leave-after-17-years-24fa8e22",
+    "urlToImage": "https://s.yimg.com/ny/api/res/1.2/4wCWYh81PtQHR1B8Dd21Rg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02MDA-/https://media.zenfs.com/en/the_wall_street_journal_hosted_996/80c4d69d35afc85e88b2dee1a5ebcbab",
+    "publishedAt": "2024-07-24T21:12:00Z",
+    "content": "John Tuttle - Emily Assiran for WSJ\r\nJohn Tuttle, a veteran executive at the New York Stock Exchange who gained prominence as its top salesman for attracting initial public offerings, plans to leave … [+2802 chars]"
+    },
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Jason Douglas and Rebecca Feng",
+    "title": "Feared in the West, China’s Manufacturers Struggle at Home",
+    "description": "Huge overinvestment, weak domestic sales and trade barriers abroad have depressed companies’ profits and pushed many to the brink.",
+    "url": "https://www.wsj.com/world/china/feared-in-the-west-chinas-manufacturers-struggle-at-home-8a64f2c3",
+    "urlToImage": "https://s.yimg.com/ny/api/res/1.2/eISXrBI9f3b_G_1eMuGdKQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02MDA-/https://media.zenfs.com/en/the_wall_street_journal_hosted_996/0498393ecfcd7b73dbfc72e077f2b386",
+    "publishedAt": "2024-07-21T04:03:00Z",
+    "content": "A robot welds battery-pack accessories at a Chinese manufacturing plant. - Cfoto/DDP/Zuma Press\r\nSINGAPOREAs Western companies quake at the latest onslaught of cheap Chinese goods, a similar drama is… [+6105 chars]"
+    },
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Patrick Thomas",
+    "title": "Pork Producer Smithfield Plans U.S. Stock Listing",
+    "description": "China’s WH Group seeks to list Smithfield’s U.S. and Mexico business after acquiring the enterprise more than a decade ago.",
+    "url": "https://www.wsj.com/business/retail/pork-producer-smithfield-plans-return-to-equity-u-s-markets-1f9eeb37",
+    "urlToImage": "https://s.yimg.com/ny/api/res/1.2/Tm2tNZPHeep0w6tjK.9T8Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02MDA-/https://media.zenfs.com/en/the_wall_street_journal_hosted_996/c9a75eb46f0f1e0f602d3d74ec0ba927",
+    "publishedAt": "2024-07-14T11:42:00Z",
+    "content": "Smithfield Foods is the largest U.S. pork producer. An employee handles sides of pork at a Smithfield facility in Milan, Mo. - Daniel Acker/Bloomberg News\r\nThe Chinese parent of Smithfield Foods says… [+3489 chars]"
+    },
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Justin Baer, Gina Heeb and Alexander Saeedy",
+    "title": "Big Banks and Customers Continue to Feel Pressure From Higher Rates",
+    "description": "JPMorgan and Wells Fargo both reported a drop in quarterly profit, while Citigroup’s profit rose, driven in part by the bank’s cost-cutting measures.",
+    "url": "https://www.wsj.com/finance/banking/bank-earnings-jp-morgan-chase-wells-fargo-citigroup-23fd9540",
+    "urlToImage": "https://s.yimg.com/ny/api/res/1.2/HKXh1GJ9fvkHK2Af26lJtw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02MDA-/https://media.zenfs.com/en/the_wall_street_journal_hosted_996/6fe2d91448f6d9dacb2cb3c336e2ff24",
+    "publishedAt": "2024-07-12T20:26:00Z",
+    "content": "The countrys biggest banks, including JPMorgan Chase, began reporting quarterly earnings Friday. - Jeenah Moon/Bloomberg News\r\nThe fight to rein in inflation continues to weigh on some of the nations… [+5859 chars]"
+    },
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Sam Goldfarb and Nick Timiraos",
+    "title": "Milder Inflation Opens Door Wider to September Rate Cut",
+    "description": "The rise in consumer prices eased to 3% in June, further extending a recent slowdown in price increases.",
+    "url": "https://www.wsj.com/economy/central-banking/inflation-june-cpi-report-interest-rate-437fa772",
+    "urlToImage": "https://s.yimg.com/ny/api/res/1.2/1rXdaoVimlWnceazwwwxJQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02MDA-/https://media.zenfs.com/en/the_wall_street_journal_hosted_996/a5bb988ab74ee8615b7e34252dd0b679",
+    "publishedAt": "2024-07-11T20:35:00Z",
+    "content": "The CPI report showed prices cooled broadly in the second quarter. - SeongJoon Cho/Bloomberg News\r\nU.S. inflation eased substantially in June, extending a recent slowdown in price increases that clea… [+6731 chars]"
+    },
+    {
+    "source": {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal"
+    },
+    "author": "Victor Stefanescu and Alison Sider",
+    "title": "Delta’s Sagging Profit Signals Trouble for Airlines This Summer",
+    "description": "Airports are attracting record traffic, but higher costs and discounted fares are expected to weigh on carriers.",
+    "url": "https://www.wsj.com/business/airlines/delta-dal-q2-earnings-report-2024-e025fb71",
+    "urlToImage": "https://s.yimg.com/ny/api/res/1.2/shko7aINLFghwbYHor057w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02MDA-/https://media.zenfs.com/en/the_wall_street_journal_hosted_996/8bd0bb64edbd8921a0406f042ce2ccb7",
+    "publishedAt": "2024-07-11T16:02:00Z",
+    "content": "Deltas second-quarter profit declined 29%. - Miguel Martinez/Zuma Press\r\nDelta Air Lines reported a sharply lower profit in the second quarter as it faced a new challenge during the busy summer trave… [+3584 chars]"
+    }
+    ]
+    }

@@ -1,0 +1,709 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synth Keyboard</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .keyboard {
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .key {
+    width: 40px;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid #000;
+    margin-right: 2px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.1s;
+  }
+  .key.black {
+    background-color: #000;
+    height: 100px;
+    width: 30px;
+    margin-left: -15px;
+    margin-right: -15px;
+    z-index: 1;
+  }
+  .key.active {
+    background-color: #4CAF50;
+  }
+  .key.held {
+    background-color: #2196F3;
+  }
+  .controls {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .control {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .control label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .control input, .control select {
+    width: 100%;
+  }
+  .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .lfo-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .lfo-control {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .recording-panel {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .recording-timer {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .chord-display {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .value-display {
+    display: inline-block;
+    width: 50px;
+    text-align: right;
+    margin-left: 10px;
+  }
+</style>
+</head>
+<body>
+  <h1>Advanced Professional Synth Keyboard Studio v2</h1>
+  <div class="keyboard" id="keyboard"></div>
+  <div class="chord-display" id="chordDisplay"></div>
+  <div class="controls">
+    <div class="control">
+      <label for="patch">Synth Patch:</label>
+      <select id="patch">
+        <option value="sine">Sine</option>
+        <option value="square">Square</option>
+        <option value="sawtooth">Sawtooth</option>
+        <option value="triangle">Triangle</option>
+        <option value="fm">FM</option>
+        <option value="am">AM</option>
+        <option value="fat">Fat</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="volume">Volume: <span class="value-display" id="volumeDisplay">0.5</span></label>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+    </div>
+    <div class="control">
+      <label for="attack">Attack: <span class="value-display" id="attackDisplay">0.1</span></label>
+      <input type="range" id="attack" min="0" max="5" step="0.01" value="0.1">
+    </div>
+    <div class="control">
+      <label for="decay">Decay: <span class="value-display" id="decayDisplay">0.2</span></label>
+      <input type="range" id="decay" min="0" max="5" step="0.01" value="0.2">
+    </div>
+    <div class="control">
+      <label for="sustain">Sustain: <span class="value-display" id="sustainDisplay">0.5</span></label>
+      <input type="range" id="sustain" min="0" max="1" step="0.01" value="0.5">
+    </div>
+    <div class="control">
+      <label for="release">Release: <span class="value-display" id="releaseDisplay">0.5</span></label>
+      <input type="range" id="release" min="0" max="5" step="0.01" value="0.5">
+    </div>
+    <div class="control">
+      <label for="filterType">Filter Type:</label>
+      <select id="filterType">
+        <option value="lowpass">Lowpass</option>
+        <option value="highpass">Highpass</option>
+        <option value="bandpass">Bandpass</option>
+        <option value="notch">Notch</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="filterFreq">Filter Frequency: <span class="value-display" id="filterFreqDisplay">2000</span></label>
+      <input type="range" id="filterFreq" min="20" max="20000" step="1" value="2000">
+    </div>
+    <div class="control">
+      <label for="filterQ">Filter Q: <span class="value-display" id="filterQDisplay">1</span></label>
+      <input type="range" id="filterQ" min="0" max="20" step="0.1" value="1">
+    </div>
+    <div class="control">
+      <label for="reverbWet">Reverb: <span class="value-display" id="reverbWetDisplay">0.3</span></label>
+      <input type="range" id="reverbWet" min="0" max="1" step="0.01" value="0.3">
+    </div>
+    <div class="control">
+      <label for="delayTime">Delay Time: <span class="value-display" id="delayTimeDisplay">0.3</span></label>
+      <input type="range" id="delayTime" min="0" max="1" step="0.01" value="0.3">
+    </div>
+    <div class="control">
+      <label for="delayFeedback">Delay Feedback: <span class="value-display" id="delayFeedbackDisplay">0.4</span></label>
+      <input type="range" id="delayFeedback" min="0" max="1" step="0.01" value="0.4">
+    </div>
+    <div class="control">
+      <label for="chorusRate">Chorus Rate: <span class="value-display" id="chorusRateDisplay">2.5</span></label>
+      <input type="range" id="chorusRate" min="0" max="20" step="0.1" value="2.5">
+    </div>
+    <div class="control">
+      <label for="chorusDepth">Chorus Depth: <span class="value-display" id="chorusDepthDisplay">0.5</span></label>
+      <input type="range" id="chorusDepth" min="0" max="1" step="0.01" value="0.5">
+    </div>
+    <div class="control">
+      <label for="distortion">Distortion: <span class="value-display" id="distortionDisplay">0.2</span></label>
+      <input type="range" id="distortion" min="0" max="1" step="0.01" value="0.2">
+    </div>
+    <div class="control">
+      <label for="compThreshold">Compressor Threshold: <span class="value-display" id="compThresholdDisplay">-24</span></label>
+      <input type="range" id="compThreshold" min="-60" max="0" step="1" value="-24">
+    </div>
+    <div class="control">
+      <label for="compRatio">Compressor Ratio: <span class="value-display" id="compRatioDisplay">4</span></label>
+      <input type="range" id="compRatio" min="1" max="20" step="0.1" value="4">
+    </div>
+  </div>
+  <div class="lfo-group">
+    <div class="lfo-control" id="lfo1">
+      <h3>LFO 1</h3>
+      <label for="lfo1-waveform">Waveform:</label>
+      <select id="lfo1-waveform">
+        <option value="sine">Sine</option>
+        <option value="square">Square</option>
+        <option value="sawtooth">Sawtooth</option>
+        <option value="triangle">Triangle</option>
+      </select>
+      <label for="lfo1-freq">Frequency: <span class="value-display" id="lfo1-freqDisplay">0</span></label>
+      <input type="range" id="lfo1-freq" min="0" max="50" step="0.1" value="0">
+      <label for="lfo1-depth">Depth: <span class="value-display" id="lfo1-depthDisplay">0</span></label>
+      <input type="range" id="lfo1-depth" min="0" max="1000" step="1" value="0">
+      <label for="lfo1-target">Target:</label>
+      <select id="lfo1-target">
+        <option value="filter">Filter Frequency</option>
+        <option value="filterQ">Filter Q</option>
+        <option value="volume">Volume</option>
+        <option value="pitch">Pitch</option>
+        <option value="pan">Pan</option>
+        <option value="reverbWet">Reverb Wet</option>
+        <option value="delayTime">Delay Time</option>
+        <option value="chorusRate">Chorus Rate</option>
+      </select>
+    </div>
+    <div class="lfo-control" id="lfo2">
+      <h3>LFO 2</h3>
+      <label for="lfo2-waveform">Waveform:</label>
+      <select id="lfo2-waveform">
+        <option value="sine">Sine</option>
+        <option value="square">Square</option>
+        <option value="sawtooth">Sawtooth</option>
+        <option value="triangle">Triangle</option>
+      </select>
+      <label for="lfo2-freq">Frequency: <span class="value-display" id="lfo2-freqDisplay">0</span></label>
+      <input type="range" id="lfo2-freq" min="0" max="50" step="0.1" value="0">
+      <label for="lfo2-depth">Depth: <span class="value-display" id="lfo2-depthDisplay">0</span></label>
+      <input type="range" id="lfo2-depth" min="0" max="1000" step="1" value="0">
+      <label for="lfo2-target">Target:</label>
+      <select id="lfo2-target">
+        <option value="filter">Filter Frequency</option>
+        <option value="filterQ">Filter Q</option>
+        <option value="volume">Volume</option>
+        <option value="pitch">Pitch</option>
+        <option value="pan">Pan</option>
+        <option value="reverbWet">Reverb Wet</option>
+        <option value="delayTime">Delay Time</option>
+        <option value="chorusRate">Chorus Rate</option>
+      </select>
+    </div>
+    <div class="lfo-control" id="lfo3">
+      <h3>LFO 3</h3>
+      <label for="lfo3-waveform">Waveform:</label>
+      <select id="lfo3-waveform">
+        <option value="sine">Sine</option>
+        <option value="square">Square</option>
+        <option value="sawtooth">Sawtooth</option>
+        <option value="triangle">Triangle</option>
+      </select>
+      <label for="lfo3-freq">Frequency: <span class="value-display" id="lfo3-freqDisplay">0</span></label>
+      <input type="range" id="lfo3-freq" min="0" max="50" step="0.1" value="0">
+      <label for="lfo3-depth">Depth: <span class="value-display" id="lfo3-depthDisplay">0</span></label>
+      <input type="range" id="lfo3-depth" min="0" max="1000" step="1" value="0">
+      <label for="lfo3-target">Target:</label>
+      <select id="lfo3-target">
+        <option value="filter">Filter Frequency</option>
+        <option value="filterQ">Filter Q</option>
+        <option value="volume">Volume</option>
+        <option value="pitch">Pitch</option>
+        <option value="pan">Pan</option>
+        <option value="reverbWet">Reverb Wet</option>
+        <option value="delayTime">Delay Time</option>
+        <option value="chorusRate">Chorus Rate</option>
+      </select>
+    </div>
+    <div class="lfo-control" id="lfo4">
+      <h3>LFO 4</h3>
+      <label for="lfo4-waveform">Waveform:</label>
+      <select id="lfo4-waveform">
+        <option value="sine">Sine</option>
+        <option value="square">Square</option>
+        <option value="sawtooth">Sawtooth</option>
+        <option value="triangle">Triangle</option>
+      </select>
+      <label for="lfo4-freq">Frequency: <span class="value-display" id="lfo4-freqDisplay">0</span></label>
+      <input type="range" id="lfo4-freq" min="0" max="50" step="0.1" value="0">
+      <label for="lfo4-depth">Depth: <span class="value-display" id="lfo4-depthDisplay">0</span></label>
+      <input type="range" id="lfo4-depth" min="0" max="1000" step="1" value="0">
+      <label for="lfo4-target">Target:</label>
+      <select id="lfo4-target">
+        <option value="filter">Filter Frequency</option>
+        <option value="filterQ">Filter Q</option>
+        <option value="volume">Volume</option>
+        <option value="pitch">Pitch</option>
+        <option value="pan">Pan</option>
+        <option value="reverbWet">Reverb Wet</option>
+        <option value="delayTime">Delay Time</option>
+        <option value="chorusRate">Chorus Rate</option>
+      </select>
+    </div>
+  </div>
+  <div class="controls">
+    <div class="control">
+      <label for="arpeggiator">Arpeggiator:</label>
+      <select id="arpeggiator">
+        <option value="off">Off</option>
+        <option value="up">Up</option>
+        <option value="down">Down</option>
+        <option value="updown">Up-Down</option>
+        <option value="random">Random</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="chord">Chord Progression:</label>
+      <select id="chord">
+        <option value="off">Off</option>
+        <option value="major">Major</option>
+        <option value="minor">Minor</option>
+        <option value="jazz">Jazz</option>
+        <option value="custom">Custom</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="bpm">BPM: <span class="value-display" id="bpmDisplay">120</span></label>
+      <input type="range" id="bpm" min="40" max="240" value="120">
+    </div>
+  </div>
+  <div class="recording-panel">
+    <div class="recording-timer" id="recordingTimer">00:00</div>
+    <button class="button" id="recordBtn">Record</button>
+    <button class="button" id="playBtn">Play</button>
+    <button class="button" id="stopBtn">Stop</button>
+  </div>
+  <div>
+    <button class="button" id="holdBtn">Toggle Hold Mode</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.37/Tone.js"></script>
+  <script>
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    let synth, filter, lfo1, lfo2, lfo3, lfo4, reverb, delay, chorus, distortion, compressor;
+    let isRecording = false;
+    let recordedNotes = [];
+    let startTime;
+    let recordingInterval;
+    let isHoldMode = false;
+    let heldNotes = new Set();
+
+    const keyMap = {
+      'a': 'C4', 'w': 'C#4', 's': 'D4', 'e': 'D#4', 'd': 'E4', 'f': 'F4', 't': 'F#4',
+      'g': 'G4', 'y': 'G#4', 'h': 'A4', 'u': 'A#4', 'j': 'B4', 'k': 'C5', 'o': 'C#5',
+      'l': 'D5', 'p': 'D#5', ';': 'E5', "'": 'F5'
+    };
+
+    function createSynth() {
+      synth = new Tone.PolySynth(Tone.Synth, {
+        oscillator: {
+          type: document.getElementById('patch').value
+        },
+        envelope: {
+          attack: parseFloat(document.getElementById('attack').value),
+          decay: parseFloat(document.getElementById('decay').value),
+          sustain: parseFloat(document.getElementById('sustain').value),
+          release: parseFloat(document.getElementById('release').value)
+        }
+      }).toDestination();
+
+      filter = new Tone.Filter(20000, document.getElementById('filterType').value).connect(Tone.Destination);
+      lfo1 = new Tone.LFO(0, 0, 1000);
+      lfo2 = new Tone.LFO(0, 0, 1000);
+      lfo3 = new Tone.LFO(0, 0, 1000);
+      lfo4 = new Tone.LFO(0, 0, 1000);
+      reverb = new Tone.Reverb().toDestination();
+      delay = new Tone.FeedbackDelay().toDestination();
+      chorus = new Tone.Chorus().start().toDestination();
+      distortion = new Tone.Distortion().toDestination();
+      compressor = new Tone.Compressor().toDestination();
+
+      synth.connect(filter);
+      filter.connect(reverb);
+      reverb.connect(delay);
+      delay.connect(chorus);
+      chorus.connect(distortion);
+      distortion.connect(compressor);
+    }
+
+    function updateSynthParams() {
+      synth.set({
+        oscillator: { type: document.getElementById('patch').value },
+        envelope: {
+          attack: parseFloat(document.getElementById('attack').value),
+          decay: parseFloat(document.getElementById('decay').value),
+          sustain: parseFloat(document.getElementById('sustain').value),
+          release: parseFloat(document.getElementById('release').value)
+        }
+      });
+      synth.volume.value = Tone.gainToDb(parseFloat(document.getElementById('volume').value));
+      filter.frequency.value = parseFloat(document.getElementById('filterFreq').value);
+      filter.Q.value = parseFloat(document.getElementById('filterQ').value);
+      filter.type = document.getElementById('filterType').value;
+      reverb.wet.value = parseFloat(document.getElementById('reverbWet').value);
+      delay.delayTime.value = parseFloat(document.getElementById('delayTime').value);
+      delay.feedback.value = parseFloat(document.getElementById('delayFeedback').value);
+      chorus.frequency.value = parseFloat(document.getElementById('chorusRate').value);
+      chorus.depth = parseFloat(document.getElementById('chorusDepth').value);
+      distortion.distortion = parseFloat(document.getElementById('distortion').value);
+      compressor.threshold.value = parseFloat(document.getElementById('compThreshold').value);
+      compressor.ratio.value = parseFloat(document.getElementById('compRatio').value);
+
+      updateLFO(lfo1, 'lfo1');
+      updateLFO(lfo2, 'lfo2');
+      updateLFO(lfo3, 'lfo3');
+      updateLFO(lfo4, 'lfo4');
+
+      updateDisplays();
+    }
+
+    function updateLFO(lfo, id) {
+      lfo.type = document.getElementById(`${id}-waveform`).value;
+      lfo.frequency.value = parseFloat(document.getElementById(`${id}-freq`).value);
+      lfo.amplitude.value = parseFloat(document.getElementById(`${id}-depth`).value);
+      
+      const target = document.getElementById(`${id}-target`).value;
+      lfo.disconnect();
+
+      switch (target) {
+        case 'filter':
+          lfo.connect(filter.frequency);
+          break;
+        case 'filterQ':
+          lfo.connect(filter.Q);
+          break;
+        case 'volume':
+          lfo.connect(synth.volume);
+          break;
+        case 'pitch':
+          lfo.connect(synth.detune);
+          break;
+        case 'pan':
+          lfo.connect(synth.pan);
+          break;
+        case 'reverbWet':
+          lfo.connect(reverb.wet);
+          break;
+        case 'delayTime':
+          lfo.connect(delay.delayTime);
+          break;
+        case 'chorusRate':
+          lfo.connect(chorus.frequency);
+          break;
+      }
+    }
+
+    function updateDisplays() {
+      document.querySelectorAll('.control input[type="range"], .lfo-control input[type="range"]').forEach(input => {
+        const display = document.getElementById(`${input.id}Display`);
+        if (display) {
+          display.textContent = input.value;
+        }
+      });
+    }
+
+    function createKeyboard() {
+      const keyboard = document.getElementById('keyboard');
+      const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+      for (let octave = 3; octave <= 5; octave++) {
+        notes.forEach((note, index) => {
+          const key = document.createElement('div');
+          key.className = `key ${note.includes('#') ? 'black' : 'white'}`;
+          key.dataset.note = `${note}${octave}`;
+          key.addEventListener('mousedown', () => playNote(`${note}${octave}`));
+          key.addEventListener('mouseup', () => stopNote(`${note}${octave}`));
+          key.addEventListener('mouseleave', () => stopNote(`${note}${octave}`));
+          keyboard.appendChild(key);
+        });
+      }
+    }
+
+    function playNote(note) {
+      synth.triggerAttack(note);
+      if (isRecording) {
+        recordedNotes.push({ note, time: Tone.now() - startTime });
+      }
+      const key = document.querySelector(`.key[data-note="${note}"]`);
+      if (key) {
+        key.classList.add('active');
+        if (isHoldMode) {
+          key.classList.add('held');
+          heldNotes.add(note);
+        }
+      }
+    }
+
+    function stopNote(note) {
+      if (!isHoldMode || !heldNotes.has(note)) {
+        synth.triggerRelease(note);
+        const key = document.querySelector(`.key[data-note="${note}"]`);
+        if (key) {
+          key.classList.remove('active');
+        }
+      }
+    }
+
+    function startRecording() {
+      isRecording = true;
+      recordedNotes = [];
+      startTime = Tone.now();
+      let seconds = 0;
+      recordingInterval = setInterval(() => {
+        seconds++;
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        document.getElementById('recordingTimer').textContent = 
+          `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+      }, 1000);
+    }
+
+    function stopRecording() {
+      isRecording = false;
+      clearInterval(recordingInterval);
+    }
+
+    function playRecording() {
+      const now = Tone.now();
+      recordedNotes.forEach(({ note, time }) => {
+        synth.triggerAttackRelease(note, '8n', now + time);
+        const key = document.querySelector(`.key[data-note="${note}"]`);
+        if (key) {
+          setTimeout(() => {
+            key.classList.add('active');
+            setTimeout(() => key.classList.remove('active'), 100);
+          }, time * 1000);
+        }
+      });
+    }
+
+    document.getElementById('recordBtn').addEventListener('click', () => {
+      if (isRecording) {
+        stopRecording();
+        document.getElementById('recordBtn').textContent = 'Record';
+      } else {
+        startRecording();
+        document.getElementById('recordBtn').textContent = 'Stop Recording';
+      }
+    });
+
+    document.getElementById('playBtn').addEventListener('click', playRecording);
+    document.getElementById('stopBtn').addEventListener('click', () => {
+      synth.releaseAll();
+      document.querySelectorAll('.key').forEach(key => key.classList.remove('active', 'held'));
+      heldNotes.clear();
+    });
+
+    document.getElementById('holdBtn').addEventListener('click', () => {
+      isHoldMode = !isHoldMode;
+      document.getElementById('holdBtn').textContent = isHoldMode ? 'Disable Hold Mode' : 'Enable Hold Mode';
+      if (!isHoldMode) {
+        heldNotes.forEach(note => synth.triggerRelease(note));
+        heldNotes.clear();
+        document.querySelectorAll('.key.held').forEach(key => key.classList.remove('held'));
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      const note = keyMap[event.key];
+      if (note && !event.repeat) {
+        playNote(note);
+      }
+    });
+
+    document.addEventListener('keyup', (event) => {
+      const note = keyMap[event.key];
+      if (note) {
+        stopNote(note);
+      }
+    });
+
+    createKeyboard();
+    createSynth();
+
+    // Add event listeners for all controls
+    document.querySelectorAll('.control input, .control select, .lfo-control input, .lfo-control select').forEach(control => {
+      control.addEventListener('input', updateSynthParams);
+    });
+
+    // Initialize synth parameters
+    updateSynthParams();
+
+    // Chord progression
+    const chords = {
+      major: ['C', 'F', 'G', 'C'],
+      minor: ['Am', 'Dm', 'Em', 'Am'],
+      jazz: ['Cmaj7', 'Dm7', 'G7', 'Cmaj7'],
+      custom: ['C', 'Am', 'F', 'G']
+    };
+
+    let currentChordIndex = 0;
+    let chordInterval;
+
+    function playChord(chordType) {
+      const chord = Tone.Chord.get(chords[chordType][currentChordIndex] + '4');
+      synth.triggerAttackRelease(chord, '4n');
+      document.getElementById('chordDisplay').textContent = `Current Chord: ${chords[chordType][currentChordIndex]}`;
+      
+      chord.forEach(note => {
+        const key = document.querySelector(`.key[data-note="${note}"]`);
+        if (key) {
+          key.classList.add('active');
+          setTimeout(() => key.classList.remove('active'), 500);
+        }
+      });
+
+      currentChordIndex = (currentChordIndex + 1) % 4;
+    }
+
+    document.getElementById('chord').addEventListener('change', (event) => {
+      clearInterval(chordInterval);
+      if (event.target.value !== 'off') {
+        const bpm = parseInt(document.getElementById('bpm').value);
+        const interval = (60 / bpm) * 1000 * 4; // 4 beats per chord
+        chordInterval = setInterval(() => playChord(event.target.value), interval);
+      } else {
+        document.getElementById('chordDisplay').textContent = '';
+      }
+    });
+
+    document.getElementById('bpm').addEventListener('input', (event) => {
+      const chordType = document.getElementById('chord').value;
+      if (chordType !== 'off') {
+        clearInterval(chordInterval);
+        const bpm = parseInt(event.target.value);
+        const interval = (60 / bpm) * 1000 * 4; // 4 beats per chord
+        chordInterval = setInterval(() => playChord(chordType), interval);
+      }
+      document.getElementById('bpmDisplay').textContent = event.target.value;
+    });
+
+    // Arpeggiator
+    let arpInterval;
+    let arpNotes = [];
+    let arpIndex = 0;
+
+    function updateArpeggiator() {
+      clearInterval(arpInterval);
+      const arpType = document.getElementById('arpeggiator').value;
+      if (arpType !== 'off' && arpNotes.length > 0) {
+        const bpm = parseInt(document.getElementById('bpm').value);
+        const interval = (60 / bpm) * 1000 / 4; // 16th notes
+        arpInterval = setInterval(() => {
+          let note;
+          switch (arpType) {
+            case 'up':
+              note = arpNotes[arpIndex];
+              arpIndex = (arpIndex + 1) % arpNotes.length;
+              break;
+            case 'down':
+              note = arpNotes[arpNotes.length - 1 - arpIndex];
+              arpIndex = (arpIndex + 1) % arpNotes.length;
+              break;
+            case 'updown':
+              note =
+ arpNotes[arpIndex];
+              if (arpIndex === arpNotes.length - 1 || arpIndex === 0) {
+                arpDirection *= -1;
+              }
+              arpIndex += arpDirection;
+              break;
+            case 'random':
+              note = arpNotes[Math.floor(Math.random() * arpNotes.length)];
+              break;
+          }
+          synth.triggerAttackRelease(note, '16n');
+          const key = document.querySelector(`.key[data-note="${note}"]`);
+          if (key) {
+            key.classList.add('active');
+            setTimeout(() => key.classList.remove('active'), 100);
+          }
+        }, interval);
+      }
+    }
+
+    document.getElementById('arpeggiator').addEventListener('change', updateArpeggiator);
+
+    // Update arpeggiator when keys are pressed or released
+    function updateArpNotes() {
+      arpNotes = Array.from(heldNotes);
+      updateArpeggiator();
+    }
+
+    // Modify playNote and stopNote functions to update arpeggiator
+    const originalPlayNote = playNote;
+    playNote = function(note) {
+      originalPlayNote(note);
+      updateArpNotes();
+    };
+
+    const originalStopNote = stopNote;
+    stopNote = function(note) {
+      originalStopNote(note);
+      updateArpNotes();
+    };
+
+    // Initialize Tone.js
+    document.body.addEventListener('click', async () => {
+      await Tone.start();
+      console.log('Tone.js is ready');
+    });
+
+  </script>
+</body>
+</html>

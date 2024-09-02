@@ -15,10 +15,22 @@
         <button class="json-button" data-file="05.json">Tesla</button>
         <button class="json-button" data-file="06.json">TechCrunch</button>
         <button class="json-button" data-file="07.json">The Wall Street Journal</button>
+        
+        <div id="visits">...</div>
     </div>
 
     <div id="articles-container"></div>
 
+    
+    <script>
+        function cb(response) {
+            document.getElementById('visits').innerText = response.value;
+        }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/erasertm.github.io/visits?callback=cb"></script>
+
+
+    
     <script>
         // Function to load and display articles from the specified JSON file
         function loadArticlesFromFile(jsonFilePath) {

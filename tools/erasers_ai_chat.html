@@ -382,7 +382,7 @@
             <div class="chip">API: <span id="api" class="editable" title="Dvoklik za edit"></span></div>
             <button id="refresh" class="btn alt" type="button">Refresh LLM</button>
             <button id="copyAll" class="btn alt" type="button">Copy Sve</button>
-            <button id="canvasBtn" class="btn alt" type="button">Canvas</button>
+            <button id="canvasBtn" class="btn alt" type="button">Debug info</button>
         </section>
 
         <section class="layout">
@@ -412,8 +412,8 @@
                 <section id="ws" class="ws">
                     <section id="msgs" class="msgs"></section>
                     <aside class="canvas">
-                        <h3 style="margin:0 0 8px;font-size:13px;color:var(--muted)">Canvas</h3>
-                        <textarea placeholder="Radna bilješka / draft..."></textarea>
+                        <h3 style="margin:0 0 8px;font-size:13px;color:var(--muted)">Debug info</h3>
+                        <textarea id="debugOut" placeholder="Debug log..." readonly></textarea>
                     </aside>
                 </section>
 
@@ -478,7 +478,8 @@
             filtered: [],
             selectedMeta: null,
             uploads: [],
-            canvas: false
+            canvas: false,
+            debug: []
         };
         const copyFlashTimers = new WeakMap();
         const el = {
@@ -506,6 +507,7 @@
             upload: gid("upload"),
             clearUpload: gid("clearUpload"),
             uploads: gid("uploads"),
+            debugOut: gid("debugOut"),
             send: gid("send"),
             status: gid("status")
         };
@@ -556,6 +558,24 @@
         function status(t, e) {
             el.status.textContent = t;
             el.status.className = e ? "status err" : "status"
+        }
+
+        function dbg(msg, data) {
+            const ts = new Date().toLocaleTimeString();
+            let line = "[" + ts + "] " + msg;
+            if (data !== undefined) {
+                try {
+                    line += " | " + (typeof data === "string" ? data : JSON.stringify(data))
+                } catch {
+                    line += " | [unserializable]"
+                }
+            }
+            st.debug.push(line);
+            if (st.debug.length > 400) st.debug.shift();
+            if (el.debugOut) {
+                el.debugOut.value = st.debug.join("\n");
+                el.debugOut.scrollTop = el.debugOut.scrollHeight
+            }
         }
 
         function esc(s) {
@@ -841,6 +861,9 @@
 
         function userFacingError(err) {
             const t = String(err?.message || err || "");
+            if (t.toLowerCase().includes("timeout") || t.includes("aborted")) {
+                return "Zahtjev je istekao (timeout). Za slike pokusaj ponovno ili pricekaj dulje."
+            }
             if (t.includes("No endpoints found that support image input")) {
                 if (st.uploads.length) markVisionUnavailable(cfg().model);
                 return "Za ovaj model trenutno nema dostupnog endpointa za unos slike. Probaj drugi Vision model ili refreshaj listu modela."
@@ -1184,6 +1207,11 @@
             const srcType = part.source?.media_type || "image/png";
             const srcData = part.source?.data || "";
             if (srcData) return "![generated image](data:" + srcType + ";base64," + srcData + ")";
+            const inMime = part.inline_data?.mime_type || "image/png";
+            const inData = part.inline_data?.data || "";
+            if (inData) return "![generated image](data:" + inMime + ";base64," + inData + ")";
+            const furi = part.file_data?.file_uri || "";
+            if (furi) return "![generated image](" + furi + ")";
             if (iu) return "![generated image](" + iu + ")";
             return ""
         }
@@ -1213,6 +1241,15 @@
             if (b) return b;
             const b2 = contentToMd(c?.delta?.content?.parts);
             if (b2) return b2;
+            const cand = payload?.candidates?.[0];
+            const c1 = contentToMd(cand?.content?.parts);
+            if (c1) return c1;
+            const c2 = contentToMd(payload?.output);
+            if (c2) return c2;
+            const c3 = contentToMd(payload?.response?.output);
+            if (c3) return c3;
+            const ot = String(payload?.output_text || payload?.response?.output_text || "");
+            if (ot) return ot;
             const t = String(c?.text || payload?.text || "");
             if (t) return t;
             const imgs = c?.message?.images || c?.delta?.images || payload?.images || [];
@@ -1224,6 +1261,9 @@
 
         async function stream(messages, slot, opts = {}) {
             const useStream = opts.stream !== false;
+            const timeoutMs = opts.timeoutMs || 120000;
+            const ctl = new AbortController();
+            const to = setTimeout(() => ctl.abort("timeout"), timeoutMs);
             const h = {
                 "Content-Type": "application/json"
             };
@@ -1235,23 +1275,47 @@
                 stream: useStream
             };
             if (opts.imageGen && st.provider === "openrouter") payload.modalities = ["image", "text"];
+            dbg("request", {
+                provider: st.provider,
+                model: cfg().model,
+                stream: useStream,
+                imageGen: Boolean(opts.imageGen),
+                timeoutMs
+            });
+            const t0 = Date.now();
             const r = await fetch(cfg().apiUrl, {
                 method: "POST",
                 headers: h,
-                body: JSON.stringify(payload)
+                body: JSON.stringify(payload),
+                signal: ctl.signal
+            });
+            clearTimeout(to);
+            dbg("response", {
+                status: r.status,
+                ok: r.ok,
+                ms: Date.now() - t0
             });
             if (!r.ok) throw new Error("HTTP " + r.status + ": " + await r.text());
             if (!useStream || !r.body) {
                 const j = await r.json();
-                return extractAssistantMd(j)
+                const out = extractAssistantMd(j);
+                dbg("non-stream parsed", {
+                    hasOut: Boolean(out),
+                    keys: Object.keys(j || {}).slice(0, 12)
+                });
+                if (!out) dbg("non-stream raw", j);
+                return out
             }
             const reader = r.body.getReader(),
                 dec = new TextDecoder("utf-8");
             let buf = "",
-                full = "";
+                full = "",
+                chunks = 0,
+                hits = 0;
             while (true) {
                 const part = await reader.read();
                 if (part.done) break;
+                chunks++;
                 buf += dec.decode(part.value, {
                     stream: true
                 });
@@ -1271,11 +1335,17 @@
                     }
                     const d = extractAssistantMd(j);
                     if (d) {
+                        hits++;
                         full += d;
                         slot.update(full)
                     }
                 }
             }
+            dbg("stream done", {
+                chunks,
+                hits,
+                outLen: full.length
+            });
             return full
         }
         async function copyAll() {
@@ -1294,6 +1364,12 @@
             const meta = currentModelMeta();
             el.send.disabled = true;
             status(meta?.imageGen ? "Generiranje odgovora..." : "Streaming odgovora...");
+            dbg("submit", {
+                promptLen: p.length,
+                uploads: st.uploads.length,
+                model: meta?.id || cfg().model,
+                imageGen: Boolean(meta?.imageGen)
+            });
             msg("user", p + (st.uploads.length ? "\n[images: " + st.uploads.length + "]" : ""));
             el.prompt.value = "";
             const a = msg("assistant", "", meta);
@@ -1301,7 +1377,8 @@
             try {
                 const out = await stream(req, a, {
                     stream: !meta?.imageGen,
-                    imageGen: Boolean(meta?.imageGen)
+                    imageGen: Boolean(meta?.imageGen),
+                    timeoutMs: meta?.imageGen ? 180000 : 120000
                 });
                 if (!out) throw new Error("Prazan odgovor modela.");
                 st.chatHistory.push({
@@ -1314,6 +1391,7 @@
                 if (st.uploads.length) clearUploads();
                 status("Povezano.")
             } catch (err) {
+                dbg("submit error", String(err?.message || err));
                 const msgErr = userFacingError(err);
                 a.update("Greška: " + msgErr);
                 status("Greška: " + msgErr, true)

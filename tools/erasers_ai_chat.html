@@ -316,6 +316,35 @@
             padding: 9px
         }
 
+        .promptRow {
+            position: relative
+        }
+
+        .promptRow textarea {
+            padding-right: 52px
+        }
+
+        .btn.mic {
+            position: absolute;
+            right: 8px;
+            bottom: 8px;
+            min-width: 36px;
+            padding: 6px 8px;
+            font-size: 18px;
+            line-height: 1
+        }
+
+        .btn.mic.listening {
+            border-color: #8f4343;
+            background: #7a2d2f;
+            box-shadow: 0 0 0 1px #b85b5b inset
+        }
+
+        .btn.mic:disabled {
+            opacity: .55;
+            cursor: not-allowed
+        }
+
         .uploads {
             display: flex;
             gap: 6px;
@@ -419,7 +448,11 @@
 
                 <form id="chat" class="composer">
                     <div>
-                        <textarea id="prompt" placeholder="Upiši poruku..." required></textarea>
+                        <div class="promptRow">
+                            <textarea id="prompt" placeholder="Upiši poruku..." required></textarea>
+                            <button id="micBtn" class="btn alt mic" type="button" title="Glasovni unos (hr-HR)"
+                                aria-label="Glasovni unos">🎤</button>
+                        </div>
                         <div id="uploads" class="uploads"></div>
                     </div>
                     <div style="display:grid;gap:8px;align-content:start">
@@ -503,6 +536,7 @@
             msgs: gid("msgs"),
             chat: gid("chat"),
             prompt: gid("prompt"),
+            micBtn: gid("micBtn"),
             file: gid("file"),
             upload: gid("upload"),
             clearUpload: gid("clearUpload"),
@@ -510,6 +544,11 @@
             debugOut: gid("debugOut"),
             send: gid("send"),
             status: gid("status")
+        };
+        const speech = {
+            ctor: window.SpeechRecognition || window.webkitSpeechRecognition || null,
+            recognition: null,
+            listening: false
         };
 
         function gid(id) {
@@ -558,6 +597,95 @@
         function status(t, e) {
             el.status.textContent = t;
             el.status.className = e ? "status err" : "status"
+        }
+
+        function setMicState(listening) {
+            speech.listening = listening;
+            if (!el.micBtn) return;
+            el.micBtn.classList.toggle("listening", listening);
+            el.micBtn.textContent = listening ? "●" : "🎤";
+            el.micBtn.title = listening ? "Zaustavi glasovni unos" : "Glasovni unos (hr-HR)";
+            el.micBtn.setAttribute("aria-pressed", listening ? "true" : "false")
+        }
+
+        function appendPromptTranscript(text) {
+            const v = String(text || "").trim();
+            if (!v) return;
+            const cur = el.prompt.value;
+            el.prompt.value = cur.trim() ? cur.trimEnd() + " " + v : v;
+            el.prompt.focus();
+            const pos = el.prompt.value.length;
+            el.prompt.setSelectionRange(pos, pos)
+        }
+
+        function initSpeechInput() {
+            if (!el.micBtn) return;
+            if (!speech.ctor) {
+                el.micBtn.disabled = true;
+                el.micBtn.title = "Govorni unos nije podrzan u ovom browseru.";
+                return
+            }
+            const rec = new speech.ctor();
+            rec.lang = "hr-HR";
+            rec.interimResults = false;
+            rec.maxAlternatives = 1;
+            rec.continuous = false;
+            rec.onstart = () => {
+                setMicState(true);
+                status("Slušam...");
+                dbg("speech start", {
+                    lang: rec.lang
+                })
+            };
+            rec.onresult = ev => {
+                let out = "";
+                const rs = ev?.results;
+                const start = Number(ev?.resultIndex || 0);
+                if (rs && typeof rs.length === "number") {
+                    for (let i = start; i < rs.length; i++) {
+                        const tr = String(rs[i]?.[0]?.transcript || "").trim();
+                        if (tr) out += (out ? " " : "") + tr
+                    }
+                }
+                if (!out) {
+                    status("Nije prepoznat govor.", true);
+                    return
+                }
+                appendPromptTranscript(out);
+                status("Govorni unos dodan.");
+                dbg("speech result", {
+                    chars: out.length
+                })
+            };
+            rec.onerror = ev => {
+                const code = String(ev?.error || "unknown");
+                if (code === "not-allowed") status("Mikrofon je blokiran. Omogući pristup mikrofonu.", true);
+                else if (code === "no-speech") status("Nije detektiran govor.", true);
+                else if (code === "audio-capture") status("Mikrofon nije dostupan.", true);
+                else status("Greška govornog unosa: " + code, true);
+                dbg("speech error", code)
+            };
+            rec.onend = () => {
+                setMicState(false);
+                dbg("speech end")
+            };
+            speech.recognition = rec;
+            setMicState(false);
+            el.micBtn.onclick = () => {
+                if (!speech.recognition) return;
+                if (speech.listening) {
+                    try {
+                        speech.recognition.stop()
+                    } catch {}
+                    return
+                }
+                try {
+                    speech.recognition.start()
+                } catch (err) {
+                    status("Greška pokretanja mikrofona: " + String(err?.message || err), true);
+                    dbg("speech start error", String(err?.message || err))
+                }
+            }
         }
 
         function dbg(msg, data) {
@@ -1516,6 +1644,11 @@
         }
         async function submit(e) {
             e.preventDefault();
+            if (speech.listening && speech.recognition) {
+                try {
+                    speech.recognition.stop()
+                } catch {}
+            }
             const p = el.prompt.value.trim();
             if (!p) return;
             if (!cfg().model) return status("Odaberi model prije slanja.", true);
@@ -1655,6 +1788,7 @@
             };
             el.clearUpload.onclick = clearUploads;
             el.chat.onsubmit = submit;
+            initSpeechInput();
             el.ws.classList.toggle("canvas", st.canvas);
             dbg("init", {
                 provider: st.provider,

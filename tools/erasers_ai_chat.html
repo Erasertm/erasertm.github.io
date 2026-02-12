@@ -1308,29 +1308,27 @@
         function extractAssistantMd(payload) {
             const c = payload?.choices?.[0];
             const a = contentToMd(c?.message?.content);
-            if (a) return a;
             const a2 = contentToMd(c?.message?.content?.parts);
-            if (a2) return a2;
             const b = contentToMd(c?.delta?.content);
-            if (b) return b;
             const b2 = contentToMd(c?.delta?.content?.parts);
-            if (b2) return b2;
             const cand = payload?.candidates?.[0];
             const c1 = contentToMd(cand?.content?.parts);
-            if (c1) return c1;
             const c2 = contentToMd(payload?.output);
-            if (c2) return c2;
             const c3 = contentToMd(payload?.response?.output);
-            if (c3) return c3;
             const ot = String(payload?.output_text || payload?.response?.output_text || "");
-            if (ot) return ot;
             const t = String(c?.text || payload?.text || "");
-            if (t) return t;
+            let out = a || a2 || b || b2 || ot || t || "";
+            const rich = c1 || c2 || c3 || "";
+            if (rich) {
+                if (!out) out = rich;
+                else if (rich.includes("![generated image]") && !out.includes("![generated image]")) out += "\n\n" + rich
+            }
             const imgs = c?.message?.images || c?.delta?.images || payload?.images || [];
             if (Array.isArray(imgs) && imgs.length) {
-                return imgs.map(imageObjToMd).filter(Boolean).join("\n\n")
+                const im = imgs.map(imageObjToMd).filter(Boolean).join("\n\n");
+                if (im && !out.includes("![generated image]")) out = out ? out + "\n\n" + im : im
             }
-            return ""
+            return out
         }
 
         async function stream(messages, slot, opts = {}) {

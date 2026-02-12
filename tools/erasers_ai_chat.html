@@ -1,0 +1,1303 @@
+<!doctype html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>..::Eraser's LLM Chat Tool!!1::..</title>
+    <style>
+        :root {
+            --bg: #0b1220;
+            --panel: #101827;
+            --line: #29405e;
+            --text: #e7eefc;
+            --muted: #9ab0cf;
+            --bad: #d34b5f;
+            --code: #0a1528;
+            --kw: #7aa2f7;
+            --str: #9ece6a;
+            --num: #f7b267;
+            --com: #7b8ca8
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            padding: 10px;
+            background: radial-gradient(circle at 20% 10%, #17233a 0%, #0b1220 55%, #070c16 100%);
+            color: var(--text);
+            font: 14px/1.45 Segoe UI, Tahoma, sans-serif
+        }
+
+        .app {
+            max-width: 1300px;
+            margin: 0 auto;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--panel);
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            min-height: 94vh
+        }
+
+        .top {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 8px;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .title {
+            font-weight: 700;
+            margin-right: auto
+        }
+
+        .chip {
+            border: 1px solid var(--line);
+            padding: 4px 7px;
+            border-radius: 8px;
+            color: var(--muted)
+        }
+
+        .btn {
+            border: 1px solid #255b43;
+            background: #1d7a59;
+            color: #fff;
+            border-radius: 8px;
+            padding: 6px 10px;
+            cursor: pointer
+        }
+
+        .btn.alt {
+            border-color: var(--line);
+            background: #112038
+        }
+
+        .btn.alt.copied-ok {
+            border-color: #39b66a;
+            box-shadow: 0 0 0 1px #39b66a inset
+        }
+
+        .btn.warn {
+            border-color: #4c2f2f;
+            background: #442022
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            min-height: 0
+        }
+
+        .left {
+            border-right: 1px solid var(--line);
+            padding: 10px;
+            overflow: auto
+        }
+
+        .left h3 {
+            margin: 10px 0 5px;
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        .left input,
+        .left textarea,
+        .left select {
+            width: 100%;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #0a1322;
+            color: var(--text);
+            padding: 7px
+        }
+
+        .left textarea {
+            min-height: 76px;
+            resize: vertical;
+            font: 12px/1.35 Consolas, monospace
+        }
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 10px;
+            align-items: center
+        }
+
+        .filters label {
+            font-size: 12px;
+            color: var(--muted);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            white-space: nowrap
+        }
+
+        .model-list {
+            min-height: 190px;
+            font: 12px/1.3 Consolas, monospace
+        }
+
+        .right {
+            display: grid;
+            grid-template-rows: 1fr auto;
+            min-height: 0
+        }
+
+        .ws {
+            display: grid;
+            grid-template-columns: 1fr 0;
+            min-height: 0
+        }
+
+        .ws.canvas {
+            grid-template-columns: 1fr minmax(250px, 34%)
+        }
+
+        .msgs {
+            padding: 10px;
+            overflow: auto;
+            display: grid;
+            gap: 10px;
+            align-content: start
+        }
+
+        .canvas {
+            display: none;
+            border-left: 1px solid var(--line);
+            padding: 8px
+        }
+
+        .ws.canvas .canvas {
+            display: block
+        }
+
+        .canvas textarea {
+            width: 100%;
+            height: calc(100% - 24px);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #091220;
+            color: var(--text);
+            padding: 8px;
+            font: 12px/1.35 Consolas, monospace
+        }
+
+        .m {
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #0f1a2c
+        }
+
+        .m.user {
+            justify-self: end;
+            width: min(92%, 840px);
+            background: #123025;
+            border-color: #245140
+        }
+
+        .mh {
+            display: flex;
+            gap: 8px;
+            padding: 6px 8px;
+            border-bottom: 1px solid #20304a;
+            color: var(--muted);
+            font-size: 12px
+        }
+
+        .mh .sp {
+            margin-right: auto
+        }
+
+        .mb {
+            padding: 10px;
+            word-break: break-word
+        }
+
+        .mb p {
+            margin: 0 0 8px
+        }
+
+        .mb p:last-child {
+            margin-bottom: 0
+        }
+
+        .code {
+            border: 1px solid #2c3f5c;
+            border-radius: 9px;
+            overflow: hidden;
+            margin: 8px 0
+        }
+
+        .codeh {
+            display: flex;
+            gap: 8px;
+            padding: 6px 8px;
+            border-bottom: 1px solid #2c3f5c;
+            color: var(--muted);
+            font-size: 12px
+        }
+
+        pre {
+            margin: 0;
+            padding: 10px;
+            overflow: auto;
+            background: var(--code)
+        }
+
+        code {
+            font-family: Consolas, monospace
+        }
+
+        .kw {
+            color: var(--kw)
+        }
+
+        .str {
+            color: var(--str)
+        }
+
+        .num {
+            color: var(--num)
+        }
+
+        .com {
+            color: var(--com);
+            font-style: italic
+        }
+
+        details.think {
+            border: 1px dashed #3f5779;
+            border-radius: 8px;
+            padding: 8px;
+            margin: 8px 0;
+            background: #0c1525
+        }
+
+        details.think summary {
+            cursor: pointer;
+            color: var(--muted);
+            font-weight: 600
+        }
+
+        .composer {
+            border-top: 1px solid var(--line);
+            padding: 8px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 8px
+        }
+
+        .composer textarea {
+            width: 100%;
+            min-height: 58px;
+            max-height: 220px;
+            resize: vertical;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #0a1322;
+            color: var(--text);
+            padding: 9px
+        }
+
+        .uploads {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 6px
+        }
+
+        .up {
+            border: 1px solid #2b4564;
+            background: #10233b;
+            border-radius: 999px;
+            padding: 2px 8px;
+            font-size: 12px
+        }
+
+        .status {
+            font-size: 12px;
+            color: var(--muted);
+            padding: 0 10px 8px
+        }
+
+        .status.err {
+            color: var(--bad)
+        }
+
+        .editable {
+            cursor: pointer;
+            text-decoration: underline dotted
+        }
+
+        @media (max-width:1100px) {
+            .layout {
+                grid-template-columns: 1fr
+            }
+
+            .left {
+                border-right: 0;
+                border-bottom: 1px solid var(--line)
+            }
+        }
+
+        @media (max-width:900px) {
+            .ws.canvas {
+                grid-template-columns: 1fr
+            }
+
+            .ws.canvas .canvas {
+                border-left: 0;
+                border-top: 1px solid var(--line);
+                min-height: 220px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="app">
+        <section class="top">
+            <div class="title">Eraser's LLM Chat Tool</div>
+            <div class="chip">Provider <select id="provider">
+                    <option value="local">Local</option>
+                    <option value="openrouter">OpenRouter</option>
+                </select></div>
+            <div class="chip">API: <span id="api" class="editable" title="Dvoklik za edit"></span></div>
+            <button id="refresh" class="btn alt" type="button">Refresh LLM</button>
+            <button id="copyAll" class="btn alt" type="button">Copy Sve</button>
+            <button id="canvasBtn" class="btn alt" type="button">Canvas</button>
+        </section>
+
+        <section class="layout">
+            <aside class="left">
+                <h3>OpenRouter API Key</h3>
+                <input id="orKey" type="password" placeholder="sk-or-v1-..." />
+
+                <h3>Model filter</h3>
+                <input id="modelFilter" type="text" placeholder="npr. (free), deepseek, qwen..." />
+                <div class="filters">
+                    <label><input id="fFree" type="checkbox" /> Free</label>
+                    <label><input id="fVision" type="checkbox" /> Vision</label>
+                    <label><input id="fReasoning" type="checkbox" /> Reasoning</label>
+                    <label><input id="fTools" type="checkbox" /> Tools</label>
+                    <label><input id="fImageGen" type="checkbox" /> ImageGen</label>
+                </div>
+                <select id="modelList" class="model-list" size="9"></select>
+                <div id="modelInfo" style="font-size:12px;color:var(--muted);margin-top:6px"></div>
+
+                <h3>System prompt</h3>
+                <textarea id="systemPrompt"></textarea>
+                <h3>Knowledge base prompt</h3>
+                <textarea id="kbPrompt"></textarea>
+            </aside>
+
+            <section class="right">
+                <section id="ws" class="ws">
+                    <section id="msgs" class="msgs"></section>
+                    <aside class="canvas">
+                        <h3 style="margin:0 0 8px;font-size:13px;color:var(--muted)">Canvas</h3>
+                        <textarea placeholder="Radna biljeska / draft..."></textarea>
+                    </aside>
+                </section>
+
+                <form id="chat" class="composer">
+                    <div>
+                        <textarea id="prompt" placeholder="Upisi poruku..." required></textarea>
+                        <div id="uploads" class="uploads"></div>
+                    </div>
+                    <div style="display:grid;gap:8px;align-content:start">
+                        <input id="file" type="file" accept="image/*" multiple style="display:none" />
+                        <button id="upload" class="btn alt" type="button">Upload</button>
+                        <button id="clearUpload" class="btn warn" type="button">Clear img</button>
+                        <button id="send" class="btn" type="submit">Posalji</button>
+                    </div>
+                </form>
+            </section>
+        </section>
+
+        <div id="status" class="status">Spremno.</div>
+    </main>
+
+    <script>
+        const defs = {
+            local: {
+                label: "Local",
+                chat: "http://192.168.0.2:1234/v1/chat/completions",
+                model: "deepseek/deepseek-r1-0528-qwen3-8b",
+                models: "",
+                key: false
+            },
+            openrouter: {
+                label: "OpenRouter",
+                chat: "https://openrouter.ai/api/v1/chat/completions",
+                model: "",
+                models: "https://openrouter.ai/api/v1/models",
+                key: true
+            }
+        };
+        const dflt = {
+            provider: "local",
+            systemPrompt: "You are a helpful assistant.",
+            kbPrompt: "",
+            providers: {
+                local: {
+                    apiUrl: defs.local.chat,
+                    model: defs.local.model,
+                    apiKey: ""
+                },
+                openrouter: {
+                    apiUrl: defs.openrouter.chat,
+                    model: "",
+                    apiKey: ""
+                }
+            }
+        };
+        const st = {
+            ...load(),
+            chatHistory: [],
+            rendered: [],
+            copy: {},
+            catalog: [],
+            filtered: [],
+            selectedMeta: null,
+            uploads: [],
+            canvas: false
+        };
+        const copyFlashTimers = new WeakMap();
+        const el = {
+            provider: gid("provider"),
+            api: gid("api"),
+            refresh: gid("refresh"),
+            copyAll: gid("copyAll"),
+            canvasBtn: gid("canvasBtn"),
+            orKey: gid("orKey"),
+            modelFilter: gid("modelFilter"),
+            fFree: gid("fFree"),
+            fVision: gid("fVision"),
+            fReasoning: gid("fReasoning"),
+            fTools: gid("fTools"),
+            fImageGen: gid("fImageGen"),
+            modelList: gid("modelList"),
+            modelInfo: gid("modelInfo"),
+            systemPrompt: gid("systemPrompt"),
+            kbPrompt: gid("kbPrompt"),
+            ws: gid("ws"),
+            msgs: gid("msgs"),
+            chat: gid("chat"),
+            prompt: gid("prompt"),
+            file: gid("file"),
+            upload: gid("upload"),
+            clearUpload: gid("clearUpload"),
+            uploads: gid("uploads"),
+            send: gid("send"),
+            status: gid("status")
+        };
+
+        function gid(id) {
+            return document.getElementById(id)
+        }
+
+        function load() {
+            try {
+                const p = JSON.parse(localStorage.getItem("llm.settings.v3") || "null");
+                if (!p) return JSON.parse(JSON.stringify(dflt));
+                return {
+                    provider: p.provider || dflt.provider,
+                    systemPrompt: p.systemPrompt ?? dflt.systemPrompt,
+                    kbPrompt: p.kbPrompt ?? dflt.kbPrompt,
+                    providers: {
+                        local: {
+                            apiUrl: p.providers?.local?.apiUrl || dflt.providers.local.apiUrl,
+                            model: p.providers?.local?.model || dflt.providers.local.model,
+                            apiKey: p.providers?.local?.apiKey || ""
+                        },
+                        openrouter: {
+                            apiUrl: p.providers?.openrouter?.apiUrl || dflt.providers.openrouter.apiUrl,
+                            model: p.providers?.openrouter?.model || dflt.providers.openrouter.model,
+                            apiKey: p.providers?.openrouter?.apiKey || ""
+                        }
+                    }
+                }
+            } catch {
+                return JSON.parse(JSON.stringify(dflt))
+            }
+        }
+
+        function save() {
+            localStorage.setItem("llm.settings.v3", JSON.stringify({
+                provider: st.provider,
+                systemPrompt: st.systemPrompt,
+                kbPrompt: st.kbPrompt,
+                providers: st.providers
+            }))
+        }
+
+        function cfg() {
+            return st.providers[st.provider]
+        }
+
+        function status(t, e) {
+            el.status.textContent = t;
+            el.status.className = e ? "status err" : "status"
+        }
+
+        function esc(s) {
+            return String(s).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"',
+                "&quot;").replaceAll("'", "&#39;")
+        }
+
+        function nlang(v) {
+            v = (v || "").trim().toLowerCase();
+            const m = {
+                js: "javascript",
+                mjs: "javascript",
+                "c++": "cpp",
+                cxx: "cpp",
+                cc: "cpp",
+                py: "python",
+                htm: "html",
+                xml: "html",
+                javascrot: "javascript"
+            };
+            return m[v] || v || "text"
+        }
+
+        function wrap(t, r, c) {
+            return t.replace(r, '<span class="' + c + '">$1</span>')
+        }
+
+        function hilite(code, lang) {
+            lang = nlang(lang);
+            let c = esc(code);
+            if (lang === "html") {
+                c = wrap(c, /(&lt;!--[\s\S]*?--&gt;)/g, "com");
+                c = wrap(c, /(&lt;\/?[a-zA-Z][^&]*?&gt;)/g, "kw");
+                c = wrap(c, /("[^"]*"|'[^']*')/g, "str");
+                return c
+            }
+            c = wrap(c, /(\/\/.*?$)/gm, "com");
+            c = wrap(c, /(\/\*[\s\S]*?\*\/)/g, "com");
+            c = wrap(c, /(#.*?$)/gm, "com");
+            c = wrap(c, /("(?:\\.|[^"])*"|'(?:\\.|[^'])*')/g, "str");
+            c = wrap(c, /\b(\d+(?:\.\d+)?)\b/g, "num");
+            const base =
+                "return|if|else|for|while|switch|case|break|continue|try|catch|throw|new|class|function|const|let|var|import|from|export|default|async|await|in|of|do|static|public|private|protected";
+            const ck =
+                "int|float|double|char|void|bool|short|long|unsigned|signed|struct|enum|typedef|sizeof|include|define|nullptr|using|namespace|template|typename|virtual|override|constexpr|auto|std";
+            const pk =
+                "def|class|lambda|yield|pass|raise|with|global|nonlocal|True|False|None|elif|except|finally|assert|del|is|not|and|or";
+            let kw = base;
+            if (lang === "c" || lang === "cpp") kw += "|" + ck;
+            if (lang === "python") kw += "|" + pk;
+            return c.replace(new RegExp("\\b(" + kw + ")\\b", "g"), '<span class="kw">$1</span>')
+        }
+
+        function parseF(md) {
+            const out = [];
+            const L = md.replace(/\r\n/g, "\n").split("\n");
+            let inC = false,
+                lang = "",
+                cl = [],
+                tl = [];
+            const ft = () => {
+                if (tl.length) {
+                    out.push({
+                        t: "text",
+                        v: tl.join("\n")
+                    });
+                    tl = []
+                }
+            };
+            for (const line of L) {
+                const f = line.match(/^```\s*([^\s`]*)\s*$/);
+                if (f) {
+                    if (!inC) {
+                        ft();
+                        inC = true;
+                        lang = f[1] || "text";
+                        cl = []
+                    } else {
+                        out.push({
+                            t: "code",
+                            lang,
+                            v: cl.join("\n")
+                        });
+                        inC = false;
+                        lang = "";
+                        cl = []
+                    }
+                    continue
+                }
+                if (inC) cl.push(line);
+                else tl.push(line)
+            }
+            if (inC) out.push({
+                t: "code",
+                lang,
+                v: cl.join("\n")
+            });
+            ft();
+            return out
+        }
+
+        function textToHtml(t) {
+            const e = esc(t).replace(/`([^`]+)`/g, "<code>$1</code>").replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+                .replace(/\*([^*]+)\*/g, "<em>$1</em>").replace(/\[([^\]]+)\]\(([^)]+)\)/g,
+                    '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+            return e.split(/\n\s*\n/g).map(p => p.trim()).filter(Boolean).map(p => "<p>" + p.replace(/\n/g, "<br>") +
+                "</p>").join("") || "<p></p>"
+        }
+
+        function splitThink(t) {
+            const a = [];
+            const rx = /<think>([\s\S]*?)<\/think>/gi;
+            let i = 0,
+                m;
+            while ((m = rx.exec(t)) !== null) {
+                if (m.index > i) a.push({
+                    t: "text",
+                    v: t.slice(i, m.index)
+                });
+                a.push({
+                    t: "think",
+                    v: m[1]
+                });
+                i = rx.lastIndex
+            }
+            if (i < t.length) a.push({
+                t: "text",
+                v: t.slice(i)
+            });
+            if (!a.length) a.push({
+                t: "text",
+                v: t
+            });
+            return a
+        }
+
+        function mdToHtml(md, id, raw) {
+            let html = "",
+                ci = 0;
+            for (const b of splitThink(md)) {
+                let h = "";
+                for (const tok of parseF(b.v)) {
+                    if (tok.t === "text") h += textToHtml(tok.v);
+                    else {
+                        const l = nlang(tok.lang),
+                            hid = id + "-c-" + (ci++);
+                        st.copy[hid] = tok.v;
+                        h += '<div class="code"><div class="codeh"><span>' + esc(l) +
+                            '</span><span style="margin-right:auto"></span><button class="btn alt copyCode" type="button" data-id="' +
+                            hid + '">Copy Code</button><button class="btn alt downloadCode" type="button" data-id="' +
+                            hid + '" data-lang="' + esc(l) + '">Download Code</button></div><pre><code>' + hilite(tok
+                                .v, l) + "</code></pre></div>"
+                    }
+                }
+                html += b.t === "think" ? '<details class="think"><summary>Think</summary>' + h + "</details>" : h
+            }
+            st.copy[id + "-md"] = raw;
+            html += '<div style="margin-top:8px"><button class="btn alt copyMd" type="button" data-id="' + id +
+                '">Copy MD</button></div>';
+            return html
+        }
+
+        function hookCopy(scope) {
+            const markCopied = b => {
+                b.classList.add("copied-ok");
+                const prev = copyFlashTimers.get(b);
+                if (prev) clearTimeout(prev);
+                copyFlashTimers.set(b, setTimeout(() => {
+                    b.classList.remove("copied-ok");
+                    copyFlashTimers.delete(b)
+                }, 10000))
+            };
+            scope.querySelectorAll(".copyCode").forEach(b => b.onclick = async () => {
+                const t = st.copy[b.dataset.id];
+                if (typeof t !== "string") return;
+                await navigator.clipboard.writeText(t);
+                markCopied(b);
+                status("Kod kopiran.")
+            });
+            scope.querySelectorAll(".copyMd").forEach(b => b.onclick = async () => {
+                const t = st.copy[b.dataset.id + "-md"];
+                if (typeof t !== "string") return;
+                await navigator.clipboard.writeText(t);
+                status("Markdown poruke kopirane.")
+            });
+            scope.querySelectorAll(".downloadCode").forEach(b => b.onclick = () => {
+                const t = st.copy[b.dataset.id];
+                if (typeof t !== "string") return;
+                const l = nlang(b.dataset.lang || "");
+                const fname = fileNameByLang(l);
+                const blob = new Blob([t], {
+                    type: "text/plain;charset=utf-8"
+                });
+                const a = document.createElement("a");
+                a.href = URL.createObjectURL(blob);
+                a.download = fname;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                setTimeout(() => URL.revokeObjectURL(a.href), 0);
+                status("Kod preuzet: " + fname)
+            })
+        }
+
+        function fileNameByLang(lang) {
+            const l = nlang(lang);
+            const ext = {
+                html: "htm",
+                javascript: "js",
+                typescript: "ts",
+                python: "py",
+                cpp: "cpp",
+                c: "cpp",
+                java: "java",
+                csharp: "cs",
+                go: "go",
+                rust: "rs",
+                php: "php",
+                ruby: "rb",
+                swift: "swift",
+                kotlin: "kt",
+                css: "css",
+                scss: "scss",
+                less: "less",
+                sql: "sql",
+                json: "json",
+                yaml: "yml",
+                toml: "toml",
+                xml: "xml",
+                markdown: "md",
+                bash: "sh",
+                shell: "sh",
+                powershell: "ps1"
+            };
+            if (l === "html") return "index.htm";
+            if (l === "javascript") return "script.js";
+            if (l === "cpp" || l === "c") return "program.cpp";
+            return "code." + (ext[l] || "txt")
+        }
+
+        function currentModelMeta() {
+            const id = cfg().model || "";
+            if (!id) return null;
+            const m = st.catalog.find(x => x.id === id) || st.selectedMeta || caps({
+                id
+            });
+            return {
+                id,
+                free: Boolean(m?.free),
+                vision: Boolean(m?.vision),
+                reasoning: Boolean(m?.reasoning),
+                tools: Boolean(m?.tools),
+                imageGen: Boolean(m?.imageGen)
+            }
+        }
+
+        function assistantTitle(meta) {
+            if (!meta?.id) return "Assistant";
+            return "Assistant: Model: " + meta.id + " | free:" + meta.free + " vision:" + meta.vision + " reasoning:" +
+                meta.reasoning + " tools:" + meta.tools + " imageGen:" + meta.imageGen
+        }
+
+        function buildRequestMessages(prompt) {
+            const model = st.catalog.find(x => x.id === cfg().model) || st.selectedMeta || null;
+            const sys = systemMsg();
+            if (supportsSystemRole(model)) return [{
+                role: "system",
+                content: sys
+            }, ...st.chatHistory, userMsg(prompt)];
+            const p = "[System uputa]\n" + sys + "\n\n[User]\n" + prompt;
+            return [...st.chatHistory, userMsg(p)]
+        }
+
+        function markVisionUnavailable(modelId) {
+            const m = st.catalog.find(x => x.id === modelId);
+            if (!m) return;
+            m.vision = false;
+            if (st.selectedMeta?.id === modelId) st.selectedMeta.vision = false;
+            updateModelInfo();
+            applyFilters()
+        }
+
+        function userFacingError(err) {
+            const t = String(err?.message || err || "");
+            if (t.includes("No endpoints found that support image input")) {
+                if (st.uploads.length) markVisionUnavailable(cfg().model);
+                return "Za ovaj model trenutno nema dostupnog endpointa za unos slike. Probaj drugi Vision model ili refreshaj listu modela."
+            }
+            if (t.includes("Developer instruction is not enabled")) {
+                return "Odabrani provider za ovaj model ne podržava system/developer instrukcije kao zasebne poruke."
+            }
+            return t
+        }
+
+        function msg(role, raw, meta = null) {
+            const m = document.createElement("article");
+            m.className = "m " + role;
+            const id = "m" + Date.now() + Math.floor(Math.random() * 10000);
+            const h = document.createElement("div");
+            h.className = "mh";
+            h.innerHTML = "<strong>" + esc(role === "user" ? "User" : assistantTitle(meta)) +
+                "</strong><span class=\"sp\"></span><span>" + new Date().toLocaleTimeString() + "</span>";
+            const b = document.createElement("div");
+            b.className = "mb";
+            b.innerHTML = role === "assistant" ? mdToHtml(raw, id, raw) : "<p>" + esc(raw).replace(/\n/g, "<br>") +
+                "</p>";
+            m.append(h, b);
+            el.msgs.appendChild(m);
+            el.msgs.scrollTop = el.msgs.scrollHeight;
+            if (role === "assistant") hookCopy(m);
+            st.rendered.push({
+                role,
+                content: raw
+            });
+            return {
+                update(n) {
+                    b.innerHTML = mdToHtml(n, id, n);
+                    hookCopy(m);
+                    el.msgs.scrollTop = el.msgs.scrollHeight;
+                    const last = st.rendered[st.rendered.length - 1];
+                    if (last && last.role === "assistant") last.content = n
+                }
+            }
+        }
+
+        function editable(span, get, set) {
+            span.textContent = get();
+            span.ondblclick = () => {
+                const i = document.createElement("input");
+                i.type = "text";
+                i.value = get();
+                i.style.width = "520px";
+                i.style.maxWidth = "65vw";
+                i.style.background = "#0a1322";
+                i.style.color = "#e7eefc";
+                i.style.border = "1px solid #29405e";
+                i.style.borderRadius = "6px";
+                i.style.padding = "3px 6px";
+                const saveIt = () => {
+                    const v = i.value.trim();
+                    if (v) set(v);
+                    span.textContent = get();
+                    i.replaceWith(span)
+                };
+                i.onkeydown = e => {
+                    if (e.key === "Enter") saveIt();
+                    if (e.key === "Escape") i.replaceWith(span)
+                };
+                i.onblur = saveIt;
+                span.replaceWith(i);
+                i.focus();
+                i.select()
+            }
+        }
+
+        function systemMsg() {
+            const s = (st.systemPrompt || "").trim(),
+                k = (st.kbPrompt || "").trim();
+            if (s && k) return s + "\n\n[Knowledge Base]\n" + k;
+            return s || k || dflt.systemPrompt
+        }
+
+        function caps(model) {
+            const h = JSON.stringify(model).toLowerCase(),
+                id = String(model.id || model.name || "").toLowerCase(),
+                p = model.pricing || {},
+                sp = Array.isArray(model.supported_parameters) ? model.supported_parameters.map(x => String(x)
+                    .toLowerCase()) : [],
+                inMods = Array.isArray(model?.architecture?.input_modalities) ? model.architecture.input_modalities
+                .map(x => String(x).toLowerCase()) : [],
+                outMods = Array.isArray(model?.architecture?.output_modalities) ? model.architecture.output_modalities
+                .map(x => String(x).toLowerCase()) : [],
+                canVision = inMods.includes("image"),
+                canImageGen = outMods.includes("image");
+            return {
+                free: id.includes("(free)") || String(p.prompt || "").trim() === "0" || String(p.completion || "")
+                .trim() === "0",
+                vision: canVision,
+                reasoning: id.includes("reason") || h.includes("reasoning"),
+                tools: sp.includes("tools") || sp.includes("tool_choice") || sp.includes("function_call") || h
+                .includes("function calling"),
+                imageGen: canImageGen
+            }
+        }
+
+        function supportsSystemRole(model) {
+            const sp = Array.isArray(model?.raw?.supported_parameters) ? model.raw.supported_parameters.map(x => String(x)
+                .toLowerCase()) : [];
+            if (sp.length) return sp.includes("system") || sp.includes("instructions");
+            return !String(model?.id || "").toLowerCase().includes("gemma-3")
+        }
+
+        function rebuildLocal() {
+            const cur = st.providers.local.model || defs.local.model;
+            st.catalog = [{
+                provider: "local",
+                id: cur,
+                name: cur,
+                description: "Lokalni model",
+                ...caps({
+                    id: cur
+                })
+            }];
+            applyFilters()
+        }
+        async function refreshModels() {
+            if (st.provider === "local") {
+                rebuildLocal();
+                status("Local provider: model lista je lokalna (1 aktivni model).");
+                return
+            }
+            const key = cfg().apiKey.trim();
+            if (!key) return status("Unesi OpenRouter API key pre refresh modela.", true);
+            el.refresh.disabled = true;
+            status("Učitavam OpenRouter modele...");
+            try {
+                const r = await fetch(defs.openrouter.models, {
+                    headers: {
+                        Authorization: "Bearer " + key,
+                        "Content-Type": "application/json"
+                    }
+                });
+                if (!r.ok) throw new Error("HTTP " + r.status + ": " + await r.text());
+                const j = await r.json();
+                const arr = Array.isArray(j?.data) ? j.data : [];
+                st.catalog = arr.map(m => ({
+                    provider: "openrouter",
+                    id: m.id,
+                    name: m.name || m.id,
+                    description: m.description || "",
+                    raw: m,
+                    ...caps(m)
+                }));
+                applyFilters();
+                status("OpenRouter modeli učitani: " + st.catalog.length)
+            } catch (e) {
+                status("Greška refresh modela: " + String(e.message || e), true)
+            } finally {
+                el.refresh.disabled = false
+            }
+        }
+
+        function applyFilters() {
+            const q = el.modelFilter.value.trim().toLowerCase(),
+                ff = el.fFree.checked,
+                fv = el.fVision.checked,
+                fr = el.fReasoning.checked,
+                ft = el.fTools.checked,
+                fi = el.fImageGen.checked;
+            st.filtered = st.catalog.filter(m => {
+                const h = (m.id + " " + m.name + " " + m.description).toLowerCase();
+                if (q && !h.includes(q)) return false;
+                if (ff && !m.free) return false;
+                if (fv && !m.vision) return false;
+                if (fr && !m.reasoning) return false;
+                if (ft && !m.tools) return false;
+                if (fi && !m.imageGen) return false;
+                return true
+            });
+            renderModelList()
+        }
+
+        function renderModelList() {
+            const sel = cfg().model;
+            el.modelList.innerHTML = "";
+            for (const m of st.filtered) {
+                const o = document.createElement("option"),
+                    tags = [m.free ? "free" : "", m.vision ? "vision" : "", m.reasoning ? "reasoning" : "", m.tools ?
+                        "tools" : "", m.imageGen ? "imagegen" : ""
+                    ].filter(Boolean).join(",");
+                o.value = m.id;
+                o.textContent = tags ? m.id + " [" + tags + "]" : m.id;
+                if (m.id === sel) o.selected = true;
+                el.modelList.appendChild(o)
+            }
+            if (!el.modelList.options.length) {
+                const o = document.createElement("option");
+                o.textContent = "(nema rezultata)";
+                o.disabled = true;
+                el.modelList.appendChild(o)
+            }
+            updateModelInfo()
+        }
+
+        function updateModelInfo() {
+            const m = st.catalog.find(x => x.id === cfg().model) || null;
+            st.selectedMeta = m;
+            if (!m) el.modelInfo.textContent = "Odaberi model iz liste ili osvezi modele.";
+            else el.modelInfo.textContent = "Model: " + m.id + " | free:" + m.free + " vision:" + m.vision +
+                " reasoning:" + m.reasoning + " tools:" + m.tools + " imageGen:" + Boolean(m.imageGen);
+            const can = Boolean(st.selectedMeta?.vision);
+            el.upload.disabled = !can;
+            el.clearUpload.disabled = !can;
+            if (!can && st.uploads.length) clearUploads()
+        }
+
+        function renderUploads() {
+            el.uploads.innerHTML = "";
+            for (const u of st.uploads) {
+                const s = document.createElement("span");
+                s.className = "up";
+                s.textContent = u.name;
+                el.uploads.appendChild(s)
+            }
+        }
+
+        function clearUploads() {
+            st.uploads = [];
+            renderUploads();
+            status("Uploadi ocisceni.")
+        }
+        async function readFiles(files) {
+            const one = f => new Promise((ok, bad) => {
+                const r = new FileReader();
+                r.onload = () => ok({
+                    name: f.name,
+                    type: f.type,
+                    dataUrl: r.result
+                });
+                r.onerror = bad;
+                r.readAsDataURL(f)
+            });
+            return Promise.all(Array.from(files).map(one))
+        }
+        async function loadJsonCfg() {
+            const ld = async p => {
+                try {
+                    const r = await fetch(p, {
+                        cache: "no-store"
+                    });
+                    if (!r.ok) return null;
+                    return await r.json()
+                } catch {
+                    return null
+                }
+            };
+            const s = await ld("./config/system.json"),
+                k = await ld("./config/knowledge.json");
+            if (s && typeof s.prompt === "string" && !st.systemPrompt) st.systemPrompt = s.prompt;
+            if (k && typeof k.prompt === "string" && !st.kbPrompt) st.kbPrompt = k.prompt;
+            el.systemPrompt.value = st.systemPrompt;
+            el.kbPrompt.value = st.kbPrompt;
+            save()
+        }
+
+        function userMsg(p) {
+            if (!(st.selectedMeta?.vision) || !st.uploads.length) return {
+                role: "user",
+                content: p
+            };
+            const c = [{
+                type: "text",
+                text: p
+            }];
+            for (const u of st.uploads) c.push({
+                type: "image_url",
+                image_url: {
+                    url: u.dataUrl
+                }
+            });
+            return {
+                role: "user",
+                content: c
+            }
+        }
+        async function stream(messages, slot) {
+            const h = {
+                "Content-Type": "application/json"
+            };
+            if (st.provider === "openrouter") h.Authorization = "Bearer " + cfg().apiKey.trim();
+            const r = await fetch(cfg().apiUrl, {
+                method: "POST",
+                headers: h,
+                body: JSON.stringify({
+                    model: cfg().model,
+                    messages,
+                    temperature: 0.7,
+                    stream: true
+                })
+            });
+            if (!r.ok) throw new Error("HTTP " + r.status + ": " + await r.text());
+            if (!r.body) {
+                const j = await r.json();
+                return j?.choices?.[0]?.message?.content || ""
+            }
+            const reader = r.body.getReader(),
+                dec = new TextDecoder("utf-8");
+            let buf = "",
+                full = "";
+            while (true) {
+                const part = await reader.read();
+                if (part.done) break;
+                buf += dec.decode(part.value, {
+                    stream: true
+                });
+                const lines = buf.split(/\r?\n/);
+                buf = lines.pop() || "";
+                for (const line of lines) {
+                    const t = line.trim();
+                    if (!t.startsWith("data:")) continue;
+                    const p = t.slice(5).trim();
+                    if (p === "[DONE]") return full;
+                    if (!p) continue;
+                    let j;
+                    try {
+                        j = JSON.parse(p)
+                    } catch {
+                        continue
+                    }
+                    const d = j?.choices?.[0]?.delta?.content ?? j?.choices?.[0]?.message?.content ?? "";
+                    if (d) {
+                        full += d;
+                        slot.update(full)
+                    }
+                }
+            }
+            return full
+        }
+        async function copyAll() {
+            const t = st.rendered.map(p => p.role.toUpperCase() + ":\n" + p.content).join(
+                "\n\n----------------\n\n");
+            await navigator.clipboard.writeText(t || "");
+            status("Kompletan razgovor kopiran.")
+        }
+        async function submit(e) {
+            e.preventDefault();
+            const p = el.prompt.value.trim();
+            if (!p) return;
+            if (!cfg().model) return status("Odaberi model prije slanja.", true);
+            if (st.provider === "openrouter" && !cfg().apiKey.trim()) return status("Unesi OpenRouter API key.",
+                true);
+            el.send.disabled = true;
+            status("Streaming odgovora...");
+            msg("user", p + (st.uploads.length ? "\n[images: " + st.uploads.length + "]" : ""));
+            el.prompt.value = "";
+            const a = msg("assistant", "", currentModelMeta());
+            const req = buildRequestMessages(p);
+            try {
+                const out = await stream(req, a);
+                if (!out) throw new Error("Prazan odgovor modela.");
+                st.chatHistory.push({
+                    role: "user",
+                    content: p
+                }, {
+                    role: "assistant",
+                    content: out
+                });
+                if (st.uploads.length) clearUploads();
+                status("Povezano.")
+            } catch (err) {
+                const msgErr = userFacingError(err);
+                a.update("Greška: " + msgErr);
+                status("Greška: " + msgErr, true)
+            } finally {
+                el.send.disabled = false
+            }
+        }
+
+        function refreshUI() {
+            el.provider.value = st.provider;
+            el.api.textContent = cfg().apiUrl;
+            el.orKey.value = st.providers.openrouter.apiKey;
+            el.orKey.disabled = st.provider !== "openrouter";
+            updateModelInfo()
+        }
+
+        function initCatalog() {
+            if (st.provider === "local") rebuildLocal();
+            else {
+                st.catalog = [];
+                st.filtered = [];
+                renderModelList()
+            }
+            refreshUI()
+        }
+
+        function bind() {
+            el.provider.value = st.provider;
+            el.systemPrompt.value = st.systemPrompt;
+            el.kbPrompt.value = st.kbPrompt;
+            el.orKey.value = st.providers.openrouter.apiKey;
+            editable(el.api, () => cfg().apiUrl, v => {
+                cfg().apiUrl = v;
+                save();
+                status("API URL sačuvan.")
+            });
+            el.provider.onchange = () => {
+                st.provider = el.provider.value;
+                save();
+                initCatalog();
+                status("Provider: " + defs[st.provider].label)
+            };
+            el.refresh.onclick = refreshModels;
+            el.copyAll.onclick = () => copyAll().catch(er => status("Greška copy: " + er.message, true));
+            el.canvasBtn.onclick = () => {
+                st.canvas = !st.canvas;
+                el.ws.classList.toggle("canvas", st.canvas)
+            };
+            el.orKey.onchange = () => {
+                st.providers.openrouter.apiKey = el.orKey.value.trim();
+                save();
+                status("OpenRouter API key sačuvan.")
+            };
+            el.modelFilter.oninput = applyFilters;
+            el.fFree.onchange = applyFilters;
+            el.fVision.onchange = applyFilters;
+            el.fReasoning.onchange = applyFilters;
+            el.fTools.onchange = applyFilters;
+            el.fImageGen.onchange = applyFilters;
+            el.modelList.onchange = () => {
+                const s = el.modelList.value;
+                if (!s || s === "(nema rezultata)") return;
+                cfg().model = s;
+                save();
+                updateModelInfo();
+                refreshUI();
+                status("Model odabran: " + s)
+            };
+            el.systemPrompt.onchange = () => {
+                st.systemPrompt = el.systemPrompt.value;
+                save()
+            };
+            el.kbPrompt.onchange = () => {
+                st.kbPrompt = el.kbPrompt.value;
+                save()
+            };
+            el.upload.onclick = () => {
+                if (!(st.selectedMeta?.vision)) return status("Upload je omogućen samo za Vision modele.", true);
+                el.file.click()
+            };
+            el.file.onchange = async () => {
+                try {
+                    const f = el.file.files;
+                    if (!f || !f.length) return;
+                    const items = await readFiles(f);
+                    st.uploads.push(...items);
+                    renderUploads();
+                    status("Dodano slika: " + items.length);
+                    el.file.value = ""
+                } catch (err) {
+                    status("Greška upload: " + String(err.message || err), true)
+                }
+            };
+            el.clearUpload.onclick = clearUploads;
+            el.chat.onsubmit = submit;
+            initCatalog()
+        }
+        bind();
+        loadJsonCfg();
+    </script>
+</body>
+
+</html>

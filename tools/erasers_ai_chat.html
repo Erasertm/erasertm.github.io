@@ -1374,7 +1374,9 @@
             if (isImageGen) payload.max_tokens = modelId.includes("gpt-5-image") ? 4096 : 1024;
             if (isImageGen && st.provider === "openrouter") payload.modalities = ["image", "text"];
             if (modelId.includes("gpt-5-image")) {
-                payload.max_tokens = Math.min(Number(payload.max_tokens || 4096), 8192)
+                payload.max_tokens = Math.min(Number(payload.max_tokens || 4096), 12288);
+                payload.modalities = ["image"];
+                payload.reasoning_effort = "low"
             }
             dbg("request", {
                 provider: st.provider,
@@ -1382,7 +1384,9 @@
                 stream: useStream,
                 imageGen: Boolean(opts.imageGen),
                 timeoutMs,
-                payloadKeys: Object.keys(payload)
+                payloadKeys: Object.keys(payload),
+                max_tokens: payload.max_tokens,
+                modalities: payload.modalities
             });
             const t0 = Date.now();
             let r = await fetch(cfg().apiUrl, {
@@ -1399,6 +1403,22 @@
             });
             if (!r.ok) {
                 const errText = await r.text();
+                if (errText.includes("Unsupported parameter: 'reasoning_effort'")) {
+                    delete payload.reasoning_effort;
+                    dbg("retry", "Ponovni pokusaj bez reasoning_effort.");
+                    r = await fetch(cfg().apiUrl, {
+                        method: "POST",
+                        headers: h,
+                        body: JSON.stringify(payload),
+                        signal: ctl.signal
+                    });
+                    if (r.ok) {
+                        dbg("retry parsed", {
+                            hasOut: true,
+                            keys: ["http-ok-after-removing-reasoning_effort"]
+                        })
+                    } else throw new Error("HTTP " + r.status + ": " + await r.text())
+                } else
                 throw new Error("HTTP " + r.status + ": " + errText);
             }
             if (!useStream || !r.body) {
@@ -1410,14 +1430,15 @@
                 });
                 const fr = String(j?.choices?.[0]?.finish_reason || "").toLowerCase();
                 const hasImg = out.includes("![generated image]");
-                if (isImageGen && !hasImg && fr === "length" && Number(payload.max_tokens || 0) < 8192) {
+                if (isImageGen && !hasImg && fr === "length" && Number(payload.max_tokens || 0) < 16384) {
                     const retryPayload = {
                         ...payload,
-                        max_tokens: 8192
+                        max_tokens: 16384
                     };
                     dbg("retry", {
                         why: "finish_reason=length and no image",
-                        max_tokens: retryPayload.max_tokens
+                        max_tokens: retryPayload.max_tokens,
+                        modalities: retryPayload.modalities
                     });
                     const r2 = await fetch(cfg().apiUrl, {
                         method: "POST",

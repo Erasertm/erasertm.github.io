@@ -478,7 +478,7 @@
             filtered: [],
             selectedMeta: null,
             uploads: [],
-            canvas: false,
+            canvas: true,
             debug: []
         };
         const copyFlashTimers = new WeakMap();
@@ -572,6 +572,9 @@
             }
             st.debug.push(line);
             if (st.debug.length > 400) st.debug.shift();
+            try {
+                console.log(line)
+            } catch {}
             if (el.debugOut) {
                 el.debugOut.value = st.debug.join("\n");
                 el.debugOut.scrollTop = el.debugOut.scrollHeight
@@ -1303,7 +1306,10 @@
                     hasOut: Boolean(out),
                     keys: Object.keys(j || {}).slice(0, 12)
                 });
-                if (!out) dbg("non-stream raw", j);
+                if (!out) {
+                    dbg("non-stream raw", j);
+                    return "Nema parsiranog outputa. Otvori Debug info za raw odgovor."
+                }
                 return out
             }
             const reader = r.body.getReader(),
@@ -1325,7 +1331,7 @@
                     const t = line.trim();
                     if (!t.startsWith("data:")) continue;
                     const p = t.slice(5).trim();
-                    if (p === "[DONE]") return full;
+                    if (p === "[DONE]") break;
                     if (!p) continue;
                     let j;
                     try {
@@ -1346,6 +1352,7 @@
                 hits,
                 outLen: full.length
             });
+            if (!full) return "Nema parsiranog outputa. Otvori Debug info za stream detalje."
             return full
         }
         async function copyAll() {
@@ -1438,7 +1445,10 @@
             el.copyAll.onclick = () => copyAll().catch(er => status("Greška copy: " + er.message, true));
             el.canvasBtn.onclick = () => {
                 st.canvas = !st.canvas;
-                el.ws.classList.toggle("canvas", st.canvas)
+                el.ws.classList.toggle("canvas", st.canvas);
+                dbg("debug panel", {
+                    open: st.canvas
+                })
             };
             el.orKey.onchange = () => {
                 st.providers.openrouter.apiKey = el.orKey.value.trim();
@@ -1487,6 +1497,11 @@
             };
             el.clearUpload.onclick = clearUploads;
             el.chat.onsubmit = submit;
+            el.ws.classList.toggle("canvas", st.canvas);
+            dbg("init", {
+                provider: st.provider,
+                debugPanel: st.canvas
+            });
             initCatalog()
         }
         bind();

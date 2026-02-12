@@ -1190,21 +1190,23 @@
             return ""
         }
 
+        function imageObjToMd(x) {
+            const u = x?.image_url?.url || x?.imageUrl?.url || x?.url || "";
+            if (u) return "![generated image](" + u + ")";
+            const mime = x?.mime_type || x?.mimeType || "image/png";
+            const b64 = x?.b64_json || x?.base64 || "";
+            return b64 ? "![generated image](data:" + mime + ";base64," + b64 + ")" : ""
+        }
+
         function extractAssistantMd(payload) {
             const c = payload?.choices?.[0];
             const a = contentToMd(c?.message?.content);
             if (a) return a;
             const b = contentToMd(c?.delta?.content);
             if (b) return b;
-            const imgs = c?.message?.images || payload?.images || [];
+            const imgs = c?.message?.images || c?.delta?.images || payload?.images || [];
             if (Array.isArray(imgs) && imgs.length) {
-                return imgs.map(x => {
-                    const u = x?.image_url?.url || x?.url || "";
-                    if (u) return "![generated image](" + u + ")";
-                    const mime = x?.mime_type || "image/png";
-                    const b64 = x?.b64_json || "";
-                    return b64 ? "![generated image](data:" + mime + ";base64," + b64 + ")" : ""
-                }).filter(Boolean).join("\n\n")
+                return imgs.map(imageObjToMd).filter(Boolean).join("\n\n")
             }
             return ""
         }
@@ -1215,15 +1217,17 @@
                 "Content-Type": "application/json"
             };
             if (st.provider === "openrouter") h.Authorization = "Bearer " + cfg().apiKey.trim();
+            const payload = {
+                model: cfg().model,
+                messages,
+                temperature: 0.7,
+                stream: useStream
+            };
+            if (opts.imageGen && st.provider === "openrouter") payload.modalities = ["image", "text"];
             const r = await fetch(cfg().apiUrl, {
                 method: "POST",
                 headers: h,
-                body: JSON.stringify({
-                    model: cfg().model,
-                    messages,
-                    temperature: 0.7,
-                    stream: useStream
-                })
+                body: JSON.stringify(payload)
             });
             if (!r.ok) throw new Error("HTTP " + r.status + ": " + await r.text());
             if (!useStream || !r.body) {
@@ -1285,7 +1289,8 @@
             const req = buildRequestMessages(p);
             try {
                 const out = await stream(req, a, {
-                    stream: !meta?.imageGen
+                    stream: !meta?.imageGen,
+                    imageGen: Boolean(meta?.imageGen)
                 });
                 if (!out) throw new Error("Prazan odgovor modela.");
                 st.chatHistory.push({

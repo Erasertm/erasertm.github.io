@@ -1174,12 +1174,16 @@
             if (typeof part === "string") return part;
             const t = String(part.type || "").toLowerCase();
             if (t === "text" || t === "output_text" || t === "input_text") return String(part.text || "");
+            if (typeof part.text === "string" && part.text) return part.text;
             const iu = part.image_url?.url || part.url || "";
             if (t === "image_url" && iu) return "![generated image](" + iu + ")";
             const mime = part.mime_type || part.mime || "image/png";
             const b64 = part.b64_json || part.base64 || "";
             if ((t === "image" || t === "output_image") && b64) return "![generated image](data:" + mime + ";base64," +
                 b64 + ")";
+            const srcType = part.source?.media_type || "image/png";
+            const srcData = part.source?.data || "";
+            if (srcData) return "![generated image](data:" + srcType + ";base64," + srcData + ")";
             if (iu) return "![generated image](" + iu + ")";
             return ""
         }
@@ -1187,6 +1191,7 @@
         function contentToMd(content) {
             if (typeof content === "string") return content;
             if (Array.isArray(content)) return content.map(contentPartToMd).filter(Boolean).join("\n\n");
+            if (content && typeof content === "object") return contentPartToMd(content);
             return ""
         }
 
@@ -1202,8 +1207,14 @@
             const c = payload?.choices?.[0];
             const a = contentToMd(c?.message?.content);
             if (a) return a;
+            const a2 = contentToMd(c?.message?.content?.parts);
+            if (a2) return a2;
             const b = contentToMd(c?.delta?.content);
             if (b) return b;
+            const b2 = contentToMd(c?.delta?.content?.parts);
+            if (b2) return b2;
+            const t = String(c?.text || payload?.text || "");
+            if (t) return t;
             const imgs = c?.message?.images || c?.delta?.images || payload?.images || [];
             if (Array.isArray(imgs) && imgs.length) {
                 return imgs.map(imageObjToMd).filter(Boolean).join("\n\n")
@@ -1260,7 +1271,7 @@
                     }
                     const d = extractAssistantMd(j);
                     if (d) {
-                        full += (full ? "\n\n" : "") + d;
+                        full += d;
                         slot.update(full)
                     }
                 }

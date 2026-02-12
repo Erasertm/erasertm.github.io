@@ -230,6 +230,14 @@
             margin-bottom: 0
         }
 
+        .mb img {
+            max-width: min(100%, 720px);
+            border: 1px solid #2c3f5c;
+            border-radius: 8px;
+            display: block;
+            margin: 8px 0
+        }
+
         .code {
             border: 1px solid #2c3f5c;
             border-radius: 9px;
@@ -405,20 +413,20 @@
                     <section id="msgs" class="msgs"></section>
                     <aside class="canvas">
                         <h3 style="margin:0 0 8px;font-size:13px;color:var(--muted)">Canvas</h3>
-                        <textarea placeholder="Radna biljeska / draft..."></textarea>
+                        <textarea placeholder="Radna bilješka / draft..."></textarea>
                     </aside>
                 </section>
 
                 <form id="chat" class="composer">
                     <div>
-                        <textarea id="prompt" placeholder="Upisi poruku..." required></textarea>
+                        <textarea id="prompt" placeholder="Upiši poruku..." required></textarea>
                         <div id="uploads" class="uploads"></div>
                     </div>
                     <div style="display:grid;gap:8px;align-content:start">
                         <input id="file" type="file" accept="image/*" multiple style="display:none" />
                         <button id="upload" class="btn alt" type="button">Upload</button>
                         <button id="clearUpload" class="btn warn" type="button">Clear img</button>
-                        <button id="send" class="btn" type="submit">Posalji</button>
+                        <button id="send" class="btn" type="submit">Pošalji</button>
                     </div>
                 </form>
             </section>
@@ -651,6 +659,7 @@
 
         function textToHtml(t) {
             const e = esc(t).replace(/`([^`]+)`/g, "<code>$1</code>").replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+                .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" loading="lazy" />')
                 .replace(/\*([^*]+)\*/g, "<em>$1</em>").replace(/\[([^\]]+)\]\(([^)]+)\)/g,
                     '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
             return e.split(/\n\s*\n/g).map(p => p.trim()).filter(Boolean).map(p => "<p>" + p.replace(/\n/g, "<br>") +
@@ -1160,7 +1169,48 @@
                 content: c
             }
         }
-        async function stream(messages, slot) {
+        function contentPartToMd(part) {
+            if (!part) return "";
+            if (typeof part === "string") return part;
+            const t = String(part.type || "").toLowerCase();
+            if (t === "text" || t === "output_text" || t === "input_text") return String(part.text || "");
+            const iu = part.image_url?.url || part.url || "";
+            if (t === "image_url" && iu) return "![generated image](" + iu + ")";
+            const mime = part.mime_type || part.mime || "image/png";
+            const b64 = part.b64_json || part.base64 || "";
+            if ((t === "image" || t === "output_image") && b64) return "![generated image](data:" + mime + ";base64," +
+                b64 + ")";
+            if (iu) return "![generated image](" + iu + ")";
+            return ""
+        }
+
+        function contentToMd(content) {
+            if (typeof content === "string") return content;
+            if (Array.isArray(content)) return content.map(contentPartToMd).filter(Boolean).join("\n\n");
+            return ""
+        }
+
+        function extractAssistantMd(payload) {
+            const c = payload?.choices?.[0];
+            const a = contentToMd(c?.message?.content);
+            if (a) return a;
+            const b = contentToMd(c?.delta?.content);
+            if (b) return b;
+            const imgs = c?.message?.images || payload?.images || [];
+            if (Array.isArray(imgs) && imgs.length) {
+                return imgs.map(x => {
+                    const u = x?.image_url?.url || x?.url || "";
+                    if (u) return "![generated image](" + u + ")";
+                    const mime = x?.mime_type || "image/png";
+                    const b64 = x?.b64_json || "";
+                    return b64 ? "![generated image](data:" + mime + ";base64," + b64 + ")" : ""
+                }).filter(Boolean).join("\n\n")
+            }
+            return ""
+        }
+
+        async function stream(messages, slot, opts = {}) {
+            const useStream = opts.stream !== false;
             const h = {
                 "Content-Type": "application/json"
             };
@@ -1172,13 +1222,13 @@
                     model: cfg().model,
                     messages,
                     temperature: 0.7,
-                    stream: true
+                    stream: useStream
                 })
             });
             if (!r.ok) throw new Error("HTTP " + r.status + ": " + await r.text());
-            if (!r.body) {
+            if (!useStream || !r.body) {
                 const j = await r.json();
-                return j?.choices?.[0]?.message?.content || ""
+                return extractAssistantMd(j)
             }
             const reader = r.body.getReader(),
                 dec = new TextDecoder("utf-8");
@@ -1204,9 +1254,9 @@
                     } catch {
                         continue
                     }
-                    const d = j?.choices?.[0]?.delta?.content ?? j?.choices?.[0]?.message?.content ?? "";
+                    const d = extractAssistantMd(j);
                     if (d) {
-                        full += d;
+                        full += (full ? "\n\n" : "") + d;
                         slot.update(full)
                     }
                 }
@@ -1226,14 +1276,17 @@
             if (!cfg().model) return status("Odaberi model prije slanja.", true);
             if (st.provider === "openrouter" && !cfg().apiKey.trim()) return status("Unesi OpenRouter API key.",
                 true);
+            const meta = currentModelMeta();
             el.send.disabled = true;
-            status("Streaming odgovora...");
+            status(meta?.imageGen ? "Generiranje odgovora..." : "Streaming odgovora...");
             msg("user", p + (st.uploads.length ? "\n[images: " + st.uploads.length + "]" : ""));
             el.prompt.value = "";
-            const a = msg("assistant", "", currentModelMeta());
+            const a = msg("assistant", "", meta);
             const req = buildRequestMessages(p);
             try {
-                const out = await stream(req, a);
+                const out = await stream(req, a, {
+                    stream: !meta?.imageGen
+                });
                 if (!out) throw new Error("Prazan odgovor modela.");
                 st.chatHistory.push({
                     role: "user",

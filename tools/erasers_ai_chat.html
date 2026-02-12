@@ -953,10 +953,60 @@
             }];
             applyFilters()
         }
+
+        function localModelsUrlFromApi(apiUrl) {
+            try {
+                const u = new URL(apiUrl);
+                const p = (u.pathname || "/").replace(/\/+$/, "");
+                if (/\/v1\/chat\/completions$/i.test(p)) u.pathname = p.replace(/\/chat\/completions$/i, "/models");
+                else if (/\/chat\/completions$/i.test(p)) u.pathname = p.replace(/\/chat\/completions$/i, "/models");
+                else if (/\/v1$/i.test(p)) u.pathname = p + "/models";
+                else if (/\/models$/i.test(p)) u.pathname = p;
+                else u.pathname = "/v1/models";
+                return u.toString()
+            } catch {
+                return ""
+            }
+        }
         async function refreshModels() {
             if (st.provider === "local") {
-                rebuildLocal();
-                status("Local provider: model lista je lokalna (1 aktivni model).");
+                el.refresh.disabled = true;
+                try {
+                    const mu = localModelsUrlFromApi(cfg().apiUrl);
+                    if (!mu) throw new Error("Neispravan local API URL.");
+                    const r = await fetch(mu, {
+                        headers: {
+                            "Content-Type": "application/json"
+                        }
+                    });
+                    if (!r.ok) throw new Error("HTTP " + r.status + ": " + await r.text());
+                    const j = await r.json();
+                    const arr = Array.isArray(j?.data) ? j.data : [];
+                    if (!arr.length) {
+                        rebuildLocal();
+                        status("Local provider: model lista je lokalna (1 aktivni model).");
+                        return
+                    }
+                    st.catalog = arr.map(m => ({
+                        provider: "local",
+                        id: m.id || m.name || "",
+                        name: m.name || m.id || "",
+                        description: m.description || "",
+                        raw: m,
+                        ...caps(m)
+                    })).filter(m => m.id);
+                    if (!st.catalog.find(x => x.id === cfg().model) && st.catalog[0]) {
+                        cfg().model = st.catalog[0].id;
+                        save()
+                    }
+                    applyFilters();
+                    status("Local provider: model lista je lokalna (1 aktivni model).")
+                } catch (e) {
+                    rebuildLocal();
+                    status("Greška refresh modela: " + String(e.message || e), true)
+                } finally {
+                    el.refresh.disabled = false
+                }
                 return
             }
             const key = cfg().apiKey.trim();
@@ -1215,7 +1265,7 @@
         }
 
         function initCatalog() {
-            if (st.provider === "local") rebuildLocal();
+            if (st.provider === "local") refreshModels();
             else {
                 st.catalog = [];
                 st.filtered = [];

@@ -1237,6 +1237,41 @@
             return b64 ? "![generated image](data:" + mime + ";base64," + b64 + ")" : ""
         }
 
+        function collectImageUrls(obj, out = [], depth = 0) {
+            if (!obj || depth > 8) return out;
+            if (typeof obj === "string") {
+                if (/^(https?:\/\/|data:image\/)/i.test(obj)) out.push(obj);
+                return out
+            }
+            if (Array.isArray(obj)) {
+                for (const x of obj) collectImageUrls(x, out, depth + 1);
+                return out
+            }
+            if (typeof obj === "object") {
+                for (const [k, v] of Object.entries(obj)) {
+                    if (typeof v === "string" && /^(https?:\/\/|data:image\/)/i.test(v) && /(url|uri|image|file)/i.test(k))
+                        out.push(v);
+                    else collectImageUrls(v, out, depth + 1)
+                }
+            }
+            return out
+        }
+
+        function fallbackOutputFromRaw(payload) {
+            const urls = Array.from(new Set(collectImageUrls(payload))).slice(0, 6);
+            if (urls.length) {
+                return urls.map(u => "![generated image](" + u + ")\n" + u).join("\n\n")
+            }
+            let txt = "";
+            try {
+                txt = JSON.stringify(payload, null, 2)
+            } catch {
+                txt = String(payload)
+            }
+            if (txt.length > 2400) txt = txt.slice(0, 2400) + "\n... (truncated)";
+            return "Nema parsiranog outputa. Raw odgovor:\n```json\n" + txt + "\n```"
+        }
+
         function extractAssistantMd(payload) {
             const c = payload?.choices?.[0];
             const a = contentToMd(c?.message?.content);
@@ -1281,11 +1316,9 @@
                 messages,
                 stream: useStream
             };
-            if (!isImageGen) payload.temperature = 0.7;
             if (isImageGen) payload.max_tokens = 1024;
             if (isImageGen && st.provider === "openrouter") payload.modalities = ["image", "text"];
             if (modelId.includes("gpt-5-image")) {
-                delete payload.temperature;
                 payload.max_tokens = Math.min(Number(payload.max_tokens || 1024), 1024)
             }
             dbg("request", {
@@ -1293,7 +1326,8 @@
                 model: cfg().model,
                 stream: useStream,
                 imageGen: Boolean(opts.imageGen),
-                timeoutMs
+                timeoutMs,
+                payloadKeys: Object.keys(payload)
             });
             const t0 = Date.now();
             let r = await fetch(cfg().apiUrl, {
@@ -1310,17 +1344,7 @@
             });
             if (!r.ok) {
                 const errText = await r.text();
-                if (errText.includes("Unsupported parameter: 'temperature'")) {
-                    delete payload.temperature;
-                    dbg("retry", "Ponovni pokusaj bez temperature parametra.");
-                    r = await fetch(cfg().apiUrl, {
-                        method: "POST",
-                        headers: h,
-                        body: JSON.stringify(payload),
-                        signal: ctl.signal
-                    });
-                    if (!r.ok) throw new Error("HTTP " + r.status + ": " + await r.text());
-                } else throw new Error("HTTP " + r.status + ": " + errText);
+                throw new Error("HTTP " + r.status + ": " + errText);
             }
             if (!useStream || !r.body) {
                 const j = await r.json();
@@ -1331,7 +1355,7 @@
                 });
                 if (!out) {
                     dbg("non-stream raw", j);
-                    return "Nema parsiranog outputa. Otvori Debug info za raw odgovor."
+                    return fallbackOutputFromRaw(j)
                 }
                 return out
             }
@@ -1340,7 +1364,8 @@
             let buf = "",
                 full = "",
                 chunks = 0,
-                hits = 0;
+                hits = 0,
+                lastEvent = null;
             while (true) {
                 const part = await reader.read();
                 if (part.done) break;
@@ -1362,6 +1387,7 @@
                     } catch {
                         continue
                     }
+                    lastEvent = j;
                     const d = extractAssistantMd(j);
                     if (d) {
                         hits++;
@@ -1375,6 +1401,7 @@
                 hits,
                 outLen: full.length
             });
+            if (!full && lastEvent) return fallbackOutputFromRaw(lastEvent);
             if (!full) return "Nema parsiranog outputa. Otvori Debug info za stream detalje."
             return full
         }

@@ -153,12 +153,8 @@
 
         .ws {
             display: grid;
-            grid-template-columns: 1fr 0;
+            grid-template-columns: 1fr;
             min-height: 0
-        }
-
-        .ws.canvas {
-            grid-template-columns: 1fr minmax(250px, 34%)
         }
 
         .msgs {
@@ -167,27 +163,6 @@
             display: grid;
             gap: 10px;
             align-content: start
-        }
-
-        .canvas {
-            display: none;
-            border-left: 1px solid var(--line);
-            padding: 8px
-        }
-
-        .ws.canvas .canvas {
-            display: block
-        }
-
-        .canvas textarea {
-            width: 100%;
-            height: calc(100% - 24px);
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            background: #091220;
-            color: var(--text);
-            padding: 8px;
-            font: 12px/1.35 Consolas, monospace
         }
 
         .m {
@@ -386,17 +361,6 @@
             }
         }
 
-        @media (max-width:900px) {
-            .ws.canvas {
-                grid-template-columns: 1fr
-            }
-
-            .ws.canvas .canvas {
-                border-left: 0;
-                border-top: 1px solid var(--line);
-                min-height: 220px
-            }
-        }
     </style>
 </head>
 
@@ -411,7 +375,6 @@
             <div class="chip">API: <span id="api" class="editable" title="Dvoklik za edit"></span></div>
             <button id="refresh" class="btn alt" type="button">Refresh LLM</button>
             <button id="copyAll" class="btn alt" type="button">Copy Sve</button>
-            <button id="canvasBtn" class="btn alt" type="button">Debug info</button>
         </section>
 
         <section class="layout">
@@ -440,10 +403,6 @@
             <section class="right">
                 <section id="ws" class="ws">
                     <section id="msgs" class="msgs"></section>
-                    <aside class="canvas">
-                        <h3 style="margin:0 0 8px;font-size:13px;color:var(--muted)">Debug info</h3>
-                        <textarea id="debugOut" placeholder="Debug log..." readonly></textarea>
-                    </aside>
                 </section>
 
                 <form id="chat" class="composer">
@@ -511,7 +470,6 @@
             filtered: [],
             selectedMeta: null,
             uploads: [],
-            canvas: true,
             debug: []
         };
         const copyFlashTimers = new WeakMap();
@@ -520,7 +478,6 @@
             api: gid("api"),
             refresh: gid("refresh"),
             copyAll: gid("copyAll"),
-            canvasBtn: gid("canvasBtn"),
             orKey: gid("orKey"),
             modelFilter: gid("modelFilter"),
             fFree: gid("fFree"),
@@ -532,7 +489,6 @@
             modelInfo: gid("modelInfo"),
             systemPrompt: gid("systemPrompt"),
             kbPrompt: gid("kbPrompt"),
-            ws: gid("ws"),
             msgs: gid("msgs"),
             chat: gid("chat"),
             prompt: gid("prompt"),
@@ -541,7 +497,6 @@
             upload: gid("upload"),
             clearUpload: gid("clearUpload"),
             uploads: gid("uploads"),
-            debugOut: gid("debugOut"),
             send: gid("send"),
             status: gid("status")
         };
@@ -703,10 +658,6 @@
             try {
                 console.log(line)
             } catch {}
-            if (el.debugOut) {
-                el.debugOut.value = st.debug.join("\n");
-                el.debugOut.scrollTop = el.debugOut.scrollHeight
-            }
         }
 
         function esc(s) {
@@ -1633,7 +1584,7 @@
                 outLen: full.length
             });
             if (!full && lastEvent) return fallbackOutputFromRaw(lastEvent);
-            if (!full) return "Nema parsiranog outputa. Otvori Debug info za stream detalje."
+            if (!full) return "Nema parsiranog outputa. Provjeri console log za stream detalje."
             return full
         }
         async function copyAll() {
@@ -1734,13 +1685,6 @@
             };
             el.refresh.onclick = refreshModels;
             el.copyAll.onclick = () => copyAll().catch(er => status("Greška copy: " + er.message, true));
-            el.canvasBtn.onclick = () => {
-                st.canvas = !st.canvas;
-                el.ws.classList.toggle("canvas", st.canvas);
-                dbg("debug panel", {
-                    open: st.canvas
-                })
-            };
             el.orKey.onchange = () => {
                 st.providers.openrouter.apiKey = el.orKey.value.trim();
                 save();
@@ -1789,10 +1733,8 @@
             el.clearUpload.onclick = clearUploads;
             el.chat.onsubmit = submit;
             initSpeechInput();
-            el.ws.classList.toggle("canvas", st.canvas);
             dbg("init", {
-                provider: st.provider,
-                debugPanel: st.canvas
+                provider: st.provider
             });
             initCatalog()
         }

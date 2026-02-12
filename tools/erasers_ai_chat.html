@@ -1438,6 +1438,7 @@
                     timeoutMs: meta?.imageGen ? 180000 : 120000
                 });
                 if (!out || !String(out).trim()) throw new Error("Prazan odgovor modela.");
+                a.update(out);
                 st.chatHistory.push({
                     role: "user",
                     content: p

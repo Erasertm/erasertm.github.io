@@ -842,15 +842,48 @@
                 meta.reasoning + " tools:" + meta.tools + " imageGen:" + meta.imageGen
         }
 
-        function buildRequestMessages(prompt) {
+        function compactHistory(maxChars = 24000, maxMsgs = 24) {
+            const out = [];
+            let chars = 0;
+            for (let i = st.chatHistory.length - 1; i >= 0 && out.length < maxMsgs; i--) {
+                const m = st.chatHistory[i];
+                const c = String(m?.content || "");
+                if (!c) continue;
+                if (chars + c.length > maxChars) {
+                    if (!out.length) break;
+                    continue
+                }
+                out.unshift({
+                    role: m.role,
+                    content: c
+                });
+                chars += c.length
+            }
+            return out
+        }
+
+        function sanitizeAssistantForHistory(text) {
+            let t = String(text || "");
+            t = t.replace(/data:image\/[a-zA-Z0-9.+-]+;base64,[A-Za-z0-9+/=\s]+/g, "[image-base64-omitted]");
+            if (t.length > 6000) t = t.slice(0, 6000) + "\n...[truncated]";
+            return t
+        }
+
+        function buildRequestMessages(prompt, opts = {}) {
             const model = st.catalog.find(x => x.id === cfg().model) || st.selectedMeta || null;
             const sys = systemMsg();
+            const hist = opts.imageGen ? [] : compactHistory();
+            dbg("history", {
+                count: hist.length,
+                chars: hist.reduce((n, m) => n + String(m.content || "").length, 0),
+                imageGen: Boolean(opts.imageGen)
+            });
             if (supportsSystemRole(model)) return [{
                 role: "system",
                 content: sys
-            }, ...st.chatHistory, userMsg(prompt)];
+            }, ...hist, userMsg(prompt)];
             const p = "[System uputa]\n" + sys + "\n\n[User]\n" + prompt;
-            return [...st.chatHistory, userMsg(p)]
+            return [...hist, userMsg(p)]
         }
 
         function markVisionUnavailable(modelId) {
@@ -1430,7 +1463,9 @@
             msg("user", p + (st.uploads.length ? "\n[images: " + st.uploads.length + "]" : ""));
             el.prompt.value = "";
             const a = msg("assistant", "", meta);
-            const req = buildRequestMessages(p);
+            const req = buildRequestMessages(p, {
+                imageGen: Boolean(meta?.imageGen)
+            });
             try {
                 const out = await stream(req, a, {
                     stream: !meta?.imageGen,
@@ -1439,13 +1474,15 @@
                 });
                 if (!out || !String(out).trim()) throw new Error("Prazan odgovor modela.");
                 a.update(out);
+                const histAssistant = sanitizeAssistantForHistory(out);
                 st.chatHistory.push({
                     role: "user",
                     content: p
                 }, {
                     role: "assistant",
-                    content: out
+                    content: histAssistant
                 });
+                if (st.chatHistory.length > 40) st.chatHistory = st.chatHistory.slice(-40);
                 if (st.uploads.length) clearUploads();
                 status("Povezano.")
             } catch (err) {

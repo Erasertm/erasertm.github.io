@@ -974,11 +974,7 @@
                 try {
                     const mu = localModelsUrlFromApi(cfg().apiUrl);
                     if (!mu) throw new Error("Neispravan local API URL.");
-                    const r = await fetch(mu, {
-                        headers: {
-                            "Content-Type": "application/json"
-                        }
-                    });
+                    const r = await fetch(mu);
                     if (!r.ok) throw new Error("HTTP " + r.status + ": " + await r.text());
                     const j = await r.json();
                     const arr = Array.isArray(j?.data) ? j.data : [];
@@ -999,6 +995,7 @@
                         cfg().model = st.catalog[0].id;
                         save()
                     }
+                    st.providers.local.model = cfg().model;
                     applyFilters();
                     status("Local provider: model lista je lokalna (1 aktivni model).")
                 } catch (e) {

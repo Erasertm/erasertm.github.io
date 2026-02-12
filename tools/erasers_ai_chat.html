@@ -1271,7 +1271,7 @@
         }
 
         function collectImageUrls(obj, out = [], depth = 0) {
-            if (!obj || depth > 8) return out;
+            if (!obj || depth > 10) return out;
             if (typeof obj === "string") {
                 if (/^(https?:\/\/|data:image\/)/i.test(obj)) out.push(obj);
                 return out
@@ -1281,6 +1281,25 @@
                 return out
             }
             if (typeof obj === "object") {
+                const url = obj?.image_url?.url || obj?.imageUrl?.url || obj?.url || "";
+                if (typeof url === "string" && /^(https?:\/\/|data:image\/)/i.test(url)) out.push(url);
+                const b64 = obj?.b64_json || obj?.base64 || "";
+                if (typeof b64 === "string" && b64.length > 128) {
+                    const mime = obj?.mime_type || obj?.mimeType || "image/png";
+                    out.push("data:" + mime + ";base64," + b64)
+                }
+                const inData = obj?.inline_data?.data || "";
+                if (typeof inData === "string" && inData.length > 128) {
+                    const inMime = obj?.inline_data?.mime_type || "image/png";
+                    out.push("data:" + inMime + ";base64," + inData)
+                }
+                const srcData = obj?.source?.data || "";
+                if (typeof srcData === "string" && srcData.length > 128) {
+                    const srcMime = obj?.source?.media_type || "image/png";
+                    out.push("data:" + srcMime + ";base64," + srcData)
+                }
+                const furi = obj?.file_data?.file_uri || "";
+                if (typeof furi === "string" && /^(https?:\/\/|data:image\/)/i.test(furi)) out.push(furi);
                 for (const [k, v] of Object.entries(obj)) {
                     if (typeof v === "string" && /^(https?:\/\/|data:image\/)/i.test(v) && /(url|uri|image|file)/i.test(k))
                         out.push(v);
@@ -1328,6 +1347,11 @@
                 const im = imgs.map(imageObjToMd).filter(Boolean).join("\n\n");
                 if (im && !out.includes("![generated image]")) out = out ? out + "\n\n" + im : im
             }
+            if (!out.includes("![generated image]")) {
+                const deep = Array.from(new Set(collectImageUrls(payload))).slice(0, 3);
+                if (deep.length) out = out ? out + "\n\n" + deep.map(u => "![generated image](" + u + ")").join(
+                    "\n\n") : deep.map(u => "![generated image](" + u + ")").join("\n\n")
+            }
             return out
         }
 
@@ -1347,10 +1371,10 @@
                 messages,
                 stream: useStream
             };
-            if (isImageGen) payload.max_tokens = 1024;
+            if (isImageGen) payload.max_tokens = modelId.includes("gpt-5-image") ? 4096 : 1024;
             if (isImageGen && st.provider === "openrouter") payload.modalities = ["image", "text"];
             if (modelId.includes("gpt-5-image")) {
-                payload.max_tokens = Math.min(Number(payload.max_tokens || 1024), 1024)
+                payload.max_tokens = Math.min(Number(payload.max_tokens || 4096), 8192)
             }
             dbg("request", {
                 provider: st.provider,
@@ -1379,11 +1403,38 @@
             }
             if (!useStream || !r.body) {
                 const j = await r.json();
-                const out = extractAssistantMd(j);
+                let out = extractAssistantMd(j);
                 dbg("non-stream parsed", {
                     hasOut: Boolean(out),
                     keys: Object.keys(j || {}).slice(0, 12)
                 });
+                const fr = String(j?.choices?.[0]?.finish_reason || "").toLowerCase();
+                const hasImg = out.includes("![generated image]");
+                if (isImageGen && !hasImg && fr === "length" && Number(payload.max_tokens || 0) < 8192) {
+                    const retryPayload = {
+                        ...payload,
+                        max_tokens: 8192
+                    };
+                    dbg("retry", {
+                        why: "finish_reason=length and no image",
+                        max_tokens: retryPayload.max_tokens
+                    });
+                    const r2 = await fetch(cfg().apiUrl, {
+                        method: "POST",
+                        headers: h,
+                        body: JSON.stringify(retryPayload),
+                        signal: ctl.signal
+                    });
+                    if (r2.ok) {
+                        const j2 = await r2.json();
+                        const out2 = extractAssistantMd(j2);
+                        if (out2) out = out2;
+                        dbg("retry parsed", {
+                            hasOut: Boolean(out2),
+                            keys: Object.keys(j2 || {}).slice(0, 12)
+                        })
+                    } else dbg("retry failed", await r2.text())
+                }
                 if (!out) {
                     dbg("non-stream raw", j);
                     return fallbackOutputFromRaw(j)
